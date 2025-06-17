@@ -1,0 +1,30 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-f" "run.f"
+debLoadSimResult /home1/std251_4/week03/dff/sim/fnc/top.fsdb
+wvCreateWindow
+verdiWindowResize -win $_Verdi_1 "769" "210" "966" "825"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -delim "." -win $_nSchema1 -scope "tb_dff"
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -inst "u_dff"
+schPushViewIn -win $_nSchema3
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -moduleName off
+schSetOptions -win $_nSchema3 -moduleName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -parameterList on
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_dff_inv"
+schPushViewIn -win $_nSchema3
+schZoomOut -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_dff_inv"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_dff"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -inst "dff:Always0:8:12:Reg"
+debExit

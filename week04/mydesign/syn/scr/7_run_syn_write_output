@@ -1,0 +1,13 @@
+## write ddc and gate verilog netlist, etc.
+change_names -rules verilog -hierarchy 
+
+# write ddc
+write -format ddc -hier -o out/mapped/mydesign.ddc
+
+# wrtie verilog netlist
+write -f verilog -h -o ./out/mapped/mydesign.v
+
+write_sdf ./out/mapped/mydesign.pre.sdf
+
+
+

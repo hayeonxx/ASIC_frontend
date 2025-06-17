@@ -1,0 +1,8 @@
+module CLKMUL(CLK_IN, CLK_1X, CLK_2X);
+input  CLK_IN ;
+output CLK_1X , CLK_2X ;
+
+NBUFFX4_RVT I_CLKMUX_1X (.A(CLK_IN), .Y(CLK_1X));
+NBUFFX4_RVT I_CLKMUX_2X (.A(CLK_IN), .Y(CLK_2X));
+
+endmodule

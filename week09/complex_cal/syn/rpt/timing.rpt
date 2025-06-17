@@ -1,0 +1,1624 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 32
+Design : complex_cal
+Version: S-2021.06-SP5-5
+Date   : Mon May 26 14:48:58 2025
+****************************************
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: din_im_1[3]
+              (input port clocked by clk)
+  Endpoint: dout_re_d_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_im_1[3] (in)                                        0.02       1.62 f
+  din_im_1[3] (net)                             3         0.00       1.62 f
+  u_complex_mul/im_1[3] (complex_mul)                     0.00       1.62 f
+  u_complex_mul/im_1[3] (net)                             0.00       1.62 f
+  u_complex_mul/U181/Y (XNOR2X1_RVT)                      0.14       1.77 r
+  u_complex_mul/n535 (net)                      5         0.00       1.77 r
+  u_complex_mul/U486/Y (NAND2X0_RVT)                      0.06       1.83 f
+  u_complex_mul/n536 (net)                      3         0.00       1.83 f
+  u_complex_mul/U555/Y (OAI22X1_RVT)                      0.09       1.92 r
+  u_complex_mul/n285 (net)                      1         0.00       1.92 r
+  u_complex_mul/U609/S (FADDX1_RVT)                       0.15       2.07 f
+  u_complex_mul/n308 (net)                      1         0.00       2.07 f
+  u_complex_mul/U617/CO (FADDX1_RVT)                      0.09       2.15 f
+  u_complex_mul/n295 (net)                      1         0.00       2.15 f
+  u_complex_mul/U612/S (FADDX1_RVT)                       0.15       2.30 r
+  u_complex_mul/n333 (net)                      1         0.00       2.30 r
+  u_complex_mul/U627/S (FADDX1_RVT)                       0.15       2.45 f
+  u_complex_mul/n474 (net)                      2         0.00       2.45 f
+  u_complex_mul/U283/Y (OR2X1_RVT)                        0.06       2.50 f
+  u_complex_mul/n222 (net)                      2         0.00       2.50 f
+  u_complex_mul/U537/Y (AND2X1_RVT)                       0.05       2.56 f
+  u_complex_mul/n478 (net)                      2         0.00       2.56 f
+  u_complex_mul/U271/Y (AO21X1_RVT)                       0.07       2.63 f
+  u_complex_mul/n479 (net)                      2         0.00       2.63 f
+  u_complex_mul/U502/Y (AO21X1_RVT)                       0.05       2.68 f
+  u_complex_mul/n192 (net)                      2         0.00       2.68 f
+  u_complex_mul/U709/Y (AO21X1_RVT)                       0.07       2.75 f
+  u_complex_mul/n566 (net)                      1         0.00       2.75 f
+  u_complex_mul/U711/Y (XOR2X2_RVT)                       0.09       2.85 r
+  u_complex_mul/mul_dout_re[4] (net)            1         0.00       2.85 r
+  u_complex_mul/mul_dout_re[4] (complex_mul)              0.00       2.85 r
+  mul_dout_re[4] (net)                                    0.00       2.85 r
+  U37/Y (MUX21X2_RVT)                                     0.08       2.93 r
+  result_re[4] (net)                            1         0.00       2.93 r
+  dout_re_d_reg[4]/D (DFFARX1_RVT)                        0.00       2.93 r
+  data arrival time                                                  2.93
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_re_d_reg[4]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.93
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.08
+
+
+  Startpoint: din_im_1[3]
+              (input port clocked by clk)
+  Endpoint: dout_re_d_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_im_1[3] (in)                                        0.02       1.62 f
+  din_im_1[3] (net)                             3         0.00       1.62 f
+  u_complex_mul/im_1[3] (complex_mul)                     0.00       1.62 f
+  u_complex_mul/im_1[3] (net)                             0.00       1.62 f
+  u_complex_mul/U181/Y (XNOR2X1_RVT)                      0.14       1.77 r
+  u_complex_mul/n535 (net)                      5         0.00       1.77 r
+  u_complex_mul/U486/Y (NAND2X0_RVT)                      0.06       1.83 f
+  u_complex_mul/n536 (net)                      3         0.00       1.83 f
+  u_complex_mul/U555/Y (OAI22X1_RVT)                      0.09       1.92 r
+  u_complex_mul/n285 (net)                      1         0.00       1.92 r
+  u_complex_mul/U609/S (FADDX1_RVT)                       0.15       2.07 f
+  u_complex_mul/n308 (net)                      1         0.00       2.07 f
+  u_complex_mul/U617/CO (FADDX1_RVT)                      0.09       2.15 f
+  u_complex_mul/n295 (net)                      1         0.00       2.15 f
+  u_complex_mul/U612/S (FADDX1_RVT)                       0.15       2.30 r
+  u_complex_mul/n333 (net)                      1         0.00       2.30 r
+  u_complex_mul/U627/S (FADDX1_RVT)                       0.15       2.45 f
+  u_complex_mul/n474 (net)                      2         0.00       2.45 f
+  u_complex_mul/U283/Y (OR2X1_RVT)                        0.06       2.50 f
+  u_complex_mul/n222 (net)                      2         0.00       2.50 f
+  u_complex_mul/U537/Y (AND2X1_RVT)                       0.05       2.56 f
+  u_complex_mul/n478 (net)                      2         0.00       2.56 f
+  u_complex_mul/U271/Y (AO21X1_RVT)                       0.07       2.63 f
+  u_complex_mul/n479 (net)                      2         0.00       2.63 f
+  u_complex_mul/U502/Y (AO21X1_RVT)                       0.05       2.68 f
+  u_complex_mul/n192 (net)                      2         0.00       2.68 f
+  u_complex_mul/U725/Y (AO21X1_RVT)                       0.07       2.75 f
+  u_complex_mul/n606 (net)                      1         0.00       2.75 f
+  u_complex_mul/U730/Y (XOR2X2_RVT)                       0.09       2.85 r
+  u_complex_mul/mul_dout_re[7] (net)            1         0.00       2.85 r
+  u_complex_mul/mul_dout_re[7] (complex_mul)              0.00       2.85 r
+  mul_dout_re[7] (net)                                    0.00       2.85 r
+  U36/Y (MUX21X2_RVT)                                     0.08       2.93 r
+  result_re[7] (net)                            1         0.00       2.93 r
+  dout_re_d_reg[7]/D (DFFARX1_RVT)                        0.00       2.93 r
+  data arrival time                                                  2.93
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_re_d_reg[7]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.93
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.08
+
+
+  Startpoint: din_im_2[6]
+              (input port clocked by clk)
+  Endpoint: dout_im_d_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 r
+  din_im_2[6] (in)                                        0.00       1.60 r
+  din_im_2[6] (net)                             1         0.00       1.60 r
+  U26/Y (NBUFFX4_RVT)                                     0.05       1.66 r
+  n31 (net)                                     6         0.00       1.66 r
+  u_complex_mul/im_2[6] (complex_mul)                     0.00       1.66 r
+  u_complex_mul/im_2[6] (net)                             0.00       1.66 r
+  u_complex_mul/U143/Y (XNOR2X2_RVT)                      0.10       1.75 r
+  u_complex_mul/n885 (net)                      4         0.00       1.75 r
+  u_complex_mul/U455/Y (NAND2X0_RVT)                      0.05       1.81 f
+  u_complex_mul/n160 (net)                      3         0.00       1.81 f
+  u_complex_mul/U734/Y (OAI22X1_RVT)                      0.09       1.90 r
+  u_complex_mul/n627 (net)                      2         0.00       1.90 r
+  u_complex_mul/U275/Y (XOR2X2_RVT)                       0.10       2.00 f
+  u_complex_mul/n685 (net)                      1         0.00       2.00 f
+  u_complex_mul/U769/S (FADDX1_RVT)                       0.16       2.16 r
+  u_complex_mul/n730 (net)                      1         0.00       2.16 r
+  u_complex_mul/U786/S (FADDX1_RVT)                       0.16       2.32 f
+  u_complex_mul/n737 (net)                      3         0.00       2.32 f
+  u_complex_mul/U498/Y (NAND2X0_RVT)                      0.05       2.37 r
+  u_complex_mul/n189 (net)                      2         0.00       2.37 r
+  u_complex_mul/U432/Y (AND3X1_RVT)                       0.07       2.44 r
+  u_complex_mul/n135 (net)                      2         0.00       2.44 r
+  u_complex_mul/U261/Y (AO21X1_RVT)                       0.08       2.52 r
+  u_complex_mul/n154 (net)                      2         0.00       2.52 r
+  u_complex_mul/U340/Y (NAND2X0_RVT)                      0.04       2.56 f
+  u_complex_mul/n111 (net)                      2         0.00       2.56 f
+  u_complex_mul/U91/Y (AO21X1_RVT)                        0.09       2.65 f
+  u_complex_mul/n868 (net)                      3         0.00       2.65 f
+  u_complex_mul/U495/Y (AO21X1_RVT)                       0.05       2.70 f
+  u_complex_mul/n186 (net)                      2         0.00       2.70 f
+  u_complex_mul/U334/Y (AO21X1_RVT)                       0.07       2.77 f
+  u_complex_mul/n165 (net)                      2         0.00       2.77 f
+  u_complex_mul/U333/Y (OR2X1_RVT)                        0.05       2.82 f
+  u_complex_mul/n162 (net)                      1         0.00       2.82 f
+  u_complex_mul/U457/Y (NAND2X0_RVT)                      0.03       2.85 r
+  u_complex_mul/mul_dout_im[6] (net)            1         0.00       2.85 r
+  u_complex_mul/mul_dout_im[6] (complex_mul)              0.00       2.85 r
+  mul_dout_im[6] (net)                                    0.00       2.85 r
+  U47/Y (AO21X1_RVT)                                      0.07       2.93 r
+  result_im[6] (net)                            1         0.00       2.93 r
+  dout_im_d_reg[6]/D (DFFARX1_RVT)                        0.00       2.93 r
+  data arrival time                                                  2.93
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_im_d_reg[6]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.93
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.08
+
+
+  Startpoint: din_im_2[6]
+              (input port clocked by clk)
+  Endpoint: dout_im_d_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 r
+  din_im_2[6] (in)                                        0.00       1.60 r
+  din_im_2[6] (net)                             1         0.00       1.60 r
+  U26/Y (NBUFFX4_RVT)                                     0.05       1.66 r
+  n31 (net)                                     6         0.00       1.66 r
+  u_complex_mul/im_2[6] (complex_mul)                     0.00       1.66 r
+  u_complex_mul/im_2[6] (net)                             0.00       1.66 r
+  u_complex_mul/U143/Y (XNOR2X2_RVT)                      0.10       1.75 r
+  u_complex_mul/n885 (net)                      4         0.00       1.75 r
+  u_complex_mul/U455/Y (NAND2X0_RVT)                      0.05       1.81 f
+  u_complex_mul/n160 (net)                      3         0.00       1.81 f
+  u_complex_mul/U734/Y (OAI22X1_RVT)                      0.09       1.90 r
+  u_complex_mul/n627 (net)                      2         0.00       1.90 r
+  u_complex_mul/U275/Y (XOR2X2_RVT)                       0.10       2.00 f
+  u_complex_mul/n685 (net)                      1         0.00       2.00 f
+  u_complex_mul/U769/S (FADDX1_RVT)                       0.16       2.16 r
+  u_complex_mul/n730 (net)                      1         0.00       2.16 r
+  u_complex_mul/U786/S (FADDX1_RVT)                       0.16       2.32 f
+  u_complex_mul/n737 (net)                      3         0.00       2.32 f
+  u_complex_mul/U498/Y (NAND2X0_RVT)                      0.05       2.37 r
+  u_complex_mul/n189 (net)                      2         0.00       2.37 r
+  u_complex_mul/U432/Y (AND3X1_RVT)                       0.07       2.44 r
+  u_complex_mul/n135 (net)                      2         0.00       2.44 r
+  u_complex_mul/U261/Y (AO21X1_RVT)                       0.08       2.52 r
+  u_complex_mul/n154 (net)                      2         0.00       2.52 r
+  u_complex_mul/U340/Y (NAND2X0_RVT)                      0.04       2.56 f
+  u_complex_mul/n111 (net)                      2         0.00       2.56 f
+  u_complex_mul/U91/Y (AO21X1_RVT)                        0.09       2.65 f
+  u_complex_mul/n868 (net)                      3         0.00       2.65 f
+  u_complex_mul/U495/Y (AO21X1_RVT)                       0.05       2.70 f
+  u_complex_mul/n186 (net)                      2         0.00       2.70 f
+  u_complex_mul/U336/Y (AO21X1_RVT)                       0.07       2.77 f
+  u_complex_mul/n184 (net)                      2         0.00       2.77 f
+  u_complex_mul/U335/Y (OR2X1_RVT)                        0.05       2.82 f
+  u_complex_mul/n183 (net)                      1         0.00       2.82 f
+  u_complex_mul/U494/Y (NAND2X0_RVT)                      0.03       2.85 r
+  u_complex_mul/mul_dout_im[5] (net)            1         0.00       2.85 r
+  u_complex_mul/mul_dout_im[5] (complex_mul)              0.00       2.85 r
+  mul_dout_im[5] (net)                                    0.00       2.85 r
+  U48/Y (AO21X1_RVT)                                      0.07       2.93 r
+  result_im[5] (net)                            1         0.00       2.93 r
+  dout_im_d_reg[5]/D (DFFARX1_RVT)                        0.00       2.93 r
+  data arrival time                                                  2.93
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_im_d_reg[5]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.93
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.08
+
+
+  Startpoint: din_im_1[5]
+              (input port clocked by clk)
+  Endpoint: dout_re_d_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 r
+  din_im_1[5] (in)                                        0.02       1.62 r
+  din_im_1[5] (net)                             3         0.00       1.62 r
+  u_complex_mul/im_1[5] (complex_mul)                     0.00       1.62 r
+  u_complex_mul/im_1[5] (net)                             0.00       1.62 r
+  u_complex_mul/U254/Y (NBUFFX4_RVT)                      0.06       1.68 r
+  u_complex_mul/n660 (net)                      3         0.00       1.68 r
+  u_complex_mul/U134/Y (XOR2X2_RVT)                       0.10       1.77 f
+  u_complex_mul/n242 (net)                      2         0.00       1.77 f
+  u_complex_mul/U486/Y (NAND2X0_RVT)                      0.06       1.83 r
+  u_complex_mul/n536 (net)                      3         0.00       1.83 r
+  u_complex_mul/U555/Y (OAI22X1_RVT)                      0.09       1.92 f
+  u_complex_mul/n285 (net)                      1         0.00       1.92 f
+  u_complex_mul/U609/S (FADDX1_RVT)                       0.15       2.07 r
+  u_complex_mul/n308 (net)                      1         0.00       2.07 r
+  u_complex_mul/U617/CO (FADDX1_RVT)                      0.10       2.17 r
+  u_complex_mul/n295 (net)                      1         0.00       2.17 r
+  u_complex_mul/U612/S (FADDX1_RVT)                       0.15       2.31 f
+  u_complex_mul/n333 (net)                      1         0.00       2.31 f
+  u_complex_mul/U627/S (FADDX1_RVT)                       0.15       2.46 r
+  u_complex_mul/n474 (net)                      2         0.00       2.46 r
+  u_complex_mul/U283/Y (OR2X1_RVT)                        0.06       2.52 r
+  u_complex_mul/n222 (net)                      2         0.00       2.52 r
+  u_complex_mul/U537/Y (AND2X1_RVT)                       0.05       2.57 r
+  u_complex_mul/n478 (net)                      2         0.00       2.57 r
+  u_complex_mul/U271/Y (AO21X1_RVT)                       0.08       2.65 r
+  u_complex_mul/n479 (net)                      2         0.00       2.65 r
+  u_complex_mul/U674/Y (AO21X1_RVT)                       0.06       2.71 r
+  u_complex_mul/n597 (net)                      3         0.00       2.71 r
+  u_complex_mul/U556/Y (NBUFFX2_RVT)                      0.05       2.76 r
+  u_complex_mul/n503 (net)                      1         0.00       2.76 r
+  u_complex_mul/U685/Y (XNOR2X2_RVT)                      0.09       2.84 r
+  u_complex_mul/mul_dout_re[3] (net)            1         0.00       2.84 r
+  u_complex_mul/mul_dout_re[3] (complex_mul)              0.00       2.84 r
+  mul_dout_re[3] (net)                                    0.00       2.84 r
+  U39/Y (MUX21X1_RVT)                                     0.08       2.93 r
+  result_re[3] (net)                            1         0.00       2.93 r
+  dout_re_d_reg[3]/D (DFFARX1_RVT)                        0.00       2.93 r
+  data arrival time                                                  2.93
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_re_d_reg[3]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.93
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.08
+
+
+  Startpoint: din_im_1[3]
+              (input port clocked by clk)
+  Endpoint: dout_re_d_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_im_1[3] (in)                                        0.02       1.62 f
+  din_im_1[3] (net)                             3         0.00       1.62 f
+  u_complex_mul/im_1[3] (complex_mul)                     0.00       1.62 f
+  u_complex_mul/im_1[3] (net)                             0.00       1.62 f
+  u_complex_mul/U181/Y (XNOR2X1_RVT)                      0.14       1.77 r
+  u_complex_mul/n535 (net)                      5         0.00       1.77 r
+  u_complex_mul/U486/Y (NAND2X0_RVT)                      0.06       1.83 f
+  u_complex_mul/n536 (net)                      3         0.00       1.83 f
+  u_complex_mul/U555/Y (OAI22X1_RVT)                      0.09       1.92 r
+  u_complex_mul/n285 (net)                      1         0.00       1.92 r
+  u_complex_mul/U609/S (FADDX1_RVT)                       0.15       2.07 f
+  u_complex_mul/n308 (net)                      1         0.00       2.07 f
+  u_complex_mul/U617/CO (FADDX1_RVT)                      0.09       2.15 f
+  u_complex_mul/n295 (net)                      1         0.00       2.15 f
+  u_complex_mul/U612/S (FADDX1_RVT)                       0.15       2.30 r
+  u_complex_mul/n333 (net)                      1         0.00       2.30 r
+  u_complex_mul/U627/S (FADDX1_RVT)                       0.15       2.45 f
+  u_complex_mul/n474 (net)                      2         0.00       2.45 f
+  u_complex_mul/U283/Y (OR2X1_RVT)                        0.06       2.50 f
+  u_complex_mul/n222 (net)                      2         0.00       2.50 f
+  u_complex_mul/U537/Y (AND2X1_RVT)                       0.05       2.56 f
+  u_complex_mul/n478 (net)                      2         0.00       2.56 f
+  u_complex_mul/U271/Y (AO21X1_RVT)                       0.07       2.63 f
+  u_complex_mul/n479 (net)                      2         0.00       2.63 f
+  u_complex_mul/U674/Y (AO21X1_RVT)                       0.05       2.68 f
+  u_complex_mul/n597 (net)                      3         0.00       2.68 f
+  u_complex_mul/U701/Y (AO21X1_RVT)                       0.08       2.76 f
+  u_complex_mul/n558 (net)                      1         0.00       2.76 f
+  u_complex_mul/U708/Y (XOR2X2_RVT)                       0.09       2.85 r
+  u_complex_mul/mul_dout_re[5] (net)            1         0.00       2.85 r
+  u_complex_mul/mul_dout_re[5] (complex_mul)              0.00       2.85 r
+  mul_dout_re[5] (net)                                    0.00       2.85 r
+  U43/Y (AO21X1_RVT)                                      0.07       2.93 r
+  result_re[5] (net)                            1         0.00       2.93 r
+  dout_re_d_reg[5]/D (DFFARX1_RVT)                        0.00       2.93 r
+  data arrival time                                                  2.93
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_re_d_reg[5]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.93
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.08
+
+
+  Startpoint: din_re_2[6]
+              (input port clocked by clk)
+  Endpoint: dout_im_d_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_re_2[6] (in)                                        0.02       1.62 f
+  din_re_2[6] (net)                             3         0.00       1.62 f
+  u_complex_mul/re_2[6] (complex_mul)                     0.00       1.62 f
+  u_complex_mul/re_2[6] (net)                             0.00       1.62 f
+  u_complex_mul/U112/Y (NBUFFX4_RVT)                      0.06       1.68 f
+  u_complex_mul/n151 (net)                      4         0.00       1.68 f
+  u_complex_mul/U107/Y (XNOR2X2_RVT)                      0.09       1.77 r
+  u_complex_mul/n13 (net)                       1         0.00       1.77 r
+  u_complex_mul/U106/Y (OR2X2_RVT)                        0.06       1.83 r
+  u_complex_mul/n637 (net)                      4         0.00       1.83 r
+  u_complex_mul/U87/Y (NBUFFX8_RVT)                       0.05       1.88 r
+  u_complex_mul/n225 (net)                      4         0.00       1.88 r
+  u_complex_mul/U122/Y (OAI22X2_RVT)                      0.08       1.96 f
+  u_complex_mul/n658 (net)                      1         0.00       1.96 f
+  u_complex_mul/U761/S (FADDX1_RVT)                       0.14       2.10 r
+  u_complex_mul/n665 (net)                      1         0.00       2.10 r
+  u_complex_mul/U763/CO (FADDX1_RVT)                      0.10       2.20 r
+  u_complex_mul/n902 (net)                      2         0.00       2.20 r
+  u_complex_mul/U764/Y (XOR3X2_RVT)                       0.09       2.29 f
+  u_complex_mul/n906 (net)                      3         0.00       2.29 f
+  u_complex_mul/U168/Y (XOR3X2_RVT)                       0.16       2.45 f
+  u_complex_mul/n865 (net)                      2         0.00       2.45 f
+  u_complex_mul/U446/Y (OR2X1_RVT)                        0.06       2.51 f
+  u_complex_mul/n697 (net)                      3         0.00       2.51 f
+  u_complex_mul/U445/Y (AND2X1_RVT)                       0.06       2.57 f
+  u_complex_mul/n867 (net)                      2         0.00       2.57 f
+  u_complex_mul/U789/Y (AND2X1_RVT)                       0.06       2.63 f
+  u_complex_mul/n869 (net)                      3         0.00       2.63 f
+  u_complex_mul/U377/Y (AO21X1_RVT)                       0.07       2.70 f
+  u_complex_mul/n126 (net)                      1         0.00       2.70 f
+  u_complex_mul/U139/Y (AO21X1_RVT)                       0.07       2.77 f
+  u_complex_mul/n164 (net)                      2         0.00       2.77 f
+  u_complex_mul/U138/Y (OR2X1_RVT)                        0.05       2.82 f
+  u_complex_mul/n29 (net)                       1         0.00       2.82 f
+  u_complex_mul/U148/Y (NAND2X0_RVT)                      0.03       2.85 r
+  u_complex_mul/mul_dout_im[7] (net)            1         0.00       2.85 r
+  u_complex_mul/mul_dout_im[7] (complex_mul)              0.00       2.85 r
+  mul_dout_im[7] (net)                                    0.00       2.85 r
+  U42/Y (AO21X1_RVT)                                      0.07       2.92 r
+  result_im[7] (net)                            1         0.00       2.92 r
+  dout_im_d_reg[7]/D (DFFARX1_RVT)                        0.00       2.92 r
+  data arrival time                                                  2.92
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_im_d_reg[7]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.92
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.07
+
+
+  Startpoint: din_im_1[3]
+              (input port clocked by clk)
+  Endpoint: dout_re_d_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_im_1[3] (in)                                        0.02       1.62 f
+  din_im_1[3] (net)                             3         0.00       1.62 f
+  u_complex_mul/im_1[3] (complex_mul)                     0.00       1.62 f
+  u_complex_mul/im_1[3] (net)                             0.00       1.62 f
+  u_complex_mul/U181/Y (XNOR2X1_RVT)                      0.14       1.77 r
+  u_complex_mul/n535 (net)                      5         0.00       1.77 r
+  u_complex_mul/U486/Y (NAND2X0_RVT)                      0.06       1.83 f
+  u_complex_mul/n536 (net)                      3         0.00       1.83 f
+  u_complex_mul/U555/Y (OAI22X1_RVT)                      0.09       1.92 r
+  u_complex_mul/n285 (net)                      1         0.00       1.92 r
+  u_complex_mul/U609/S (FADDX1_RVT)                       0.15       2.07 f
+  u_complex_mul/n308 (net)                      1         0.00       2.07 f
+  u_complex_mul/U617/CO (FADDX1_RVT)                      0.09       2.15 f
+  u_complex_mul/n295 (net)                      1         0.00       2.15 f
+  u_complex_mul/U612/S (FADDX1_RVT)                       0.15       2.30 r
+  u_complex_mul/n333 (net)                      1         0.00       2.30 r
+  u_complex_mul/U627/S (FADDX1_RVT)                       0.15       2.45 f
+  u_complex_mul/n474 (net)                      2         0.00       2.45 f
+  u_complex_mul/U283/Y (OR2X1_RVT)                        0.06       2.50 f
+  u_complex_mul/n222 (net)                      2         0.00       2.50 f
+  u_complex_mul/U537/Y (AND2X1_RVT)                       0.05       2.56 f
+  u_complex_mul/n478 (net)                      2         0.00       2.56 f
+  u_complex_mul/U271/Y (AO21X1_RVT)                       0.07       2.63 f
+  u_complex_mul/n479 (net)                      2         0.00       2.63 f
+  u_complex_mul/U674/Y (AO21X1_RVT)                       0.05       2.68 f
+  u_complex_mul/n597 (net)                      3         0.00       2.68 f
+  u_complex_mul/U713/Y (AO21X1_RVT)                       0.08       2.76 f
+  u_complex_mul/n586 (net)                      1         0.00       2.76 f
+  u_complex_mul/U722/Y (XOR2X2_RVT)                       0.09       2.85 r
+  u_complex_mul/mul_dout_re[6] (net)            1         0.00       2.85 r
+  u_complex_mul/mul_dout_re[6] (complex_mul)              0.00       2.85 r
+  mul_dout_re[6] (net)                                    0.00       2.85 r
+  U44/Y (AO21X1_RVT)                                      0.07       2.92 r
+  result_re[6] (net)                            1         0.00       2.92 r
+  dout_re_d_reg[6]/D (DFFARX1_RVT)                        0.00       2.92 r
+  data arrival time                                                  2.92
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_re_d_reg[6]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.92
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.07
+
+
+  Startpoint: din_re_2[6]
+              (input port clocked by clk)
+  Endpoint: dout_im_d_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_re_2[6] (in)                                        0.02       1.62 f
+  din_re_2[6] (net)                             3         0.00       1.62 f
+  u_complex_mul/re_2[6] (complex_mul)                     0.00       1.62 f
+  u_complex_mul/re_2[6] (net)                             0.00       1.62 f
+  u_complex_mul/U112/Y (NBUFFX4_RVT)                      0.06       1.68 f
+  u_complex_mul/n151 (net)                      4         0.00       1.68 f
+  u_complex_mul/U107/Y (XNOR2X2_RVT)                      0.09       1.77 r
+  u_complex_mul/n13 (net)                       1         0.00       1.77 r
+  u_complex_mul/U106/Y (OR2X2_RVT)                        0.06       1.83 r
+  u_complex_mul/n637 (net)                      4         0.00       1.83 r
+  u_complex_mul/U199/Y (OAI22X1_RVT)                      0.08       1.91 f
+  u_complex_mul/n677 (net)                      1         0.00       1.91 f
+  u_complex_mul/U767/S (FADDX1_RVT)                       0.15       2.06 r
+  u_complex_mul/n705 (net)                      1         0.00       2.06 r
+  u_complex_mul/U778/S (FADDX1_RVT)                       0.15       2.22 f
+  u_complex_mul/n776 (net)                      2         0.00       2.22 f
+  u_complex_mul/U294/Y (XOR3X2_RVT)                       0.16       2.37 r
+  u_complex_mul/n853 (net)                      2         0.00       2.37 r
+  u_complex_mul/U104/Y (OR2X1_RVT)                        0.06       2.43 r
+  u_complex_mul/n12 (net)                       2         0.00       2.43 r
+  u_complex_mul/U103/Y (INVX1_RVT)                        0.02       2.45 f
+  u_complex_mul/n856 (net)                      1         0.00       2.45 f
+  u_complex_mul/U128/Y (OA21X1_RVT)                       0.06       2.51 f
+  u_complex_mul/n20 (net)                       1         0.00       2.51 f
+  u_complex_mul/U127/Y (INVX1_RVT)                        0.02       2.53 r
+  u_complex_mul/n129 (net)                      1         0.00       2.53 r
+  u_complex_mul/U176/Y (AO21X1_RVT)                       0.07       2.60 r
+  u_complex_mul/n941 (net)                      7         0.00       2.60 r
+  u_complex_mul/U339/Y (AO21X2_RVT)                       0.10       2.70 r
+  u_complex_mul/n110 (net)                      1         0.00       2.70 r
+  u_complex_mul/U74/Y (INVX2_RVT)                         0.02       2.72 f
+  u_complex_mul/n949 (net)                      1         0.00       2.72 f
+  u_complex_mul/U867/Y (XOR2X2_RVT)                       0.09       2.81 r
+  u_complex_mul/mul_dout_im[2] (net)            1         0.00       2.81 r
+  u_complex_mul/mul_dout_im[2] (complex_mul)              0.00       2.81 r
+  mul_dout_im[2] (net)                                    0.00       2.81 r
+  U79/Y (MUX21X1_RVT)                                     0.08       2.89 r
+  result_im[2] (net)                            1         0.00       2.89 r
+  dout_im_d_reg[2]/D (DFFARX1_RVT)                        0.00       2.89 r
+  data arrival time                                                  2.89
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_im_d_reg[2]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.89
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.04
+
+
+  Startpoint: din_im_1[5]
+              (input port clocked by clk)
+  Endpoint: dout_re_d_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 r
+  din_im_1[5] (in)                                        0.02       1.62 r
+  din_im_1[5] (net)                             3         0.00       1.62 r
+  u_complex_mul/im_1[5] (complex_mul)                     0.00       1.62 r
+  u_complex_mul/im_1[5] (net)                             0.00       1.62 r
+  u_complex_mul/U254/Y (NBUFFX4_RVT)                      0.06       1.68 r
+  u_complex_mul/n660 (net)                      3         0.00       1.68 r
+  u_complex_mul/U134/Y (XOR2X2_RVT)                       0.10       1.77 f
+  u_complex_mul/n242 (net)                      2         0.00       1.77 f
+  u_complex_mul/U486/Y (NAND2X0_RVT)                      0.06       1.83 r
+  u_complex_mul/n536 (net)                      3         0.00       1.83 r
+  u_complex_mul/U555/Y (OAI22X1_RVT)                      0.09       1.92 f
+  u_complex_mul/n285 (net)                      1         0.00       1.92 f
+  u_complex_mul/U609/S (FADDX1_RVT)                       0.15       2.07 r
+  u_complex_mul/n308 (net)                      1         0.00       2.07 r
+  u_complex_mul/U617/CO (FADDX1_RVT)                      0.10       2.17 r
+  u_complex_mul/n295 (net)                      1         0.00       2.17 r
+  u_complex_mul/U612/S (FADDX1_RVT)                       0.15       2.31 f
+  u_complex_mul/n333 (net)                      1         0.00       2.31 f
+  u_complex_mul/U627/S (FADDX1_RVT)                       0.15       2.46 r
+  u_complex_mul/n474 (net)                      2         0.00       2.46 r
+  u_complex_mul/U283/Y (OR2X1_RVT)                        0.06       2.52 r
+  u_complex_mul/n222 (net)                      2         0.00       2.52 r
+  u_complex_mul/U315/Y (NBUFFX2_RVT)                      0.05       2.57 r
+  u_complex_mul/n91 (net)                       2         0.00       2.57 r
+  u_complex_mul/U73/Y (INVX2_RVT)                         0.02       2.59 f
+  u_complex_mul/n504 (net)                      2         0.00       2.59 f
+  u_complex_mul/U686/Y (OAI21X2_RVT)                      0.10       2.69 r
+  u_complex_mul/n505 (net)                      1         0.00       2.69 r
+  u_complex_mul/U490/Y (AO21X1_RVT)                       0.05       2.74 r
+  u_complex_mul/n180 (net)                      1         0.00       2.74 r
+  u_complex_mul/U489/Y (XOR2X2_RVT)                       0.09       2.83 f
+  u_complex_mul/mul_dout_re[2] (net)            1         0.00       2.83 f
+  u_complex_mul/mul_dout_re[2] (complex_mul)              0.00       2.83 f
+  mul_dout_re[2] (net)                                    0.00       2.83 f
+  U73/Y (MUX21X1_RVT)                                     0.08       2.91 f
+  result_re[2] (net)                            1         0.00       2.91 f
+  dout_re_d_reg[2]/D (DFFARX1_RVT)                        0.00       2.91 f
+  data arrival time                                                  2.91
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_re_d_reg[2]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.03       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -2.91
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.04
+
+
+  Startpoint: din_im_1[2]
+              (input port clocked by clk)
+  Endpoint: dout_re_d_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_im_1[2] (in)                                        0.03       1.63 f
+  din_im_1[2] (net)                             4         0.00       1.63 f
+  u_complex_mul/im_1[2] (complex_mul)                     0.00       1.63 f
+  u_complex_mul/im_1[2] (net)                             0.00       1.63 f
+  u_complex_mul/U179/Y (XNOR2X1_RVT)                      0.14       1.77 r
+  u_complex_mul/n385 (net)                      4         0.00       1.77 r
+  u_complex_mul/U208/Y (NBUFFX4_RVT)                      0.06       1.83 r
+  u_complex_mul/n63 (net)                       8         0.00       1.83 r
+  u_complex_mul/U207/Y (OAI22X1_RVT)                      0.09       1.92 f
+  u_complex_mul/n346 (net)                      1         0.00       1.92 f
+  u_complex_mul/U632/S (FADDX1_RVT)                       0.15       2.07 r
+  u_complex_mul/n364 (net)                      3         0.00       2.07 r
+  u_complex_mul/U449/Y (XOR3X2_RVT)                       0.16       2.23 f
+  u_complex_mul/n449 (net)                      1         0.00       2.23 f
+  u_complex_mul/U667/S (FADDX1_RVT)                       0.15       2.38 r
+  u_complex_mul/n462 (net)                      2         0.00       2.38 r
+  u_complex_mul/U554/Y (NOR2X0_RVT)                       0.08       2.46 f
+  u_complex_mul/n464 (net)                      2         0.00       2.46 f
+  u_complex_mul/U144/Y (OAI21X2_RVT)                      0.10       2.56 r
+  u_complex_mul/n466 (net)                      2         0.00       2.56 r
+  u_complex_mul/U561/Y (AO21X1_RVT)                       0.05       2.61 r
+  u_complex_mul/n237 (net)                      3         0.00       2.61 r
+  u_complex_mul/U72/Y (AOI21X1_RVT)                       0.10       2.71 f
+  u_complex_mul/n520 (net)                      1         0.00       2.71 f
+  u_complex_mul/U691/Y (XOR2X2_RVT)                       0.09       2.80 r
+  u_complex_mul/mul_dout_re[0] (net)            1         0.00       2.80 r
+  u_complex_mul/mul_dout_re[0] (complex_mul)              0.00       2.80 r
+  mul_dout_re[0] (net)                                    0.00       2.80 r
+  U80/Y (MUX21X1_RVT)                                     0.08       2.88 r
+  result_re[0] (net)                            1         0.00       2.88 r
+  dout_re_d_reg[0]/D (DFFARX1_RVT)                        0.00       2.88 r
+  data arrival time                                                  2.88
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_re_d_reg[0]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.88
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.03
+
+
+  Startpoint: din_im_1[2]
+              (input port clocked by clk)
+  Endpoint: dout_re_d_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_im_1[2] (in)                                        0.03       1.63 f
+  din_im_1[2] (net)                             4         0.00       1.63 f
+  u_complex_mul/im_1[2] (complex_mul)                     0.00       1.63 f
+  u_complex_mul/im_1[2] (net)                             0.00       1.63 f
+  u_complex_mul/U179/Y (XNOR2X1_RVT)                      0.14       1.77 r
+  u_complex_mul/n385 (net)                      4         0.00       1.77 r
+  u_complex_mul/U208/Y (NBUFFX4_RVT)                      0.06       1.83 r
+  u_complex_mul/n63 (net)                       8         0.00       1.83 r
+  u_complex_mul/U207/Y (OAI22X1_RVT)                      0.09       1.92 f
+  u_complex_mul/n346 (net)                      1         0.00       1.92 f
+  u_complex_mul/U632/S (FADDX1_RVT)                       0.15       2.07 r
+  u_complex_mul/n364 (net)                      3         0.00       2.07 r
+  u_complex_mul/U449/Y (XOR3X2_RVT)                       0.16       2.23 f
+  u_complex_mul/n449 (net)                      1         0.00       2.23 f
+  u_complex_mul/U667/S (FADDX1_RVT)                       0.15       2.38 r
+  u_complex_mul/n462 (net)                      2         0.00       2.38 r
+  u_complex_mul/U554/Y (NOR2X0_RVT)                       0.08       2.46 f
+  u_complex_mul/n464 (net)                      2         0.00       2.46 f
+  u_complex_mul/U144/Y (OAI21X2_RVT)                      0.10       2.56 r
+  u_complex_mul/n466 (net)                      2         0.00       2.56 r
+  u_complex_mul/U186/Y (AO21X1_RVT)                       0.05       2.61 r
+  u_complex_mul/n55 (net)                       2         0.00       2.61 r
+  u_complex_mul/U71/Y (AOI21X1_RVT)                       0.10       2.70 f
+  u_complex_mul/n514 (net)                      1         0.00       2.70 f
+  u_complex_mul/U689/Y (XOR2X2_RVT)                       0.09       2.79 r
+  u_complex_mul/mul_dout_re[1] (net)            1         0.00       2.79 r
+  u_complex_mul/mul_dout_re[1] (complex_mul)              0.00       2.79 r
+  mul_dout_re[1] (net)                                    0.00       2.79 r
+  U81/Y (MUX21X1_RVT)                                     0.08       2.88 r
+  result_re[1] (net)                            1         0.00       2.88 r
+  dout_re_d_reg[1]/D (DFFARX1_RVT)                        0.00       2.88 r
+  data arrival time                                                  2.88
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_re_d_reg[1]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.88
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.03
+
+
+  Startpoint: din_im_2[6]
+              (input port clocked by clk)
+  Endpoint: dout_im_d_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 r
+  din_im_2[6] (in)                                        0.00       1.60 r
+  din_im_2[6] (net)                             1         0.00       1.60 r
+  U26/Y (NBUFFX4_RVT)                                     0.05       1.66 r
+  n31 (net)                                     6         0.00       1.66 r
+  u_complex_mul/im_2[6] (complex_mul)                     0.00       1.66 r
+  u_complex_mul/im_2[6] (net)                             0.00       1.66 r
+  u_complex_mul/U143/Y (XNOR2X2_RVT)                      0.10       1.75 r
+  u_complex_mul/n885 (net)                      4         0.00       1.75 r
+  u_complex_mul/U455/Y (NAND2X0_RVT)                      0.05       1.81 f
+  u_complex_mul/n160 (net)                      3         0.00       1.81 f
+  u_complex_mul/U89/Y (OAI22X1_RVT)                       0.10       1.90 r
+  u_complex_mul/n679 (net)                      1         0.00       1.90 r
+  u_complex_mul/U767/CO (FADDX1_RVT)                      0.11       2.01 r
+  u_complex_mul/n684 (net)                      1         0.00       2.01 r
+  u_complex_mul/U769/S (FADDX1_RVT)                       0.16       2.17 f
+  u_complex_mul/n730 (net)                      1         0.00       2.17 f
+  u_complex_mul/U786/S (FADDX1_RVT)                       0.15       2.32 r
+  u_complex_mul/n737 (net)                      3         0.00       2.32 r
+  u_complex_mul/U498/Y (NAND2X0_RVT)                      0.04       2.36 f
+  u_complex_mul/n189 (net)                      2         0.00       2.36 f
+  u_complex_mul/U432/Y (AND3X1_RVT)                       0.08       2.44 f
+  u_complex_mul/n135 (net)                      2         0.00       2.44 f
+  u_complex_mul/U497/Y (NAND2X0_RVT)                      0.06       2.50 r
+  u_complex_mul/n188 (net)                      3         0.00       2.50 r
+  u_complex_mul/U183/Y (NAND2X0_RVT)                      0.04       2.54 f
+  u_complex_mul/n54 (net)                       1         0.00       2.54 f
+  u_complex_mul/U863/Y (NOR2X0_RVT)                       0.07       2.61 r
+  u_complex_mul/n943 (net)                      1         0.00       2.61 r
+  u_complex_mul/U70/Y (AOI21X1_RVT)                       0.09       2.71 f
+  u_complex_mul/n946 (net)                      1         0.00       2.71 f
+  u_complex_mul/U865/Y (XOR2X2_RVT)                       0.09       2.80 r
+  u_complex_mul/mul_dout_im[3] (net)            1         0.00       2.80 r
+  u_complex_mul/mul_dout_im[3] (complex_mul)              0.00       2.80 r
+  mul_dout_im[3] (net)                                    0.00       2.80 r
+  U49/Y (MUX21X1_RVT)                                     0.08       2.88 r
+  result_im[3] (net)                            1         0.00       2.88 r
+  dout_im_d_reg[3]/D (DFFARX1_RVT)                        0.00       2.88 r
+  data arrival time                                                  2.88
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_im_d_reg[3]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.88
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.03
+
+
+  Startpoint: din_re_2[6]
+              (input port clocked by clk)
+  Endpoint: dout_im_d_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_re_2[6] (in)                                        0.02       1.62 f
+  din_re_2[6] (net)                             3         0.00       1.62 f
+  u_complex_mul/re_2[6] (complex_mul)                     0.00       1.62 f
+  u_complex_mul/re_2[6] (net)                             0.00       1.62 f
+  u_complex_mul/U112/Y (NBUFFX4_RVT)                      0.06       1.68 f
+  u_complex_mul/n151 (net)                      4         0.00       1.68 f
+  u_complex_mul/U107/Y (XNOR2X2_RVT)                      0.09       1.77 r
+  u_complex_mul/n13 (net)                       1         0.00       1.77 r
+  u_complex_mul/U106/Y (OR2X2_RVT)                        0.06       1.83 r
+  u_complex_mul/n637 (net)                      4         0.00       1.83 r
+  u_complex_mul/U199/Y (OAI22X1_RVT)                      0.08       1.91 f
+  u_complex_mul/n677 (net)                      1         0.00       1.91 f
+  u_complex_mul/U767/S (FADDX1_RVT)                       0.15       2.06 r
+  u_complex_mul/n705 (net)                      1         0.00       2.06 r
+  u_complex_mul/U778/S (FADDX1_RVT)                       0.15       2.22 f
+  u_complex_mul/n776 (net)                      2         0.00       2.22 f
+  u_complex_mul/U294/Y (XOR3X2_RVT)                       0.16       2.37 r
+  u_complex_mul/n853 (net)                      2         0.00       2.37 r
+  u_complex_mul/U104/Y (OR2X1_RVT)                        0.06       2.43 r
+  u_complex_mul/n12 (net)                       2         0.00       2.43 r
+  u_complex_mul/U103/Y (INVX1_RVT)                        0.02       2.45 f
+  u_complex_mul/n856 (net)                      1         0.00       2.45 f
+  u_complex_mul/U128/Y (OA21X1_RVT)                       0.06       2.51 f
+  u_complex_mul/n20 (net)                       1         0.00       2.51 f
+  u_complex_mul/U127/Y (INVX1_RVT)                        0.02       2.53 r
+  u_complex_mul/n129 (net)                      1         0.00       2.53 r
+  u_complex_mul/U176/Y (AO21X1_RVT)                       0.07       2.60 r
+  u_complex_mul/n941 (net)                      7         0.00       2.60 r
+  u_complex_mul/U69/Y (AOI21X1_RVT)                       0.10       2.70 f
+  u_complex_mul/n953 (net)                      1         0.00       2.70 f
+  u_complex_mul/U869/Y (XOR2X2_RVT)                       0.09       2.79 r
+  u_complex_mul/mul_dout_im[1] (net)            1         0.00       2.79 r
+  u_complex_mul/mul_dout_im[1] (complex_mul)              0.00       2.79 r
+  mul_dout_im[1] (net)                                    0.00       2.79 r
+  U78/Y (MUX21X1_RVT)                                     0.08       2.87 r
+  result_im[1] (net)                            1         0.00       2.87 r
+  dout_im_d_reg[1]/D (DFFARX1_RVT)                        0.00       2.87 r
+  data arrival time                                                  2.87
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_im_d_reg[1]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.87
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.03
+
+
+  Startpoint: din_im_2[6]
+              (input port clocked by clk)
+  Endpoint: dout_im_d_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 r
+  din_im_2[6] (in)                                        0.00       1.60 r
+  din_im_2[6] (net)                             1         0.00       1.60 r
+  U26/Y (NBUFFX4_RVT)                                     0.05       1.66 r
+  n31 (net)                                     6         0.00       1.66 r
+  u_complex_mul/im_2[6] (complex_mul)                     0.00       1.66 r
+  u_complex_mul/im_2[6] (net)                             0.00       1.66 r
+  u_complex_mul/U143/Y (XNOR2X2_RVT)                      0.10       1.75 r
+  u_complex_mul/n885 (net)                      4         0.00       1.75 r
+  u_complex_mul/U455/Y (NAND2X0_RVT)                      0.05       1.81 f
+  u_complex_mul/n160 (net)                      3         0.00       1.81 f
+  u_complex_mul/U734/Y (OAI22X1_RVT)                      0.09       1.90 r
+  u_complex_mul/n627 (net)                      2         0.00       1.90 r
+  u_complex_mul/U275/Y (XOR2X2_RVT)                       0.10       2.00 f
+  u_complex_mul/n685 (net)                      1         0.00       2.00 f
+  u_complex_mul/U769/S (FADDX1_RVT)                       0.16       2.16 r
+  u_complex_mul/n730 (net)                      1         0.00       2.16 r
+  u_complex_mul/U786/CO (FADDX1_RVT)                      0.11       2.27 r
+  u_complex_mul/n735 (net)                      3         0.00       2.27 r
+  u_complex_mul/U100/Y (XOR3X2_RVT)                       0.17       2.43 f
+  u_complex_mul/n739 (net)                      3         0.00       2.43 f
+  u_complex_mul/U261/Y (AO21X1_RVT)                       0.08       2.52 f
+  u_complex_mul/n154 (net)                      2         0.00       2.52 f
+  u_complex_mul/U340/Y (NAND2X0_RVT)                      0.04       2.56 r
+  u_complex_mul/n111 (net)                      2         0.00       2.56 r
+  u_complex_mul/U91/Y (AO21X1_RVT)                        0.09       2.65 r
+  u_complex_mul/n868 (net)                      3         0.00       2.65 r
+  u_complex_mul/U75/Y (AO21X1_RVT)                        0.06       2.71 r
+  u_complex_mul/n935 (net)                      1         0.00       2.71 r
+  u_complex_mul/U862/Y (XNOR2X2_RVT)                      0.09       2.80 r
+  u_complex_mul/mul_dout_im[4] (net)            1         0.00       2.80 r
+  u_complex_mul/mul_dout_im[4] (complex_mul)              0.00       2.80 r
+  mul_dout_im[4] (net)                                    0.00       2.80 r
+  U75/Y (NAND2X0_RVT)                                     0.03       2.83 f
+  n19 (net)                                     1         0.00       2.83 f
+  U76/Y (NAND2X0_RVT)                                     0.04       2.87 r
+  result_im[4] (net)                            1         0.00       2.87 r
+  dout_im_d_reg[4]/D (DFFARX1_RVT)                        0.00       2.87 r
+  data arrival time                                                  2.87
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_im_d_reg[4]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.87
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.02
+
+
+  Startpoint: din_re_2[6]
+              (input port clocked by clk)
+  Endpoint: dout_im_d_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+  complex_mul        8000                  saed32rvt_ss0p95v125c
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    0.60       1.60 f
+  din_re_2[6] (in)                                        0.02       1.62 f
+  din_re_2[6] (net)                             3         0.00       1.62 f
+  u_complex_mul/re_2[6] (complex_mul)                     0.00       1.62 f
+  u_complex_mul/re_2[6] (net)                             0.00       1.62 f
+  u_complex_mul/U112/Y (NBUFFX4_RVT)                      0.06       1.68 f
+  u_complex_mul/n151 (net)                      4         0.00       1.68 f
+  u_complex_mul/U107/Y (XNOR2X2_RVT)                      0.08       1.76 f
+  u_complex_mul/n13 (net)                       1         0.00       1.76 f
+  u_complex_mul/U106/Y (OR2X2_RVT)                        0.06       1.82 f
+  u_complex_mul/n637 (net)                      4         0.00       1.82 f
+  u_complex_mul/U83/Y (OAI22X2_RVT)                       0.10       1.92 r
+  u_complex_mul/n681 (net)                      1         0.00       1.92 r
+  u_complex_mul/U768/S (FADDX1_RVT)                       0.15       2.07 f
+  u_complex_mul/n704 (net)                      1         0.00       2.07 f
+  u_complex_mul/U778/S (FADDX1_RVT)                       0.15       2.22 r
+  u_complex_mul/n776 (net)                      2         0.00       2.22 r
+  u_complex_mul/U294/Y (XOR3X2_RVT)                       0.16       2.38 f
+  u_complex_mul/n853 (net)                      2         0.00       2.38 f
+  u_complex_mul/U104/Y (OR2X1_RVT)                        0.06       2.43 f
+  u_complex_mul/n12 (net)                       2         0.00       2.43 f
+  u_complex_mul/U103/Y (INVX1_RVT)                        0.02       2.46 r
+  u_complex_mul/n856 (net)                      1         0.00       2.46 r
+  u_complex_mul/U128/Y (OA21X1_RVT)                       0.06       2.52 r
+  u_complex_mul/n20 (net)                       1         0.00       2.52 r
+  u_complex_mul/U127/Y (INVX1_RVT)                        0.02       2.54 f
+  u_complex_mul/n129 (net)                      1         0.00       2.54 f
+  u_complex_mul/U176/Y (AO21X1_RVT)                       0.07       2.61 f
+  u_complex_mul/n941 (net)                      7         0.00       2.61 f
+  u_complex_mul/U380/Y (XNOR2X1_RVT)                      0.11       2.72 r
+  u_complex_mul/mul_dout_im[0] (net)            1         0.00       2.72 r
+  u_complex_mul/mul_dout_im[0] (complex_mul)              0.00       2.72 r
+  mul_dout_im[0] (net)                                    0.00       2.72 r
+  U77/Y (MUX21X1_RVT)                                     0.08       2.80 r
+  result_im[0] (net)                            1         0.00       2.80 r
+  dout_im_d_reg[0]/D (DFFARX1_RVT)                        0.00       2.80 r
+  data arrival time                                                  2.80
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             1.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  dout_im_d_reg[0]/CLK (DFFARX1_RVT)                      0.00       1.90 r
+  library setup time                                     -0.05       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -2.80
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.95
+
+
+  Startpoint: dout_re_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_re[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_re_reg[7]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_re_reg[7]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_re[7] (net)               1         0.00       1.24 r
+  dout_re[7] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_re_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_re[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_re_reg[6]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_re_reg[6]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_re[6] (net)               1         0.00       1.24 r
+  dout_re[6] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_re_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_re[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_re_reg[5]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_re_reg[5]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_re[5] (net)               1         0.00       1.24 r
+  dout_re[5] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_re_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_re[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_re_reg[4]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_re_reg[4]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_re[4] (net)               1         0.00       1.24 r
+  dout_re[4] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_re_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_re[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_re_reg[3]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_re_reg[3]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_re[3] (net)               1         0.00       1.24 r
+  dout_re[3] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_re_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_re[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_re_reg[2]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_re_reg[2]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_re[2] (net)               1         0.00       1.24 r
+  dout_re[2] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_re_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_re[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_re_reg[1]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_re_reg[1]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_re[1] (net)               1         0.00       1.24 r
+  dout_re[1] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_re_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_re[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_re_reg[0]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_re_reg[0]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_re[0] (net)               1         0.00       1.24 r
+  dout_re[0] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_im_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_im[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_im_reg[7]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_im_reg[7]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_im[7] (net)               1         0.00       1.24 r
+  dout_im[7] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_im_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_im[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_im_reg[6]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_im_reg[6]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_im[6] (net)               1         0.00       1.24 r
+  dout_im[6] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_im_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_im[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_im_reg[5]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_im_reg[5]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_im[5] (net)               1         0.00       1.24 r
+  dout_im[5] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_im_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_im[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_im_reg[4]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_im_reg[4]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_im[4] (net)               1         0.00       1.24 r
+  dout_im[4] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_im_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_im[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_im_reg[3]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_im_reg[3]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_im[3] (net)               1         0.00       1.24 r
+  dout_im[3] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_im_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_im[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_im_reg[2]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_im_reg[2]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_im[2] (net)               1         0.00       1.24 r
+  dout_im[2] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_im_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_im[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_im_reg[1]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_im_reg[1]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_im[1] (net)               1         0.00       1.24 r
+  dout_im[1] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: dout_im_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_im[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  complex_cal        8000                  saed32rvt_ss0p95v125c
+
+  Point                        Fanout      Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  dout_im_reg[0]/CLK (DFFARX1_RVT)         0.00       1.00 r
+  dout_im_reg[0]/Q (DFFARX1_RVT)           0.24       1.24 r
+  dout_im[0] (net)               1         0.00       1.24 r
+  dout_im[0] (out)                         0.00       1.24 r
+  data arrival time                                   1.24
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              1.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.60       1.30
+  data required time                                  1.30
+  -----------------------------------------------------------
+  data required time                                  1.30
+  data arrival time                                  -1.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+1

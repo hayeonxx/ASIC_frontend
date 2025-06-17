@@ -1,0 +1,125 @@
+
+
+##################################################################################
+# © 2002-2021 Synopsys, Inc. This Synopsys product and all associated
+# documentation and files are proprietary to Synopsys, Inc. and may only be
+# used pursuant to the terms and conditions of a written license agreement with
+# Synopsys, Inc. All other use, reproduction, modification, or distribution of
+# the Synopsys product or the associated documentation or files is strictly
+# prohibited.
+##################################################################################
+
+
+
+guide \
+  -tool { Design Compiler } \
+  -version { S-2021.06-SP5-5 built Sep 20, 2022 } \
+  -SVF { 20.177 } \
+  -timestamp { Fri May 30 11:30:22 2025 } 
+
+## Operation Id: 1
+guide_environment \
+  { { dc_product_version S-2021.06-SP5-5 } \
+    { dc_product_build_date { Sep 20, 2022 } } \
+    { bus_dimension_separator_style ][ } \
+    { bus_extraction_style %s\[%d:%d\] } \
+    { bus_multiple_separator_style , } \
+    { bus_naming_style %s[%d] } \
+    { bus_range_separator_style : } \
+    { dc_allow_rtl_pg false } \
+    { hdlin_unified_rtl_read FALSE } \
+    { hdlin_enable_hier_naming FALSE } \
+    { hdlin_enable_upf_compatible_naming FALSE } \
+    { hdlin_generate_naming_style %s_%d } \
+    { hdlin_generate_separator_style _ } \
+    { hdlin_interface_port_downto FALSE } \
+    { hdlin_preserve_sequential none } \
+    { hdlin_sverilog_std 2012 } \
+    { hdlin_sv_packages dont_chain } \
+    { hdlin_sv_union_member_naming FALSE } \
+    { hdlin_vhdl_std 2008 } \
+    { hdlin_vrlg_std 2005 } \
+    { hdlin_v2005_replication_semantics TRUE } \
+    { hdlin_while_loop_iterations 4096 } \
+    { hdlin_enable_verilog_configurations_canonical TRUE } \
+    { hdlin_enable_verilog_configurations_array_n_block TRUE } \
+    { hdlin_enable_persistent_macros FALSE } \
+    { hdlin_persistent_macros_filename syn_auto_generated_macro_file.sv } \
+    { link_portname_allow_period_to_match_underscore false } \
+    { link_portname_allow_square_bracket_to_match_underscore false } \
+    { port_complement_naming_style %s_BAR } \
+    { simplified_verification_mode FALSE } \
+    { template_naming_style %s_%p } \
+    { template_parameter_style %s%d } \
+    { template_separator_style _ } \
+    { upf_iso_filter_elements_with_applies_to ENABLE } \
+    { upf_isols_allow_instances_in_elements true } \
+    { link_library { * saed32rvt_ss0p95v125c.db  saed32io_fc_ss0p95v125c_2p25v.db  saed32pll_ss0p95v125c_2p25v.db  saed32sram_ss0p95v125c.db  dw_foundation.sldb } } \
+    { target_library saed32rvt_ss0p95v125c.db } \
+    { search_path { . /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_hvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_lvt/db_nldm  /tools/dk/SAED32_EDK/lib/io_std/db_nldm  /tools/dk/SAED32_EDK/lib/sram/db_nldm  /tools/dk/SAED32_EDK/lib/pll/db_nldm  ../rtl } } \
+    { synopsys_root /tools/synopsys_2021/syn/S-2021.06-SP5-5 } \
+    { cwd /home1/std251_4/week04/mydesign/syn } \
+    { define_design_lib { -path ./work work } } \
+    { hdlin_infer_enumerated_types FALSE } \
+    { hdlin_optimize_enum_types FALSE } \
+    { hdlin_allow_4state_parameters TRUE } \
+    { search_path { . /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_hvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_lvt/db_nldm  /tools/dk/SAED32_EDK/lib/io_std/db_nldm  /tools/dk/SAED32_EDK/lib/sram/db_nldm  /tools/dk/SAED32_EDK/lib/pll/db_nldm  ../rtl } } \
+    { target_library saed32rvt_ss0p95v125c.db } \
+    { link_library { * saed32rvt_ss0p95v125c.db  saed32io_fc_ss0p95v125c_2p25v.db  saed32pll_ss0p95v125c_2p25v.db  saed32sram_ss0p95v125c.db  dw_foundation.sldb } } \
+    { define_design_lib { -path ./work work } } \
+    { compile_seqmap_propagate_high_effort true } } 
+
+## Operation Id: 2
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 3
+guide_info \
+  -version { /home1/std251_4/week04/mydesign/rtl/mydesign.v 20.177 } 
+
+## Operation Id: 4
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 5
+guide_environment \
+  { { read_verilog { \{ mydesign.v shift2.v \} } } \
+    { current_design mydesign } \
+    { write_file { -format ddc -hierarchy -output out/unmapped/mydesign.ddc } } \
+    { write_file { -format verilog -hierarchy -output ./out/unmapped/mydesign.v } } \
+    { compile_seqmap_propagate_high_effort true } } 
+
+## Operation Id: 6
+guide_change_names \
+  -design { mydesign } \
+  { { cell add_151 add_x_1 } } 
+
+## Operation Id: 7
+guide_change_names \
+  -design { mydesign } \
+  { { cell sub_151 sub_x_2 } } 
+
+## Operation Id: 8
+guide_change_names \
+  -design { mydesign } \
+  { { cell cnt_reg[0] cnt_reg_0_ } \
+    { cell cnt_reg[1] cnt_reg_1_ } \
+    { cell xor_ff_reg[0] xor_ff_reg_0_ } \
+    { cell xor_ff_reg[1] xor_ff_reg_1_ } } 
+
+## Operation Id: 9
+guide_change_names \
+  -design { shift2 } \
+  { { cell shift_r_reg[1] shift_r_reg_1_ } \
+    { cell shift_r_reg[0] shift_r_reg_0_ } } 
+
+## Operation Id: 10
+guide_environment \
+  { { write_file { -format ddc -hierarchy -output out/mapped/mydesign.ddc } } \
+    { write_file { -format verilog -hierarchy -output ./out/mapped/mydesign.v } } \
+    { compile_seqmap_propagate_high_effort true } } 
+
+setup
+

@@ -1,0 +1,107 @@
+
+                                 PrimeTime (R)
+
+              Version S-2021.06-SP5-2 for linux64 - Sep 20, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Information: current_design won't return any data before link (DES-071)
+Loading verilog file '/home1/std251_4/week04/mydesign/syn/out/mapped/mydesign.v'
+Loading db file '/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db'
+Linking design mydesign...
+Information: Removing 1 unneeded designs..... (LNK-034)
+Information: 289 (98.30%) library cells are unused in library saed32rvt_ss0p95v125c..... (LNK-045)
+Information: total 289 library cells are unused (LNK-046)
+
+Reading SDC version 2.1...
+#####################################
+# clean-up
+#####################################
+#####################################
+# Constraints file for design mydesign
+###################################
+## define create clock : 333.33MHz -> 3ns
+create_clock -name clk -period 3.0 [get_ports clk]
+## source_latency : clock generator delay = 700ps
+set_clock_latency -source 0.7 [get_clocks clk]
+##network latency
+set_clock_latency -max 0.3 [get_clocks clk]
+##jitter + margin + skew*2 = 40 + 50 + 30*2 = 150ps
+set_clock_uncertainty -setup 0.15 [get_clocks clk]
+##transition time(rise/fall time) = 120ps
+set_clock_transition 0.12 [get_clocks clk] 
+#####n_rst######
+#Recovery Untested : clk edge 전 안정 상태 (-min)
+#Removal Untested : clk edge 이후 일정 시간 변화 x (-max, -min 필요 )
+# set_input_delay -max 0.3 -clock clk [get_ports n_rst]
+# set_input_delay -min 0.05 -clock clk [get_ports n_rst]
+set_false_path -from [get_ports n_rst]
+##Input/Output Dealy
+set_input_delay -max 2.15 -clock clk [get_ports din1]
+set_input_delay -max 0.45 -clock clk [get_ports up1_dn0]
+set_input_delay -max 0.4 -clock clk [get_ports sel]
+set_output_delay -max 0.5 -clock clk [get_ports do1]
+set_output_delay -max 0.4 -clock clk [get_ports do2]
+set_output_delay -max 2.04 -clock clk [get_ports do3]
+set_input_delay -max 0.2 -clock clk [get_ports cin*]
+set_output_delay -max 0.2 -clock clk [get_ports co*]
+set_driving_cell -library saed32rvt_ss0p95v125c -lib_cell INVX0_RVT [get_ports {din1 up1_dn0 sel cin1 cin2}]
+# #AND2X1_RVT/A1 capacitance 0.472084
+# #MAX_INPUT_LOAD = 0.472084 * 5 = 2.36042
+# #OUTPUT_LOAD = 2.36042 * 3 = 7.08126
+set_max_capacitance 2.36 [get_ports {din1 up1_dn0 sel cin1 cin2}]
+set_load 7.08 [all_outputs]
+Information: Building multi voltage information for entire design. (MV-022)
+****************************************
+Report : analysis_coverage
+Design : mydesign
+Version: S-2021.06-SP5-2
+Date   : Sat May 31 10:17:42 2025
+****************************************
+
+Type of Check         Total              Met         Violated         Untested
+--------------------------------------------------------------------------------
+setup                     7         7 (100%)         0 (  0%)         0 (  0%)
+hold                      7         2 ( 29%)         3 ( 43%)         2 ( 29%)
+recovery                  7         0 (  0%)         0 (  0%)         7 (100%)
+removal                   7         0 (  0%)         0 (  0%)         7 (100%)
+min_pulse_width          21        14 ( 67%)         0 (  0%)         7 ( 33%)
+out_setup                 8         8 (100%)         0 (  0%)         0 (  0%)
+out_hold                  8         0 (  0%)         0 (  0%)         8 (100%)
+--------------------------------------------------------------------------------
+All Checks               65        31 ( 48%)         3 (  5%)        31 ( 48%)
+
+Saving netlist information.....
+Saving miscellaneous application information.....
+Saving timing information.....
+Saving variable information.....
+Information: At least 1 MB of free disk space in pt_tmp_dir will be required to restore this session.  (SR-044)
+Saving mcmm design data.....
+Information: pl global not defined, therefore no spef file found
+Suppressed Messages Summary:
+Id          Severity      Occurrences   Suppressed
+-------------------------------------------------------------------------------
+ENV-003     Information             2            2
+Total 1 type of message is suppressed
+
+Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 2989.15 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 2 seconds
+Diagnostics summary: 6 informationals
+
+Thank you for using pt_shell!

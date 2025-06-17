@@ -1,0 +1,539 @@
+
+
+##################################################################################
+# © 2002-2021 Synopsys, Inc. This Synopsys product and all associated
+# documentation and files are proprietary to Synopsys, Inc. and may only be
+# used pursuant to the terms and conditions of a written license agreement with
+# Synopsys, Inc. All other use, reproduction, modification, or distribution of
+# the Synopsys product or the associated documentation or files is strictly
+# prohibited.
+##################################################################################
+
+
+
+guide \
+  -tool { Design Compiler } \
+  -version { S-2021.06-SP5-5 built Sep 20, 2022 } \
+  -SVF { 20.177 } \
+  -timestamp { Mon May 26 14:48:36 2025 } 
+
+## Operation Id: 1
+guide_environment \
+  { { dc_product_version S-2021.06-SP5-5 } \
+    { dc_product_build_date { Sep 20, 2022 } } \
+    { bus_dimension_separator_style ][ } \
+    { bus_extraction_style %s\[%d:%d\] } \
+    { bus_multiple_separator_style , } \
+    { bus_naming_style %s[%d] } \
+    { bus_range_separator_style : } \
+    { dc_allow_rtl_pg false } \
+    { hdlin_unified_rtl_read FALSE } \
+    { hdlin_enable_hier_naming FALSE } \
+    { hdlin_enable_upf_compatible_naming FALSE } \
+    { hdlin_generate_naming_style %s_%d } \
+    { hdlin_generate_separator_style _ } \
+    { hdlin_interface_port_downto FALSE } \
+    { hdlin_preserve_sequential none } \
+    { hdlin_sverilog_std 2012 } \
+    { hdlin_sv_packages dont_chain } \
+    { hdlin_sv_union_member_naming FALSE } \
+    { hdlin_vhdl_std 2008 } \
+    { hdlin_vrlg_std 2005 } \
+    { hdlin_v2005_replication_semantics TRUE } \
+    { hdlin_while_loop_iterations 4096 } \
+    { hdlin_enable_verilog_configurations_canonical TRUE } \
+    { hdlin_enable_verilog_configurations_array_n_block TRUE } \
+    { hdlin_enable_persistent_macros FALSE } \
+    { hdlin_persistent_macros_filename syn_auto_generated_macro_file.sv } \
+    { link_portname_allow_period_to_match_underscore false } \
+    { link_portname_allow_square_bracket_to_match_underscore false } \
+    { port_complement_naming_style %s_BAR } \
+    { simplified_verification_mode FALSE } \
+    { template_naming_style %s_%p } \
+    { template_parameter_style %s%d } \
+    { template_separator_style _ } \
+    { upf_iso_filter_elements_with_applies_to ENABLE } \
+    { upf_isols_allow_instances_in_elements true } \
+    { link_library { * saed32rvt_ss0p95v125c.db  saed32io_fc_ss0p95v125c_2p25v.db  saed32pll_ss0p95v125c_2p25v.db  saed32sram_ss0p95v125c.db  dw_foundation.sldb } } \
+    { target_library saed32rvt_ss0p95v125c.db } \
+    { search_path { . /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_hvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_lvt/db_nldm  /tools/dk/SAED32_EDK/lib/io_std/db_nldm  /tools/dk/SAED32_EDK/lib/sram/db_nldm  /tools/dk/SAED32_EDK/lib/pll/db_nldm  ../rtl } } \
+    { synopsys_root /tools/synopsys_2021/syn/S-2021.06-SP5-5 } \
+    { cwd /home1/std251_4/week09/complex_cal/syn } \
+    { define_design_lib { -path ./work work } } \
+    { hdlin_infer_enumerated_types FALSE } \
+    { hdlin_optimize_enum_types FALSE } \
+    { hdlin_allow_4state_parameters TRUE } \
+    { search_path { . /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_hvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_lvt/db_nldm  /tools/dk/SAED32_EDK/lib/io_std/db_nldm  /tools/dk/SAED32_EDK/lib/sram/db_nldm  /tools/dk/SAED32_EDK/lib/pll/db_nldm  ../rtl } } \
+    { target_library saed32rvt_ss0p95v125c.db } \
+    { link_library { * saed32rvt_ss0p95v125c.db  saed32io_fc_ss0p95v125c_2p25v.db  saed32pll_ss0p95v125c_2p25v.db  saed32sram_ss0p95v125c.db  dw_foundation.sldb } } \
+    { define_design_lib { -path ./work work } } \
+    { compile_seqmap_propagate_high_effort true } } 
+
+## Operation Id: 2
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 3
+guide_info \
+  -version { /home1/std251_4/week09/complex_cal/rtl/complex_add.v 20.177 } 
+
+## Operation Id: 4
+guide_info \
+  -version { /home1/std251_4/week09/complex_cal/rtl/complex_mul.v 20.177 } 
+
+## Operation Id: 5
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 6
+guide_environment \
+  { { read_verilog { \{ complex_cal.v complex_add.v complex_mul.v \} } } \
+    { current_design complex_cal } \
+    { write_file { -format ddc -hierarchy -output out/unmapped/complex_cal.ddc } } \
+    { write_file { -format verilog -hierarchy -output ./out/unmapped/complex_cal.v } } \
+    { compile_seqmap_propagate_high_effort true } } 
+
+## Operation Id: 7
+guide_merge \
+  -design { complex_mul } \
+  -datapath { DP_OP_7J1_122_8293 } \
+  -type { svfMergeDPOP } \
+  -input { 8 I1 } \
+  -input { 8 I2 } \
+  -input { 8 I3 } \
+  -input { 8 I4 } \
+  -output { 16 O1 } \
+  -pre_resource { { 16 } mult_13 = MULT { { I1 SIGN 16 } { I2 SIGN 16 } } } \
+  -pre_resource { { 16 } sub_13 = SUB { { mult_13.out.1 } { mult_13_2.out.1 } } } \
+  -pre_resource { { 16 } mult_13_2 = MULT { { I3 SIGN 16 } { I4 SIGN 16 } } } \
+  -pre_assign { O1 = { sub_13.out.1 } } 
+
+## Operation Id: 8
+guide_merge \
+  -design { complex_mul } \
+  -datapath { DP_OP_8J1_123_8293 } \
+  -type { svfMergeDPOP } \
+  -input { 8 I1 } \
+  -input { 8 I2 } \
+  -input { 8 I3 } \
+  -input { 8 I4 } \
+  -output { 16 O1 } \
+  -pre_resource { { 16 } mult_14 = MULT { { I1 SIGN 16 } { I2 SIGN 16 } } } \
+  -pre_resource { { 16 } add_14 = ADD { { mult_14.out.1 } { mult_14_2.out.1 } } } \
+  -pre_resource { { 16 } mult_14_2 = MULT { { I3 SIGN 16 } { I4 SIGN 16 } } } \
+  -pre_assign { O1 = { add_14.out.1 } } 
+
+## Operation Id: 9
+guide_uniquify \
+  -design { complex_mul } \
+  { { DP_OP_8J1_123_8293 complex_mul_DP_OP_8J1_123_8293_J1_0 } } 
+
+## Operation Id: 10
+guide_uniquify \
+  -design { complex_mul } \
+  { { DP_OP_7J1_122_8293 complex_mul_DP_OP_7J1_122_8293_J1_0 } } 
+
+## Operation Id: 11
+guide_boundary_netlist \
+  -file { d1/netlists/S1/J1/dw-1 } \
+  { saed32rvt_ss0p95v125c } 
+
+## Operation Id: 12
+guide_replace \
+  -origin { Gensh } \
+  -body { complex_mul_DP_OP_8J1_123_8293_J1_0 } \
+  -input { signed 8 I1 bin } \
+  -input { signed 8 I2 bin } \
+  -input { signed 8 I3 bin } \
+  -input { signed 8 I4 bin } \
+  -output { 16 O1 bin } \
+  -pre_resource { { 16 } OP0 = MULT { { I1 SIGN 16 } { I2 SIGN 16 } } } \
+  -pre_resource { { 16 } OP1 = MULT { { I3 SIGN 16 } { I4 SIGN 16 } } } \
+  -pre_resource { { 16 } OP2 = ADD { { OP0.out.1 SIGN 16 } { OP1.out.1 SIGN 16 } } } \
+  -pre_assign { O1 = { OP2.out.1 ZERO 16 } } \
+  -post_resource { { 16 } OP2 = SOP { { { I1 SIGN 16 } { I2 SIGN 16 } } { { I3 SIGN 16 } { I4 SIGN 16 } } } } \
+  -post_assign { O1 = { OP2.out.1 ZERO 16 } } 
+
+## Operation Id: 13
+guide_boundary \
+  -body { complex_mul_DP_OP_8J1_123_8293_J1_0 } \
+  -operand { I1 bin 8 } \
+  -column { I1 0 { I1[0] } } \
+  -column { I1 1 { I1[1] } } \
+  -column { I1 2 { I1[2] } } \
+  -column { I1 3 { I1[3] } } \
+  -column { I1 4 { I1[4] } } \
+  -column { I1 5 { I1[5] } } \
+  -column { I1 6 { I1[6] } } \
+  -column { I1 7 { I1[7] } } \
+  -operand { I2 bin 8 } \
+  -column { I2 0 { I2[0] } } \
+  -column { I2 1 { I2[1] } } \
+  -column { I2 2 { I2[2] } } \
+  -column { I2 3 { I2[3] } } \
+  -column { I2 4 { I2[4] } } \
+  -column { I2 5 { I2[5] } } \
+  -column { I2 6 { I2[6] } } \
+  -column { I2 7 { I2[7] } } \
+  -operand { I3 bin 8 } \
+  -column { I3 0 { I3[0] } } \
+  -column { I3 1 { I3[1] } } \
+  -column { I3 2 { I3[2] } } \
+  -column { I3 3 { I3[3] } } \
+  -column { I3 4 { I3[4] } } \
+  -column { I3 5 { I3[5] } } \
+  -column { I3 6 { I3[6] } } \
+  -column { I3 7 { I3[7] } } \
+  -operand { I4 bin 8 } \
+  -column { I4 0 { I4[0] } } \
+  -column { I4 1 { I4[1] } } \
+  -column { I4 2 { I4[2] } } \
+  -column { I4 3 { I4[3] } } \
+  -column { I4 4 { I4[4] } } \
+  -column { I4 5 { I4[5] } } \
+  -column { I4 6 { I4[6] } } \
+  -column { I4 7 { I4[7] } } \
+  -operand { OP2.out.1 bin 16 } \
+  -column { OP2.out.1 0 { O1[0] } } \
+  -column { OP2.out.1 1 { O1[1] } } \
+  -column { OP2.out.1 2 { O1[2] } } \
+  -column { OP2.out.1 3 { O1[3] } } \
+  -column { OP2.out.1 4 { O1[4] } } \
+  -column { OP2.out.1 5 { O1[5] } } \
+  -column { OP2.out.1 6 { O1[6] } } \
+  -column { OP2.out.1 7 { O1[7] } } \
+  -column { OP2.out.1 8 { O1[8] } } \
+  -column { OP2.out.1 9 { O1[9] } } \
+  -column { OP2.out.1 10 { O1[10] } } \
+  -column { OP2.out.1 11 { O1[11] } } \
+  -column { OP2.out.1 12 { O1[12] } } \
+  -column { OP2.out.1 13 { O1[13] } } \
+  -column { OP2.out.1 14 { O1[14] } } \
+  -column { OP2.out.1 15 { O1[15] } } \
+  -resource { OP2 \
+     { I1 I2 I3 I4 } \
+     { OP2.out.1 } } 
+
+## Operation Id: 14
+guide_replace \
+  -origin { Gensh } \
+  -body { complex_mul_DP_OP_7J1_122_8293_J1_0 } \
+  -input { signed 8 I1 bin } \
+  -input { signed 8 I2 bin } \
+  -input { signed 8 I3 bin } \
+  -input { signed 8 I4 bin } \
+  -output { 16 O1 bin } \
+  -pre_resource { { 16 } OP3 = MULT { { I1 SIGN 16 } { I2 SIGN 16 } } } \
+  -pre_resource { { 16 } OP4 = MULT { { I3 SIGN 16 } { I4 SIGN 16 } } } \
+  -pre_resource { { 16 } OP5 = SUB { { OP3.out.1 SIGN 16 } { OP4.out.1 SIGN 16 } } } \
+  -pre_assign { O1 = { OP5.out.1 SIGN 16 } } \
+  -post_resource { { 16 } OP5 = SOP { { { I1 SIGN 16 } { I2 SIGN 16 } } { { - I3 SIGN 16 } { I4 SIGN 16 } } } } \
+  -post_assign { O1 = { OP5.out.1 SIGN 16 } } 
+
+## Operation Id: 15
+guide_boundary \
+  -body { complex_mul_DP_OP_7J1_122_8293_J1_0 } \
+  -operand { I1 bin 8 } \
+  -column { I1 0 { I1[0] } } \
+  -column { I1 1 { I1[1] } } \
+  -column { I1 2 { I1[2] } } \
+  -column { I1 3 { I1[3] } } \
+  -column { I1 4 { I1[4] } } \
+  -column { I1 5 { I1[5] } } \
+  -column { I1 6 { I1[6] } } \
+  -column { I1 7 { I1[7] } } \
+  -operand { I2 bin 8 } \
+  -column { I2 0 { I2[0] } } \
+  -column { I2 1 { I2[1] } } \
+  -column { I2 2 { I2[2] } } \
+  -column { I2 3 { I2[3] } } \
+  -column { I2 4 { I2[4] } } \
+  -column { I2 5 { I2[5] } } \
+  -column { I2 6 { I2[6] } } \
+  -column { I2 7 { I2[7] } } \
+  -operand { I3 bin 8 } \
+  -column { I3 0 { I3[0] } } \
+  -column { I3 1 { I3[1] } } \
+  -column { I3 2 { I3[2] } } \
+  -column { I3 3 { I3[3] } } \
+  -column { I3 4 { I3[4] } } \
+  -column { I3 5 { I3[5] } } \
+  -column { I3 6 { I3[6] } } \
+  -column { I3 7 { I3[7] } } \
+  -operand { I4 bin 8 } \
+  -column { I4 0 { I4[0] } } \
+  -column { I4 1 { I4[1] } } \
+  -column { I4 2 { I4[2] } } \
+  -column { I4 3 { I4[3] } } \
+  -column { I4 4 { I4[4] } } \
+  -column { I4 5 { I4[5] } } \
+  -column { I4 6 { I4[6] } } \
+  -column { I4 7 { I4[7] } } \
+  -operand { OP5.out.1 bin 16 } \
+  -column { OP5.out.1 0 { O1[0] } } \
+  -column { OP5.out.1 1 { O1[1] } } \
+  -column { OP5.out.1 2 { O1[2] } } \
+  -column { OP5.out.1 3 { O1[3] } } \
+  -column { OP5.out.1 4 { O1[4] } } \
+  -column { OP5.out.1 5 { O1[5] } } \
+  -column { OP5.out.1 6 { O1[6] } } \
+  -column { OP5.out.1 7 { O1[7] } } \
+  -column { OP5.out.1 8 { O1[8] } } \
+  -column { OP5.out.1 9 { O1[9] } } \
+  -column { OP5.out.1 10 { O1[10] } } \
+  -column { OP5.out.1 11 { O1[11] } } \
+  -column { OP5.out.1 12 { O1[12] } } \
+  -column { OP5.out.1 13 { O1[13] } } \
+  -column { OP5.out.1 14 { O1[14] } } \
+  -column { OP5.out.1 15 { O1[15] } } \
+  -resource { OP5 \
+     { I1 I2 I3 I4 } \
+     { OP5.out.1 } } 
+
+## Operation Id: 16
+guide_architecture_netlist \
+  -file { d1/netlists/S1/J1/dw-1 } \
+  { saed32rvt_ss0p95v125c } 
+
+## Operation Id: 17
+guide_datapath \
+  -design { complex_mul } \
+  -datapath { DP_OP_8J1_123_8293 } \
+  -body { complex_mul_DP_OP_8J1_123_8293_J1_0 } 
+
+## Operation Id: 18
+guide_datapath \
+  -design { complex_mul } \
+  -datapath { DP_OP_7J1_122_8293 } \
+  -body { complex_mul_DP_OP_7J1_122_8293_J1_0 } 
+
+## Operation Id: 19
+guide_change_names \
+  -design { complex_add } \
+  { { cell add_13 add_x_1 } } 
+
+## Operation Id: 20
+guide_change_names \
+  -design { complex_add } \
+  { { cell add_14 add_x_2 } } 
+
+## Operation Id: 21
+guide_boundary_netlist \
+  -file { d1/netlists/dw-1 } \
+  { saed32rvt_ss0p95v125c } 
+
+## Operation Id: 22
+guide_replace \
+  -origin { Gensh } \
+  -body { complex_mul_DP_OP_7J1_122_8293_1 } \
+  -input { signed 8 I1 bin } \
+  -input { signed 8 I2 bin } \
+  -input { signed 8 I3 bin } \
+  -input { signed 8 I4 bin } \
+  -output { 16 O1 bin } \
+  -pre_resource { { 16 } OP6 = MULT { { I1 SIGN 16 } { I2 SIGN 16 } } } \
+  -pre_resource { { 16 } OP7 = MULT { { I3 SIGN 16 } { I4 SIGN 16 } } } \
+  -pre_resource { { 16 } OP8 = SUB { { OP6.out.1 SIGN 16 } { OP7.out.1 SIGN 16 } } } \
+  -pre_assign { O1 = { OP8.out.1 SIGN 16 } } \
+  -post_resource { { 16 } OP8 = SOP { { { I1 SIGN 16 } { I2 SIGN 16 } } { { - I3 SIGN 16 } { I4 SIGN 16 } } } } \
+  -post_assign { O1 = { OP8.out.1 SIGN 16 } } 
+
+## Operation Id: 23
+guide_boundary \
+  -body { complex_mul_DP_OP_7J1_122_8293_1 } \
+  -operand { I1 bin 8 } \
+  -column { I1 0 { I1[0] } } \
+  -column { I1 1 { I1[1] } } \
+  -column { I1 2 { I1[2] } } \
+  -column { I1 3 { I1[3] } } \
+  -column { I1 4 { I1[4] } } \
+  -column { I1 5 { I1[5] } } \
+  -column { I1 6 { I1[6] } } \
+  -column { I1 7 { I1[7] } } \
+  -operand { I2 bin 8 } \
+  -column { I2 0 { I2[0] } } \
+  -column { I2 1 { I2[1] } } \
+  -column { I2 2 { I2[2] } } \
+  -column { I2 3 { I2[3] } } \
+  -column { I2 4 { I2[4] } } \
+  -column { I2 5 { I2[5] } } \
+  -column { I2 6 { I2[6] } } \
+  -column { I2 7 { I2[7] } } \
+  -operand { I3 bin 8 } \
+  -column { I3 0 { I3[0] } } \
+  -column { I3 1 { I3[1] } } \
+  -column { I3 2 { I3[2] } } \
+  -column { I3 3 { I3[3] } } \
+  -column { I3 4 { I3[4] } } \
+  -column { I3 5 { I3[5] } } \
+  -column { I3 6 { I3[6] } } \
+  -column { I3 7 { I3[7] } } \
+  -operand { I4 bin 8 } \
+  -column { I4 0 { I4[0] } } \
+  -column { I4 1 { I4[1] } } \
+  -column { I4 2 { I4[2] } } \
+  -column { I4 3 { I4[3] } } \
+  -column { I4 4 { I4[4] } } \
+  -column { I4 5 { I4[5] } } \
+  -column { I4 6 { I4[6] } } \
+  -column { I4 7 { I4[7] } } \
+  -operand { OP8.out.1 bin 16 } \
+  -column { OP8.out.1 0 { O1[0] } } \
+  -column { OP8.out.1 1 { O1[1] } } \
+  -column { OP8.out.1 2 { O1[2] } } \
+  -column { OP8.out.1 3 { O1[3] } } \
+  -column { OP8.out.1 4 { O1[4] } } \
+  -column { OP8.out.1 5 { O1[5] } } \
+  -column { OP8.out.1 6 { O1[6] } } \
+  -column { OP8.out.1 7 { O1[7] } } \
+  -column { OP8.out.1 8 { O1[8] } } \
+  -column { OP8.out.1 9 { O1[9] } } \
+  -column { OP8.out.1 10 { O1[10] } } \
+  -column { OP8.out.1 11 { O1[11] } } \
+  -column { OP8.out.1 12 { O1[12] } } \
+  -column { OP8.out.1 13 { O1[13] } } \
+  -column { OP8.out.1 14 { O1[14] } } \
+  -column { OP8.out.1 15 { O1[15] } } \
+  -resource { OP8 \
+     { I1 I2 I3 I4 } \
+     { OP8.out.1 } } 
+
+## Operation Id: 24
+guide_replace \
+  -origin { Gensh } \
+  -body { complex_mul_DP_OP_8J1_123_8293_2 } \
+  -input { signed 8 I1 bin } \
+  -input { signed 8 I2 bin } \
+  -input { signed 8 I3 bin } \
+  -input { signed 8 I4 bin } \
+  -output { 16 O1 bin } \
+  -pre_resource { { 16 } OP12 = MULT { { I1 SIGN 16 } { I2 SIGN 16 } } } \
+  -pre_resource { { 16 } OP13 = MULT { { I3 SIGN 16 } { I4 SIGN 16 } } } \
+  -pre_resource { { 16 } OP14 = ADD { { OP12.out.1 SIGN 16 } { OP13.out.1 SIGN 16 } } } \
+  -pre_assign { O1 = { OP14.out.1 ZERO 16 } } \
+  -post_resource { { 16 } OP14 = SOP { { { I2 SIGN 16 } { I1 SIGN 16 } } { { I4 SIGN 16 } { I3 SIGN 16 } } } } \
+  -post_assign { O1 = { OP14.out.1 ZERO 16 } } 
+
+## Operation Id: 25
+guide_boundary \
+  -body { complex_mul_DP_OP_8J1_123_8293_2 } \
+  -operand { I1 bin 8 } \
+  -column { I1 0 { I1[0] } } \
+  -column { I1 1 { I1[1] } } \
+  -column { I1 2 { I1[2] } } \
+  -column { I1 3 { I1[3] } } \
+  -column { I1 4 { I1[4] } } \
+  -column { I1 5 { I1[5] } } \
+  -column { I1 6 { I1[6] } } \
+  -column { I1 7 { I1[7] } } \
+  -operand { I2 bin 8 } \
+  -column { I2 0 { I2[0] } } \
+  -column { I2 1 { I2[1] } } \
+  -column { I2 2 { I2[2] } } \
+  -column { I2 3 { I2[3] } } \
+  -column { I2 4 { I2[4] } } \
+  -column { I2 5 { I2[5] } } \
+  -column { I2 6 { I2[6] } } \
+  -column { I2 7 { I2[7] } } \
+  -operand { I3 bin 8 } \
+  -column { I3 0 { I3[0] } } \
+  -column { I3 1 { I3[1] } } \
+  -column { I3 2 { I3[2] } } \
+  -column { I3 3 { I3[3] } } \
+  -column { I3 4 { I3[4] } } \
+  -column { I3 5 { I3[5] } } \
+  -column { I3 6 { I3[6] } } \
+  -column { I3 7 { I3[7] } } \
+  -operand { I4 bin 8 } \
+  -column { I4 0 { I4[0] } } \
+  -column { I4 1 { I4[1] } } \
+  -column { I4 2 { I4[2] } } \
+  -column { I4 3 { I4[3] } } \
+  -column { I4 4 { I4[4] } } \
+  -column { I4 5 { I4[5] } } \
+  -column { I4 6 { I4[6] } } \
+  -column { I4 7 { I4[7] } } \
+  -operand { OP14.out.1 bin 16 } \
+  -column { OP14.out.1 0 { O1[0] } } \
+  -column { OP14.out.1 1 { O1[1] } } \
+  -column { OP14.out.1 2 { O1[2] } } \
+  -column { OP14.out.1 3 { O1[3] } } \
+  -column { OP14.out.1 4 { O1[4] } } \
+  -column { OP14.out.1 5 { O1[5] } } \
+  -column { OP14.out.1 6 { O1[6] } } \
+  -column { OP14.out.1 7 { O1[7] } } \
+  -column { OP14.out.1 8 { O1[8] } } \
+  -column { OP14.out.1 9 { O1[9] } } \
+  -column { OP14.out.1 10 { O1[10] } } \
+  -column { OP14.out.1 11 { O1[11] } } \
+  -column { OP14.out.1 12 { O1[12] } } \
+  -column { OP14.out.1 13 { O1[13] } } \
+  -column { OP14.out.1 14 { O1[14] } } \
+  -column { OP14.out.1 15 { O1[15] } } \
+  -resource { OP14 \
+     { I2 I1 I4 I3 } \
+     { OP14.out.1 } } 
+
+## Operation Id: 26
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1 } \
+  { saed32rvt_ss0p95v125c } 
+
+## Operation Id: 27
+guide_datapath \
+  -design { complex_cal } \
+  -datapath { u_complex_mul/DP_OP_7J1_122_8293 } \
+  -body { complex_mul_DP_OP_7J1_122_8293_1 } 
+
+## Operation Id: 28
+guide_datapath \
+  -design { complex_cal } \
+  -datapath { u_complex_mul/DP_OP_8J1_123_8293 } \
+  -body { complex_mul_DP_OP_8J1_123_8293_2 } 
+
+## Operation Id: 29
+guide_change_names \
+  -design { complex_cal } \
+  { { cell dout_im_d_reg[7] dout_im_d_reg_7_ } \
+    { cell dout_im_reg[7] dout_im_reg_7_ } \
+    { cell dout_im_d_reg[6] dout_im_d_reg_6_ } \
+    { cell dout_im_reg[6] dout_im_reg_6_ } \
+    { cell dout_im_d_reg[5] dout_im_d_reg_5_ } \
+    { cell dout_im_reg[5] dout_im_reg_5_ } \
+    { cell dout_im_d_reg[4] dout_im_d_reg_4_ } \
+    { cell dout_im_reg[4] dout_im_reg_4_ } \
+    { cell dout_im_d_reg[3] dout_im_d_reg_3_ } \
+    { cell dout_im_reg[3] dout_im_reg_3_ } \
+    { cell dout_im_d_reg[2] dout_im_d_reg_2_ } \
+    { cell dout_im_reg[2] dout_im_reg_2_ } \
+    { cell dout_im_d_reg[1] dout_im_d_reg_1_ } \
+    { cell dout_im_reg[1] dout_im_reg_1_ } \
+    { cell dout_im_d_reg[0] dout_im_d_reg_0_ } \
+    { cell dout_im_reg[0] dout_im_reg_0_ } \
+    { cell dout_re_d_reg[7] dout_re_d_reg_7_ } \
+    { cell dout_re_d_reg[6] dout_re_d_reg_6_ } \
+    { cell dout_re_d_reg[5] dout_re_d_reg_5_ } \
+    { cell dout_re_d_reg[4] dout_re_d_reg_4_ } \
+    { cell dout_re_d_reg[3] dout_re_d_reg_3_ } \
+    { cell dout_re_d_reg[2] dout_re_d_reg_2_ } \
+    { cell dout_re_d_reg[1] dout_re_d_reg_1_ } \
+    { cell dout_re_d_reg[0] dout_re_d_reg_0_ } \
+    { cell dout_re_reg[7] dout_re_reg_7_ } \
+    { cell dout_re_reg[6] dout_re_reg_6_ } \
+    { cell dout_re_reg[5] dout_re_reg_5_ } \
+    { cell dout_re_reg[4] dout_re_reg_4_ } \
+    { cell dout_re_reg[3] dout_re_reg_3_ } \
+    { cell dout_re_reg[2] dout_re_reg_2_ } \
+    { cell dout_re_reg[1] dout_re_reg_1_ } \
+    { cell dout_re_reg[0] dout_re_reg_0_ } } 
+
+## Operation Id: 30
+guide_environment \
+  { { write_file { -format ddc -hierarchy -output out/mapped/complex_cal.ddc } } \
+    { write_file { -format verilog -hierarchy -output out/mapped/complex_cal.v } } \
+    { compile_seqmap_propagate_high_effort true } } 
+
+setup
+

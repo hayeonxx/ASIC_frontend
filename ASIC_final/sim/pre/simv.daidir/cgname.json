@@ -1,0 +1,134 @@
+{
+    "fir13_filter": [
+        "fir13_filter",
+        "A5pf8",
+        "module",
+        26
+    ],
+    "tb_fir13_filter": [
+        "tb_fir13_filter",
+        "JjEFG",
+        "module",
+        25
+    ],
+    "AND2X1_RVT": [
+        "AND2X1_RVT",
+        "VFW6S",
+        "module",
+        5
+    ],
+    "AO21X1_RVT": [
+        "AO21X1_RVT",
+        "Tbe3K",
+        "module",
+        8
+    ],
+    "AO222X1_RVT": [
+        "AO222X1_RVT",
+        "UxugA",
+        "module",
+        49
+    ],
+    "AO22X1_RVT": [
+        "AO22X1_RVT",
+        "IGStm",
+        "module",
+        9
+    ],
+    "DFFARX1_RVT": [
+        "DFFARX1_RVT",
+        "fPZ7f",
+        "module",
+        12
+    ],
+    "FADDX1_RVT": [
+        "FADDX1_RVT",
+        "Mssj6",
+        "module",
+        16
+    ],
+    "HADDX1_RVT": [
+        "HADDX1_RVT",
+        "n9AgH",
+        "module",
+        45
+    ],
+    "INVX0_RVT": [
+        "INVX0_RVT",
+        "LkLxL",
+        "module",
+        18
+    ],
+    "NAND2X0_RVT": [
+        "NAND2X0_RVT",
+        "RDfSw",
+        "module",
+        24
+    ],
+    "NBUFFX2_RVT": [
+        "NBUFFX2_RVT",
+        "ak7Qh",
+        "module",
+        43
+    ],
+    "OA21X1_RVT": [
+        "OA21X1_RVT",
+        "PPWFq",
+        "module",
+        41
+    ],
+    "OA22X1_RVT": [
+        "OA22X1_RVT",
+        "tF3xC",
+        "module",
+        39
+    ],
+    "OAI21X1_RVT": [
+        "OAI21X1_RVT",
+        "hP6N4",
+        "module",
+        34
+    ],
+    "OAI222X1_RVT": [
+        "OAI222X1_RVT",
+        "Gua3D",
+        "module",
+        37
+    ],
+    "OR2X1_RVT": [
+        "OR2X1_RVT",
+        "HQeZw",
+        "module",
+        38
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        46
+    ],
+    "s_faddx1_S": [
+        "s_faddx1_S",
+        "CZfJ6",
+        "udp",
+        47
+    ],
+    "s_faddx1_CO": [
+        "s_faddx1_CO",
+        "u96GI",
+        "udp",
+        48
+    ],
+    "saed32_xbuf_lvt": [
+        "saed32_xbuf_lvt",
+        "Gjg4Z",
+        "udp",
+        50
+    ],
+    "saed32_dff_pos_lvt": [
+        "saed32_dff_pos_lvt",
+        "Z0GwU",
+        "udp",
+        51
+    ]
+}

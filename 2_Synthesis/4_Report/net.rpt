@@ -1,0 +1,411 @@
+ 
+****************************************
+Report : net
+Design : ORCA
+Version: S-2021.06-SP5-5
+Date   : Mon Dec 11 12:48:42 2023
+****************************************
+
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+ORCA                   2000000           saed32rvt_ss0p95v125c
+IOPOWER                280000            saed32rvt_ss0p95v125c
+CLOCK_GEN              16000             saed32rvt_ss0p95v125c
+ORCA_TOP               280000            saed32rvt_ss0p95v125c
+CLKMUL                 ForQA             saed32rvt_ss0p95v125c
+RESET_BLOCK            ForQA             saed32rvt_ss0p95v125c
+PCI_CORE               70000             saed32rvt_ss0p95v125c
+PARSER                 8000              saed32rvt_ss0p95v125c
+CONTEXT_MEM            70000             saed32rvt_ss0p95v125c
+SDRAM_IF               70000             saed32rvt_ss0p95v125c
+RISC_CORE              35000             saed32rvt_ss0p95v125c
+BLENDER                16000             saed32rvt_ss0p95v125c
+PCI_RFIFO              16000             saed32rvt_ss0p95v125c
+PCI_WFIFO              16000             saed32rvt_ss0p95v125c
+SDRAM_RFIFO            16000             saed32rvt_ss0p95v125c
+SDRAM_WFIFO            16000             saed32rvt_ss0p95v125c
+PCI_W_MUX              ForQA             saed32rvt_ss0p95v125c
+SD_W_MUX               ForQA             saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_CONTEXT_MEM_0 ForQA saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_CONTEXT_MEM_1 ForQA saed32rvt_ss0p95v125c
+ALU                    8000              saed32rvt_ss0p95v125c
+CONTROL                ForQA             saed32rvt_ss0p95v125c
+DATA_PATH              8000              saed32rvt_ss0p95v125c
+INSTRN_LAT             8000              saed32rvt_ss0p95v125c
+PRGRM_CNT_TOP          8000              saed32rvt_ss0p95v125c
+REG_FILE               35000             saed32rvt_ss0p95v125c
+STACK_TOP              8000              saed32rvt_ss0p95v125c
+BLENDER_DW01_add_0_DW01_add_1 ForQA      saed32rvt_ss0p95v125c
+BLENDER_DW01_add_1_DW01_add_2 ForQA      saed32rvt_ss0p95v125c
+BLENDER_DW01_add_2_DW01_add_3 ForQA      saed32rvt_ss0p95v125c
+BLENDER_DW01_add_3_DW01_add_4 ForQA      saed32rvt_ss0p95v125c
+BLENDER_DW01_sub_0_DW01_sub_9 ForQA      saed32rvt_ss0p95v125c
+BLENDER_DW01_add_4_DW01_add_5 ForQA      saed32rvt_ss0p95v125c
+BLENDER_DW01_sub_1_DW01_sub_10 ForQA     saed32rvt_ss0p95v125c
+BLENDER_DW01_add_5_DW01_add_6 ForQA      saed32rvt_ss0p95v125c
+BLENDER_DW01_add_6_DW01_add_7 ForQA      saed32rvt_ss0p95v125c
+BLENDER_DW_mult_uns_0  8000              saed32rvt_ss0p95v125c
+BLENDER_DW_mult_uns_1  8000              saed32rvt_ss0p95v125c
+PCI_RFIFO_DW_fifoctl_s2_sf_0_DW_fifoctl_s2_sf_3 8000 saed32rvt_ss0p95v125c
+PCI_WFIFO_DW_fifoctl_s2_sf_0_DW_fifoctl_s2_sf_2 8000 saed32rvt_ss0p95v125c
+SDRAM_RFIFO_DW_fifoctl_s2_sf_0_DW_fifoctl_s2_sf_1 8000 saed32rvt_ss0p95v125c
+SDRAM_WFIFO_DW_fifoctl_s2_sf_0 8000      saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_ALU_0 ForQA         saed32rvt_ss0p95v125c
+ALU_DW01_sub_3         8000              saed32rvt_ss0p95v125c
+ALU_DW01_add_3         8000              saed32rvt_ss0p95v125c
+ALU_DW01_dec_1         ForQA             saed32rvt_ss0p95v125c
+ALU_DW01_inc_3         ForQA             saed32rvt_ss0p95v125c
+ALU_DW01_sub_2         8000              saed32rvt_ss0p95v125c
+ALU_DW01_add_2         8000              saed32rvt_ss0p95v125c
+ALU_DW01_inc_4         ForQA             saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_DATA_PATH_0 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_DATA_PATH_2 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_INSTRN_LAT_0 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_INSTRN_LAT_3 ForQA  saed32rvt_ss0p95v125c
+PRGRM_FSM              ForQA             saed32rvt_ss0p95v125c
+PRGRM_DECODE           ForQA             saed32rvt_ss0p95v125c
+PRGRM_CNT              ForQA             saed32rvt_ss0p95v125c
+STACK_FSM              ForQA             saed32rvt_ss0p95v125c
+STACK_MEM_0            8000              saed32rvt_ss0p95v125c
+STACK_MEM_2            8000              saed32rvt_ss0p95v125c
+STACK_MEM_1            8000              saed32rvt_ss0p95v125c
+PCI_RFIFO_DW_FIFOCTL_IF_0_DW_FIFOCTL_IF_6 8000 saed32rvt_ss0p95v125c
+PCI_RFIFO_DW_FIFOCTL_IF_1_DW_FIFOCTL_IF_7 8000 saed32rvt_ss0p95v125c
+PCI_WFIFO_DW_FIFOCTL_IF_0_DW_FIFOCTL_IF_4 8000 saed32rvt_ss0p95v125c
+PCI_WFIFO_DW_FIFOCTL_IF_1_DW_FIFOCTL_IF_5 8000 saed32rvt_ss0p95v125c
+SDRAM_RFIFO_DW_FIFOCTL_IF_0_DW_FIFOCTL_IF_2 8000 saed32rvt_ss0p95v125c
+SDRAM_RFIFO_DW_FIFOCTL_IF_1_DW_FIFOCTL_IF_3 8000 saed32rvt_ss0p95v125c
+SDRAM_WFIFO_DW_FIFOCTL_IF_0 8000         saed32rvt_ss0p95v125c
+SDRAM_WFIFO_DW_FIFOCTL_IF_1 8000         saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_PRGRM_CNT ForQA     saed32rvt_ss0p95v125c
+PRGRM_CNT_DW01_inc_0_DW01_inc_1 ForQA    saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_FSM ForQA     saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_1 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_24 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_0 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_29 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_PCI_RFIFO_DW_FIFOCTL_IF_0_0 ForQA saed32rvt_ss0p95v125c
+PCI_RFIFO_DW_inc_0     ForQA             saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_PCI_RFIFO_DW_FIFOCTL_IF_1_0 ForQA saed32rvt_ss0p95v125c
+PCI_RFIFO_DW_inc_1     ForQA             saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_PCI_WFIFO_DW_FIFOCTL_IF_0_0 ForQA saed32rvt_ss0p95v125c
+PCI_WFIFO_DW_inc_0     ForQA             saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_PCI_WFIFO_DW_FIFOCTL_IF_1_0 ForQA saed32rvt_ss0p95v125c
+PCI_WFIFO_DW_inc_1     ForQA             saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_SDRAM_RFIFO_DW_FIFOCTL_IF_0_0 ForQA saed32rvt_ss0p95v125c
+SDRAM_RFIFO_DW_inc_0   ForQA             saed32rvt_ss0p95v125c
+SDRAM_RFIFO_DW01_sub_0_DW01_sub_3 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_SDRAM_RFIFO_DW_FIFOCTL_IF_1_0 ForQA saed32rvt_ss0p95v125c
+SDRAM_RFIFO_DW_inc_1   ForQA             saed32rvt_ss0p95v125c
+SDRAM_RFIFO_DW01_sub_1_DW01_sub_4 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_SDRAM_WFIFO_DW_FIFOCTL_IF_0_0 ForQA saed32rvt_ss0p95v125c
+SDRAM_WFIFO_DW_inc_0   ForQA             saed32rvt_ss0p95v125c
+SDRAM_WFIFO_DW01_sub_0_DW01_sub_1 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_SDRAM_WFIFO_DW_FIFOCTL_IF_1_0 ForQA saed32rvt_ss0p95v125c
+SDRAM_WFIFO_DW_inc_1   ForQA             saed32rvt_ss0p95v125c
+SDRAM_WFIFO_DW01_sub_1_DW01_sub_2 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_2 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_3 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_4 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_5 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_6 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_7 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_8 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_9 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_10 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_11 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_12 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_13 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_14 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_15 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_16 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_17 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_18 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_19 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_20 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_21 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_22 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_23 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_INSTRN_LAT_1 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_INSTRN_LAT_2 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_DATA_PATH_1 ForQA   saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_25 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_26 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_27 ForQA  saed32rvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_28 ForQA  saed32rvt_ss0p95v125c
+
+
+Attributes:
+   dr - drc disabled
+    d - dont_touch
+    I - ideal_network
+    h - high fanout
+
+Net Fanout Fanin     Load      LoadUR    LoadUF    LoadLR    LoadLF    Resist    Pins      Attr
+-----------------------------------------------------------------------------------------------
+*Logic0*     50      1   675.44   678.46   672.42    678.46    672.42    210.25      51    dr
+*Logic1*     65      1  1039.45  1025.00  1053.91   1025.00   1053.91    294.37      66    dr
+buf_pclk   1065      1     0.00     0.00     0.00      0.00      0.00   5543.38    1066    dr, d, I, h
+buf_sdram_clk   1169      1     0.00     0.00     0.00     0.00     0.00  5543.38   1170   dr, d, I, h
+buf_sys_2x_clk     28      1     0.00     0.00     0.00     0.00     0.00    92.48     29  dr, d, I
+buf_sys_clk    133      1     0.00     0.00     0.00     0.00     0.00   681.32     134    dr, d, I
+n28      6      1      141.19    143.18    139.20    143.18    139.20      3.87       7    
+n29      5      1      117.65    119.31    115.99    119.31    115.99      2.86       6    
+n30      5      1      117.65    119.31    115.99    119.31    115.99      2.86       6    
+n31      8      1      101.05     99.15    102.94     99.15    102.94      6.47       9    
+n32      9      1      102.33    100.62    104.39    100.11    103.89      8.11      10    
+n33      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n34      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n35      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n36      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n37      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n38      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n39      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n40      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n41      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n42      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n43      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n44      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n45      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n46      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n47      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n48      1      1       15.71     15.68     15.74     15.68     15.74      0.32       2    
+n49      1      1       12.62     12.39     12.86     12.39     12.86      0.32       2    
+n50      1      1       12.62     12.39     12.86     12.39     12.86      0.32       2    
+n51      1      1       12.62     12.39     12.86     12.39     12.86      0.32       2    
+n52      1      1       12.62     12.39     12.86     12.39     12.86      0.32       2    
+n53      1      1       12.62     12.39     12.86     12.39     12.86      0.32       2    
+n54      1      1       12.62     12.39     12.86     12.39     12.86      0.32       2    
+n55      1      1       12.62     12.39     12.86     12.39     12.86      0.32       2    
+n56      4      1       50.51     49.56     51.45     49.56     51.45      2.03       5    
+n57      1      1       12.62     12.39     12.86     12.39     12.86      0.32       2    
+n58      3      1        8.62     10.15     10.07      6.95      6.83      1.34       4    
+n59      1      1        0.39      0.47      0.47      0.36      0.34      0.32       2    
+net_pad_en      1      1     0.42     0.56     0.55     0.34     0.34      0.32       2    
+net_pad_en_input      2      1     5.75     6.77     6.71     4.63     4.55     0.78      3
+net_pad_in[0]      4      1     1.81     2.27     2.28     1.51     1.50     2.03      5   
+net_pad_in[1]      4      1     1.82     2.26     2.27     1.50     1.48     2.03      5   
+net_pad_in[2]      4      1     1.78     2.19     2.21     1.51     1.50     2.03      5   
+net_pad_in[3]      4      1     1.78     2.19     2.21     1.51     1.50     2.03      5   
+net_pad_in[4]      4      1     1.78     2.19     2.21     1.51     1.50     2.03      5   
+net_pad_in[5]      4      1     1.81     2.27     2.28     1.51     1.50     2.03      5   
+net_pad_in[6]      4      1     1.81     2.27     2.28     1.51     1.50     2.03      5   
+net_pad_in[7]      3      1     1.34     1.65     1.66     1.13     1.11     1.34      4   
+net_pad_in[8]      3      1     1.42     1.77     1.75     1.18     1.16     1.34      4   
+net_pad_in[9]      3      1     1.42     1.77     1.75     1.18     1.16     1.34      4   
+net_pad_in[10]      3      1     1.42     1.77     1.75     1.18     1.16     1.34      4  
+net_pad_in[11]      3      1     1.42     1.77     1.75     1.18     1.16     1.34      4  
+net_pad_in[12]      3      1     1.42     1.77     1.75     1.18     1.16     1.34      4  
+net_pad_in[13]      3      1     1.42     1.77     1.75     1.18     1.16     1.34      4  
+net_pad_in[14]      3      1     1.42     1.77     1.75     1.18     1.16     1.34      4  
+net_pad_in[15]      3      1     1.42     1.77     1.75     1.18     1.16     1.34      4  
+net_pad_out[0]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[1]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[2]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[3]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[4]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[5]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[6]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[7]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[8]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[9]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2  
+net_pad_out[10]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_pad_out[11]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_pad_out[12]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_pad_out[13]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_pad_out[14]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_pad_out[15]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_pc_be_en      5      1    98.88   100.82    98.11    98.98    96.30     2.86      6    
+net_pc_be_in[0]      3      1     1.68     2.14     2.14     1.30     1.30     1.34      4 
+net_pc_be_in[1]      3      1     1.62     1.96     1.94     1.29     1.29     1.34      4 
+net_pc_be_in[2]      3      1     1.65     2.05     2.04     1.29     1.29     1.34      4 
+net_pc_be_in[3]      3      1     1.65     2.05     2.04     1.29     1.29     1.34      4 
+net_pc_be_out[0]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2
+net_pc_be_out[1]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2
+net_pc_be_out[2]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2
+net_pc_be_out[3]      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2
+net_pclk      2      1     1.75     1.84     1.86      1.68      1.69      0.78       3    dr
+net_pclk_fb   1065      1     0.00     0.00     0.00     0.00     0.00  5543.38    1066    dr, d, I, h
+net_pdevsel_n_en      2      1    24.79    25.31    24.62    24.80    24.12     0.78      3
+net_pdevsel_n_in      3      1     1.58     1.96     1.95     1.22     1.22     1.34      4
+net_pdevsel_n_out      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2
+net_pframe_n_en      2      1    24.79    25.31    24.62    24.80    24.12     0.78      3 
+net_pframe_n_in      3      1     1.60     1.94     1.92     1.28     1.27     1.34      4 
+net_pframe_n_out      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2
+net_pgnt_n      2      1     1.18     1.46     1.45     0.90     0.90      0.78       3    
+net_pidsel      6      1     2.94     3.56     3.52     2.41     2.41      3.87       7    
+net_pirdy_n_en      2      1    24.79    25.31    24.62    24.80    24.12     0.78      3  
+net_pirdy_n_in      4      1     1.97     2.40     2.38     1.56     1.58     2.03      5  
+net_pirdy_n_out      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_pm66en      2      1     1.09     1.25     1.23     0.88     0.87      0.78       3    
+net_ppar_en      2      1    24.79    25.31    24.62    24.80    24.12     0.78       3    
+net_ppar_in      1      1     0.39     0.47     0.47     0.36     0.34     0.32       2    
+net_ppar_out      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2    
+net_pperr_n_en      2      1    24.79    25.31    24.62    24.80    24.12     0.78      3  
+net_pperr_n_in      3      1     1.58     1.93     1.91     1.23     1.23     1.34      4  
+net_pperr_n_out      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_preq_n      1      1    21.76    21.68    21.85    21.68    21.85      0.32       2    
+net_pserr_n_en      2      1    24.79    25.31    24.62    24.80    24.12     0.78      3  
+net_pserr_n_in      3      1     1.58     1.88     1.87     1.26     1.24     1.34      4  
+net_pserr_n_out      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_pstop_n_en      2      1    24.79    25.31    24.62    24.80    24.12     0.78      3  
+net_pstop_n_in      1      1     0.42     0.56     0.55     0.34     0.34     0.32      2  
+net_pstop_n_out      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_ptrdy_n_en      2      1    24.79    25.31    24.62    24.80    24.12     0.78      3  
+net_ptrdy_n_in      3      1     1.58     1.88     1.86     1.30     1.29     1.34      4  
+net_ptrdy_n_out      1      1    24.07    24.69    23.45    24.69    23.45     0.32      2 
+net_sdram_A[0]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_A[1]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_A[2]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_A[3]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_A[4]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_A[5]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_A[6]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_A[7]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_A[8]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_A[9]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2  
+net_sdram_BWS[0]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2
+net_sdram_BWS[1]      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2
+net_sdram_CK      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2    dr, d, I
+net_sdram_CKn      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2   d, I
+net_sdram_DQ_en[0]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[1]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[2]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[3]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[4]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[5]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[6]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[7]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[8]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[9]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[10]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[11]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[12]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[13]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[14]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_en[15]      2      1    28.26    28.78    28.08    28.27    27.58     0.78      3
+net_sdram_DQ_in[0]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[1]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[2]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[3]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[4]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[5]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[6]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[7]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[8]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[9]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[10]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[11]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[12]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[13]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[14]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_in[15]      2      1     0.88     1.03     1.02     0.75     0.74     0.78      3
+net_sdram_DQ_out[0]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[1]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[2]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[3]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[4]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[5]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[6]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[7]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[8]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[9]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[10]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[11]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[12]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[13]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[14]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_DQ_out[15]      1      1     0.00     0.00     0.00     0.00     0.00     0.32      2 d, I
+net_sdram_LD      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2    
+net_sdram_RW      1      1    21.76    21.68    21.85    21.68    21.85     0.32      2    
+net_sdram_clk      2      1     1.75     1.84     1.86     1.68     1.69     0.78      3   dr
+net_sdram_clk_fb   1169      1     0.00     0.00     0.00     0.00     0.00  5543.38   1170 dr, d, I, h
+net_sys_clk      4      1     1.90     2.19     2.18     1.62     1.59     2.03       5    dr
+pad[0]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[1]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[2]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[3]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[4]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[5]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[6]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[7]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[8]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[9]      2      2   307.44    307.44    307.44    307.44    307.44      0.32       2    
+pad[10]      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+pad[11]      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+pad[12]      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+pad[13]      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+pad[14]      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+pad[15]      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+pc_be[0]      2      2   307.44   307.44   307.44    307.44    307.44      0.32       2    
+pc_be[1]      2      2   307.44   307.44   307.44    307.44    307.44      0.32       2    
+pc_be[2]      2      2   307.44   307.44   307.44    307.44    307.44      0.32       2    
+pc_be[3]      2      2   307.44   307.44   307.44    307.44    307.44      0.32       2    
+pclk      1      1    2540.00   2505.92   2574.09   2505.92   2574.09      0.32       2    dr
+pdevsel_n      2      2   307.44   307.44   307.44   307.44    307.44      0.32       2    
+pframe_n      2      2   307.44   307.44   307.44    307.44    307.44      0.32       2    
+pgnt_n      1      1  2555.00   2520.92   2589.09   2520.92   2589.09      0.32       2    
+pidsel      1      1  2555.00   2520.92   2589.09   2520.92   2589.09      0.32       2    
+pirdy_n      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+pm66en      1      1  2555.00   2520.92   2589.09   2520.92   2589.09      0.32       2    
+power_save      1      1  2550.00  2515.92  2584.09  2515.92  2584.09      0.32       2    
+ppar      2      2     307.44    307.44    307.44    307.44    307.44      0.32       2    
+pperr_n      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+preq_n      2      1  1443.31   1443.31   1443.31   1443.31   1443.31      0.32       2    
+prst_n      1      1  2540.00   2505.92   2574.09   2505.92   2574.09      0.32       2    
+pserr_n      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+pstop_n      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+ptrdy_n      2      2   307.44   307.44    307.44    307.44    307.44      0.32       2    
+s_pclk      1      1     0.65      0.74      0.74      0.53      0.52      0.32       2    dr
+s_power_save      1      1     0.98     1.11     1.11     0.79     0.77     0.32      2    
+s_prst_n      9      1     8.25     7.94     9.29      7.68      7.88      8.11      10    
+s_scan_en      0      1     0.00     0.00     0.00     0.00      0.00      0.00       1    
+s_sdram_clk      1      1     0.65     0.74     0.74     0.53     0.52     0.32       2    dr
+s_sys_2x_clk      1      1     0.65     0.74     0.74     0.53     0.52     0.32      2    dr
+s_sys_clk      1      1     0.65     0.74     0.74     0.53      0.52      0.32       2    dr
+s_test_mode     10      1     5.81     6.80     6.79     4.75     4.65    10.01      11    
+scan_en      1      1  2550.00  2515.92   2584.09   2515.92   2584.09      0.32       2    
+sd_A[0]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_A[1]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_A[2]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_A[3]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_A[4]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_A[5]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_A[6]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_A[7]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_A[8]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_A[9]      2      1  1443.31  1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_BWS[0]      2      1  1443.31  1443.31  1443.31  1443.31   1443.31      0.32       2    
+sd_BWS[1]      2      1  1443.31  1443.31  1443.31  1443.31   1443.31      0.32       2    
+sd_CK      2      1      0.00      0.00      0.00      0.00      0.00      0.32       2    dr, d, I
+sd_CKn      2      1     0.00      0.00      0.00      0.00      0.00      0.32       2    d, I
+sd_DQ[0]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[1]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[2]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[3]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[4]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[5]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[6]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[7]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[8]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[9]      2      2   376.46   376.46   376.46    376.46    376.46      0.32       2    
+sd_DQ[10]      2      2   376.46   376.46   376.46   376.46    376.46      0.32       2    
+sd_DQ[11]      2      2   376.46   376.46   376.46   376.46    376.46      0.32       2    
+sd_DQ[12]      2      2   376.46   376.46   376.46   376.46    376.46      0.32       2    
+sd_DQ[13]      2      2   376.46   376.46   376.46   376.46    376.46      0.32       2    
+sd_DQ[14]      2      2   376.46   376.46   376.46   376.46    376.46      0.32       2    
+sd_DQ[15]      2      2   376.46   376.46   376.46   376.46    376.46      0.32       2    
+sd_LD      2      1   1443.31   1443.31   1443.31   1443.31   1443.31      0.32       2    
+sd_RW      2      1   1443.31   1443.31   1443.31   1443.31   1443.31      0.32       2    
+sdr_clk      1      1  2540.00  2505.92   2574.09   2505.92   2574.09      0.32       2    dr
+sys_clk      1      1  2540.00  2505.92   2574.09   2505.92   2574.09      0.32       2    dr
+test_mode      2      1  2550.69  2516.70  2584.87  2516.42   2584.59      0.78       3    
+-----------------------------------------------------------------------------------------------
+Total 257 nets   5221    301 66304.62 65999.31 66656.65 65950.12 66606.09 23635.43   5417
+Maximum   1169      2  2555.00  2520.92   2589.09   2520.92   2589.09   5543.38    1170
+Average  20.32   1.17   257.99   256.81    259.36    256.62    259.17     91.97   21.08
+1

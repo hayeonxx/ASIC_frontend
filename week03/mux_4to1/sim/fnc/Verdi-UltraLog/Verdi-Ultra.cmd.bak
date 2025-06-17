@@ -1,0 +1,44 @@
+debImport "-f" "run.f"
+wvCreateWindow
+wvOpenFile -win $_nWave2 {/home1/std251_4/week03/mux_4to1/sim/fnc/top.fsdb}
+verdiWindowResize -win $_Verdi_1 "500" "182" "900" "700"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcHBSelect "tb_mux_4to1" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+schCreateWindow -delim "." -win $_nSchema1 -scope "tb_mux_4to1"
+verdiSetActWin -win $_nSchema_3
+verdiWindowResize -win $_Verdi_1 "500" "182" "1053" "824"
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -localNetName off
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -stickyLocator on
+schSetOptions -win $_nSchema3 -alignRight on
+schSetOptions -win $_nSchema3 -parameterList on
+schSetOptions -win $_nSchema3 -highContrastMode on
+schSetOptions -win $_nSchema3 -parameterList off
+schSetOptions -win $_nSchema3 -parameterList on
+schSetOptions -win $_nSchema3 -stickyLocator off
+schSetOptions -win $_nSchema3 -alignRight off
+schSelect -win $_nSchema3 -inst "u_mux_4to1"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_mux_4to1"
+schPushViewIn -win $_nSchema3
+verdiSetActWin -win $_nWave2
+schSelect -win $_nSchema3 -inst "mux_4to1:Always0:19:37:Combo"
+verdiSetActWin -win $_nSchema_3
+verdiSetActWin -win $_nWave2
+wvCreateWindow
+verdiSetActWin -win $_nWave4
+verdiSetActWin -win $_nSchema_3
+schDeselectAll -win $_nSchema3
+verdiSetActWin -win $_nWave4
+verdiWindowResize -win $_Verdi_1 "306" "120" "1053" "824"
+debReload
+wvCreateWindow
+verdiSetActWin -win $_nWave5
+debExit

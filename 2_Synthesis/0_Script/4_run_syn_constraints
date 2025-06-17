@@ -1,0 +1,8 @@
+# constraint for timing and area
+
+source -echo -verbose 1_Input/Constraint/Constraint.con
+
+#set_dont_use [get_lib_cells */LATCH*]
+set_dont_use [get_lib_cells */LAS*]
+set_dont_use [get_lib_cells */LAR*]
+

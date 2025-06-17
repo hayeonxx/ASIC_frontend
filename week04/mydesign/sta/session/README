@@ -1,0 +1,26 @@
+-------------------------------------------------------
+
+PrimeTime save_session README file
+
+-------------------------------------------------------
+
+PrimeTime Version: 
+	S-2021.06-SP5-2 for linux64 -- Sep 20, 2022
+Save Session Date:
+	Sat May 31 09:44:01 2025
+ 
+-------------------------------------------------------
+
+Command log of this session is saved in "cmd_log".
+If the saved session is moved to a different location, 
+    please update the paths in the cmd_log file accordingly, 
+    in order to use the Constraints in-design flow.
+-------------------------------------------------------
+
+Current Design: mydesign
+
+Technology librares referenced by this session:
+/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db     saed32rvt_ss0p95v125c.db
+-------------------------------------------------------
+At least 1 MB of free disk space in pt_tmp_dir will be required to restore this session.
+-------------------------------------------------------

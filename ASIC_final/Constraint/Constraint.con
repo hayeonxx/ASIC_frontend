@@ -1,0 +1,37 @@
+# fir13_filter.sdc
+#################################
+# Fast Clock (343MHz = 2.91ns)
+#################################
+create_clock -name clk -period 2.91 [get_ports clk]
+
+set_clock_latency -source 0.5 [get_clocks clk]
+
+# Network delay (ideal)
+set_clock_latency -max 0.5 [get_clocks clk]
+
+# Uncertainty = jitter + margin + skew
+set_clock_uncertainty -setup 0.2 [get_clocks clk]
+
+# Transition constraint (drive strength hint)
+set_clock_transition 0.2 [get_clocks clk]
+
+
+# Input delay 
+set_input_delay -max 1.75 -clock clk [get_ports x_in]
+set_input_delay -min 0.05 -clock clk [get_ports x_in]
+
+# Output delay 
+set_output_delay -max 1.16 -clock clk [get_ports y_out]
+
+set ALL_INPUT_EXC_CLK [remove_from_collection [all_inputs] [get_ports clk]]
+
+# Load (capacitance)
+set_driving_cell -library saed32rvt_ss0p95v125c -lib_cell INVX0_RVT [get_ports x_in]
+
+# #AND2X1_RVT/A1 capacitance 0.472084
+# #MAX_INPUT_LOAD = 0.472084 * 5 = 2.36042
+# #OUTPUT_LOAD = 2.36042 * 3 = 7.08126
+
+set_max_capacitance 2.36 [get_ports x_in]
+
+set_load -max 7.08 [all_outputs]

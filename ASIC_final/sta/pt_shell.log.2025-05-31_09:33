@@ -1,0 +1,28 @@
+Error: unknown command 'alais' (CMD-005)
+Information: script '/home1/std251_4/week04/mydesign/sta/.synopsys_pt.setup'
+        stopped at line 42 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"alais vman {view man}"
+    (file "/home1/std251_4/week04/mydesign/sta/.synopsys_pt.setup" line 42)
+ -- End Extended Error Info
+pt_shell> source pt.tcl
+pt_shell> report_timing -delay_type max -to [get_ports do*]
+Error: Current design is not defined. (DES-001)
+Error: Current design is not defined. (DES-001)
+pt_shell> report_timing
+Error: Current design is not defined. (DES-001)
+pt_shell> report_lib
+Error: Required argument 'library' was not found (CMD-007)
+pt_shell> report_timing -delay_type max -to [all_outputs]
+Error: Current design is not defined. (DES-001)
+Error: Current design is not defined. (DES-001)
+pt_shell> exit
+Maximum memory usage for this session: 3043.23 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 138 seconds
+Diagnostics summary: 7 errors, 1 informational
+
+Thank you for using pt_shell!
+

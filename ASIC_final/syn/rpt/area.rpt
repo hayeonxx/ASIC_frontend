@@ -1,0 +1,43 @@
+ 
+****************************************
+Report : area
+Design : fir13_filter
+Version: S-2021.06-SP5-5
+Date   : Mon Jun 16 19:12:32 2025
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_ss0p95v125c (File: /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db)
+
+Number of ports:                           18
+Number of nets:                           662
+Number of cells:                          498
+Number of combinational cells:            343
+Number of sequential cells:               155
+Number of macros/black boxes:               0
+Number of buf/inv:                        113
+Number of references:                      15
+
+Combinational area:               1060.288749
+Buf/Inv area:                      152.740546
+Noncombinational area:            1102.984979
+Macro/Black Box area:                0.000000
+Net Interconnect area:             341.588079
+
+Total cell area:                  2163.273728
+Total area:                       2504.861807
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+fir13_filter                      2163.2737    100.0  1060.2887  1102.9850  0.0000  fir13_filter
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+Total                                                 1060.2887  1102.9850  0.0000
+
+1

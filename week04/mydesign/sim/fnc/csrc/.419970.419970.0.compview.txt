@@ -1,0 +1,5 @@
+{"vcs1":{"timestamp_begin":1747861558.563864378, "rt":0.16, "ut":0.04, "st":0.02}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1747861558.169089222}
+{"VCS_COMP_START_TIME": 1747861558.169089222}
+{"VCS_COMP_END_TIME": 1747861558.753885013}
+{"VCS_USER_OPTIONS": "-full64 -debug_acc+all -kdb +define+SDF_PRE +neg_tchk +maxdelays -timescale=1ns/1ps +lint=TFIPC-L -f run_pre.f -l run_pre.log"}

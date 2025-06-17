@@ -1,0 +1,78 @@
+Warning: Reference PLL contains internal pins with clock attribute. (TIM-103)
+Information: Updating design information... (UID-85)
+Warning: Design 'ORCA' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: A non-unate path in clock network for clock 'SDRAM_CLK' from pin 'I_ORCA_TOP/I_SDRAM_IF/genblk1[0].sd_mux_dq_out/Y' is detected. (TIM-052)
+Warning: A non-unate path in clock network for clock 'sdr_clk' from pin 'I_ORCA_TOP/I_SDRAM_IF/genblk1[0].sd_mux_dq_out/Y' is detected. (TIM-052)
+Warning: No controlling value could be found for the clock gating cell 'I_ORCA_TOP/I_RISC_CORE/U2' for the clock pin 'A1'. (TIM-128)
+Warning: Gated clock latch is not created for cell 'I_ORCA_TOP/I_RISC_CORE/U2'on pin 'A3' in design 'ORCA'. (TIM-141)
+Warning: No controlling value could be found for the clock gating cell 'I_ORCA_TOP/I_RISC_CORE/U2' for the clock pin 'A1'. (TIM-128)
+Warning: Gated clock latch is not created for cell 'I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_RAM'on pin 'CE1' in design 'ORCA'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_RAM'on pin 'CE2' in design 'ORCA'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_RAM'on pin 'CE1' in design 'ORCA'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_RAM'on pin 'CE2' in design 'ORCA'. (TIM-141)
+Warning: No controlling value could be found for the clock gating cell 'I_CLOCK_GEN/U6' for the clock pin 'A3'. (TIM-128)
+Warning: Gated clock latch is not created for cell 'I_CLOCK_GEN/U6'on pin 'A2' in design 'ORCA'. (TIM-141)
+Warning: No controlling value could be found for the clock gating cell 'I_CLOCK_GEN/U6' for the clock pin 'A3'. (TIM-128)
+Warning: Gated clock latch is not created for cell 'I_CLOCK_GEN/U5'on pin 'A1' in design 'ORCA'. (TIM-141)
+Warning: A non-unate path in clock network for clock 'sdr_clk' from pin 'I_ORCA_TOP/I_SDRAM_IF/genblk1[0].sd_mux_dq_out/Y' is detected. (TIM-052)
+Warning: A non-unate path in clock network for clock 'SDRAM_CLK' from pin 'I_ORCA_TOP/I_SDRAM_IF/genblk1[0].sd_mux_dq_out/Y' is detected. (TIM-052)
+Information: There are 3091 clock pins driven by multiple clocks, and some of them are driven by up-to 3 clocks. (TIM-099)
+ 
+****************************************
+Report : clocks
+Design : ORCA
+Version: S-2021.06-SP5-5
+Date   : Mon Dec 11 12:48:40 2023
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+PCI_CLK          8.00   {0 4}                         {I_CLOCK_GEN/I_PLL_PCI/CLK_1X}
+SDRAM_CLK        4.00   {0 2}                         {I_CLOCK_GEN/I_PLL_SD/CLK_1X}
+SD_DDR_CLK       4.00   {0 2}               G         {sd_CK}
+SYS_2x_CLK       2.00   {0 1}               G         {I_CLOCK_GEN/I_CLKMUL/CLK_2X}
+SYS_CLK          4.00   {0 2}               G         {I_CLOCK_GEN/I_CLKMUL/CLK_1X}
+pclk             8.00   {0 4}                         {pclk}
+sdr_clk          4.00   {0 2}                         {sdr_clk}
+sys_clk          4.00   {0 2}                         {sys_clk}
+--------------------------------------------------------------------------------
+
+Generated     Master         Generated      Master         Waveform
+Clock         Source         Source         Clock          Modification
+--------------------------------------------------------------------------------
+SD_DDR_CLK    I_CLOCK_GEN/I_PLL_SD/CLK_1X
+                             {sd_CK}        SDRAM_CLK      divide_by(1)
+SYS_2x_CLK    I_CLOCK_GEN/I_CLKMUL/CLK_IN
+                             {I_CLOCK_GEN/I_CLKMUL/CLK_2X}
+                                            sys_clk        multiply_by(2)
+SYS_CLK       I_CLOCK_GEN/I_CLKMUL/CLK_IN
+                             {I_CLOCK_GEN/I_CLKMUL/CLK_1X}
+                                            sys_clk        multiply_by(1)
+--------------------------------------------------------------------------------
+ 
+****************************************
+Report : clock_skew
+Design : ORCA
+Version: S-2021.06-SP5-5
+Date   : Mon Dec 11 12:48:40 2023
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+pclk                -         -         -         -         -      0.30
+sys_clk             -         -         -         -         -      0.30
+sdr_clk             -         -         -         -         -      0.30
+PCI_CLK             -         -         -         -         -      0.30
+SDRAM_CLK           -         -         -         -         -      0.30
+SD_DDR_CLK          -         -         -         -         -      0.30
+SYS_CLK             -         -         -         -         -      0.30
+SYS_2x_CLK          -         -         -         -         -      0.40
+1

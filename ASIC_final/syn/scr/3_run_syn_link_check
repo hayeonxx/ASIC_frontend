@@ -1,0 +1,14 @@
+# link design
+current_design fir13_filter
+link
+
+# check design
+check_design ./rpt/fir13_filter.chk_design.rpt
+change_names -rules verilog -hierarchy 
+
+
+# write ddc
+write_file -f ddc -hier -output out/unmapped/um_fir13_filter.ddc
+
+# wrtie verilog netlist
+write -f verilog -hier -output ./out/unmapped/um_fir13_filter.v

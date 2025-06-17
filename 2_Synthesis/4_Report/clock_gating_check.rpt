@@ -1,0 +1,550 @@
+ 
+****************************************
+Report : clock gating check
+Design : ORCA
+Version: S-2021.06-SP5-5
+Date   : Mon Dec 11 12:48:42 2023
+****************************************
+
+                                    Rise            Fall
+    Cell     Enable  Clock     Setup   Hold    Setup  Hold     Low/High  Attr
+--------------------------------------------------------------------------------
+
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[15].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[15].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[15].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[15].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[14].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[14].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[14].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[14].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[13].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[13].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[13].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[13].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[12].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[12].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[12].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[12].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[11].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[11].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[11].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[11].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[10].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[10].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[10].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[10].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[9].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[9].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[9].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[9].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[8].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[8].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[8].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[8].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[7].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[7].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[7].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[7].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[6].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[6].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[6].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[6].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[5].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[5].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[5].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[5].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[4].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[4].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[4].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[4].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[3].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[3].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[3].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[3].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[2].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[2].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[2].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[2].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[1].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[1].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[1].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[1].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[0].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[0].sd_mux_dq_out
+             A2      S0         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[0].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_SDRAM_IF/genblk1[0].sd_mux_dq_out
+             A1      S0         0.20    0.10    0.20   0.10    Low       i
+    I_ORCA_TOP/I_BLENDER/U350
+             A2      A3         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_BLENDER/U350
+             A1      A3         0.20    0.10    0.20   0.10    High      i
+    I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_read_addr_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_read_addr_reg/latch
+             EN      CLK         -     -0.05     -    -0.11    -         p l
+    I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_read_addr_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_read_addr_reg/latch
+             EN      CLK         -     -0.05     -    -0.11    -         p l
+    I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_write_addr_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_write_addr_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_write_addr_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_write_addr_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_ALU/clk_gate_Lachd_Result_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_ALU/clk_gate_Lachd_Result_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_ALU/clk_gate_Lachd_Result_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_ALU/clk_gate_Lachd_Result_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_A_reg/latch
+             EN      CLK        0.05     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_A_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_A_reg/latch
+             EN      CLK        0.05     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_A_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_B_reg/latch
+             EN      CLK        0.05     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_B_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_B_reg/latch
+             EN      CLK        0.05     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_B_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_PSWL_Zro_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_PSWL_Zro_reg/latch
+             EN      CLK         -     -0.05     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_PSWL_Zro_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_PSWL_Zro_reg/latch
+             EN      CLK         -     -0.05     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg_0/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg_0/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg_0/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg_0/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg_0/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg_0/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg_0/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg_0/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/clk_gate_PCint_reg/latch
+             EN      CLK        0.05     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/clk_gate_PCint_reg/latch
+             EN      CLK         -     -0.05     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/clk_gate_PCint_reg/latch
+             EN      CLK        0.05     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/clk_gate_PCint_reg/latch
+             EN      CLK         -     -0.05     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/clk_gate_TOS_int_reg/latch
+             EN      CLK        0.06     -      0.14    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/clk_gate_TOS_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.12    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/clk_gate_TOS_int_reg/latch
+             EN      CLK        0.06     -      0.14    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/clk_gate_TOS_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.12    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_ml/latch
+             EN      CLK        0.06     -      0.14    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_ml/latch
+             EN      CLK         -     -0.06     -    -0.12    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_ml/latch
+             EN      CLK        0.06     -      0.14    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_ml/latch
+             EN      CLK         -     -0.06     -    -0.12    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_ml/latch
+             EN      CLK        0.06     -      0.14    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_ml/latch
+             EN      CLK         -     -0.06     -    -0.12    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_ml/latch
+             EN      CLK        0.06     -      0.14    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_ml/latch
+             EN      CLK         -     -0.06     -    -0.12    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]/latch
+             EN      CLK         -     -0.05     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK        0.05     -      0.12    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]/latch
+             EN      CLK         -     -0.04     -    -0.10    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_ml/latch
+             EN      CLK        0.06     -      0.14    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_ml/latch
+             EN      CLK         -     -0.06     -    -0.12    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_ml/latch
+             EN      CLK        0.06     -      0.14    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_ml/latch
+             EN      CLK         -     -0.06     -    -0.12    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK        0.06     -      0.13    -      -         p l
+    I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_PopDataOut_reg/latch
+             EN      CLK         -     -0.06     -    -0.11    -         p l
+    I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.04     -    -0.10    -         i l
+    I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.04     -    -0.10    -         i l
+    I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         i l
+    I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         i l
+    I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.04     -    -0.10    -         i l
+    I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.04     -    -0.10    -         i l
+    I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         i l
+    I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         i l
+    I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.04     -    -0.10    -         i l
+    I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.04     -    -0.10    -         i l
+    I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         i l
+    I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         i l
+    I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.04     -    -0.10    -         i l
+    I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.04     -    -0.10    -         i l
+    I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         i l
+    I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK        0.05     -      0.12    -      -         i l
+    I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg/latch
+             EN      CLK         -     -0.05     -    -0.10    -         i l
+Disabled:
+    None
+
+Attr: 
+i:auto inferred, p:power compiler inserted, l:library cell defined
+1

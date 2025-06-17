@@ -1,0 +1,11 @@
+*design* DebussyLib (btIdent Verdi_S-2021.09-SP2-9)
+Command arguments:
+    +define+verilog
+    -f run.f
+        ../../rtl/mux_4to1.v
+        ../tb/tb_mux_4to1.v
+
+Highest level modules:
+tb_mux_4to1
+
+Total	0 error(s),   0 warning(s)

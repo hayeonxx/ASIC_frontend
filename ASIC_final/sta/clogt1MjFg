@@ -1,0 +1,180 @@
+#@ # 
+#@ # Running pt_shell Version S-2021.06-SP5-2 for linux64 -- Sep 20, 2022
+#@ # Date:   Sun Jun 15 21:33:42 2025
+#@ # Run by: std251_4@sse506-s3
+#@ 
+
+source /tools/synopsys_2021/prime/S-2021.06-SP5-2/admin/setup/.synopsys_pt.setup
+#@ # -- Starting source /tools/synopsys_2021/prime/S-2021.06-SP5-2/admin/setup/.synopsys_pt.setup
+
+#@ #
+#@ # .synopsys_pt.setup: Initialization File for PrimeTime
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparcOS5" || $sh_arch == "hpux10" || \
+#@      $sh_arch == "hp32" || $sh_arch == "linux" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you use new variable message
+#@ # tracing for debugging purposes only.
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ alias report_constraints	report_constraint
+#@ alias report_clocks		report_clock
+#@ 
+#@ #
+#@ # The alias for get_clock was added when get_clock_network_objects
+#@ # was introduced, as it conflicts with get_clocks (and get_clock is a
+#@ # typical abbreviation for get_clocks)
+#@ #
+#@ alias get_clock get_clocks
+#@ 
+#@ 
+#@ #
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ 
+#@ # -- End source /tools/synopsys_2021/prime/S-2021.06-SP5-2/admin/setup/.synopsys_pt.setup
+
+source /home1/std251_4/ASIC_final/sta/.synopsys_pt.setup
+#@ # -- Starting source /home1/std251_4/ASIC_final/sta/.synopsys_pt.setup
+
+#@ ####################################################################
+#@ ## .synopsys_pt.setup for PrimeTime
+#@ ## Location: mydesign/sta/.synopsys_pt.setup
+#@ ####################################################################
+#@ 
+#@ ##### ALIASES #####
+#@ alias page_on  {set sh_enable_page_mode true}
+#@ alias page_off {set sh_enable_page_mode false}
+#@ alias h        {history}
+#@ alias rt       {report_timing}
+#@ alias rtm      {report_timing -delay min}
+#@ alias q        {exit}
+#@ alias vman     {view man}
+#@ 
+#@ ##### HISTORY #####
+#@ history keep 200
+#@ set sh_enable_line_editing true
+#@ 
+#@ ##### SUPPRESSED MESSAGES #####
+#@ # suppress known non-critical warnings
+#@ suppress_message {RC-009 RC-004 CMD-029 PTE-070 PTE-071 PTE-060 CMD-041 ENV-003}
+#@ unsuppress_message CMD-029  
+#@ 
+#@ ##### MY TCL PROCEDURES #####
+#@ foreach each_proc [glob -nocomplain ./*.tcl] {
+#@     source $each_proc
+#@ }
+#@ # -- Starting source ./pt.tcl
+
+#@ ###############################################################
+#@ # PrimeTime Run Script - pt.tcl
+#@ # Location: mydesign/sta/pt.tcl
+#@ ###############################################################
+#@ 
+#@ #Source common_setup & pt_setup Tcl files
+#@ #source ./common_setup.tcl
+#@ source ./pt_setup.tcl
+#@ # -- Starting source ./pt_setup.tcl
+
+#@ ###########################################################################
+#@ # pt_setup.tcl – PrimeTime 
+#@ # location : mydesign/sta/pt_setup.tcl
+#@ ###########################################################################
+#@ 
+#@ #Report and Results directories
+#@ set REPORTS_DIR "rpt"
+#@ file mkdir $REPORTS_DIR
+#@ 
+#@ #Library & Design Setup
+#@ set lib_rvt  "/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm"
+#@ 
+#@ set search_path ". $lib_rvt"
+#@ 
+#@ set target_library "saed32rvt_ss0p95v125c.db"
+#@ 
+#@ set link_path "* $target_library "
+#@ # saed32io_fc_ss0p95v125c_2p25v.db \
+#@     # saed32pll_ss0p95v125c_2p25v.db \
+#@     # saed32sram_ss0p95v125c.db \
+#@     # dw_foundation.sldb"
+#@ 
+#@ set NETLIST_FILES "../syn/out/mapped/m_fir13_filter.v"
+#@ 
+#@ #set PARASTIC_FILES ""
+#@ 
+#@ set constraint_file "./con/fir13_filter_pt.sdc"
+#@ 
+#@ 
+#@ set DESIGN_NAME "fir13_filter"
+#@ # -- End source ./pt_setup.tcl
+
+#@ 
+#@ #Define Search Path
+#@ set_app_var sh_source_uses_search_path true
+#@ set_app_var search_path "$search_path"
+#@ 
+#@ #Read netlist and link design
+#@ set_app_var link_path "$link_path"
+#@ 
+#@ read_verilog $NETLIST_FILES
+#@ current_design $DESIGN_NAME
+#@ #link_design -verbose
+#@ 
+#@ #Back annotate parasitics
+#@ #read_parasitics $PARASITIC_FILES
+#@ 
+#@ #Apply Constraints
+#@ if {[file extension $constraint_file] eq ".sdc"} {
+#@     read_sdc -echo $constraint_file
+#@ } else {
+#@     source -echo $constraint_file
+#@ }
+#@ 
+#@ update_timing
+#@ check_timing > ./rpt/check_timing.rpt
+#@ report_clocks
+#@ report_timing -max_paths 3 -sort_by slack
+#@ report_timing -delay_type max -from [get_ports x_in] -to [get_pins *]
+#@ 
+#@ report_analysis_coverage > ./rpt/analysis_coverage.rpt
+#@ report_analysis_coverage
+#@ report_timing
+#@ 
+#@ #Save session
+#@ file delete -force fir13_filter_pt_session
+#@ save_session fir13_filter_pt_session
+#@ 
+#@ quit
+#@ if { [namespace which -command __pre_quit_tcl_procs] == "::__pre_quit_tcl_procs" } {   __pre_quit_tcl_procs}
+

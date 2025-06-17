@@ -1,0 +1,890 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version S-2021.06-SP5-5 for linux64 - Sep 20, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /home1/std251_4/.synopsys_dc_gui/preferences.tcl
+Warning: Cannot use command line editor for terminal type 'xterm-256color'.  (UI-74)
+dc_shell> Running PRESTO HDLC
+Compiling source file ./1_Input/RTL/ORCA.v
+Compiling source file ./1_Input/RTL/CLOCK_GEN.v
+Warning:  ./1_Input/RTL/ORCA.v:316: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ./1_Input/RTL/ORCA.v:341: A unnamed generate block with an LRM-defined name 'genblk2' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Compiling source file ./1_Input/RTL/IOPOWER.v
+Compiling source file ./1_Input/RTL/ORCA_TOP.v
+Compiling source file ./1_Input/RTL/RESET_BLOCK.v
+Compiling source file ./1_Input/RTL/PCI_CORE.v
+Warning:  ./1_Input/RTL/PCI_CORE.v:61: Parameter keyword used in local parameter declaration. (VER-329)
+Compiling source file ./1_Input/RTL/PARSER.v
+Compiling source file ./1_Input/RTL/CONTEXT_MEM.v
+Compiling source file ./1_Input/RTL/SDRAM_IF.v
+Warning:  ./1_Input/RTL/SDRAM_IF.v:45: Redeclaration of port 'sd_DQ_en'. (VER-331)
+Warning:  ./1_Input/RTL/SDRAM_IF.v:46: Redeclaration of port 'sd_rfifo_DQ_out'. (VER-331)
+Warning:  ./1_Input/RTL/SDRAM_IF.v:48: Parameter keyword used in local parameter declaration. (VER-329)
+Compiling source file ./1_Input/RTL/RISC_CORE.v
+Warning:  ./1_Input/RTL/SDRAM_IF.v:226: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Compiling source file ./1_Input/RTL/BLENDER.v
+Compiling source file ./1_Input/RTL/PCI_RFIFO.v
+Compiling source file ./1_Input/RTL/PCI_WFIFO.v
+Compiling source file ./1_Input/RTL/SDRAM_RFIFO.v
+Compiling source file ./1_Input/RTL/SDRAM_WFIFO.v
+Compiling source file ./1_Input/RTL/PCI_W_MUX.v
+Compiling source file ./1_Input/RTL/SD_W_MUX.v
+Compiling source file ./1_Input/RTL/CLKMUL.v
+Compiling source file ./1_Input/RTL/CONTROL.v
+Warning:  ./1_Input/RTL/CONTROL.v:15: Redeclaration of port 'Latch_Instr'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:15: Redeclaration of port 'Rd_Oprnd_A'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:15: Redeclaration of port 'Rd_Oprnd_B'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:15: Redeclaration of port 'Latch_Flags'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:15: Redeclaration of port 'Latch_Result'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:15: Redeclaration of port 'Write_RegC'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:15: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./1_Input/RTL/CONTROL.v:16: Redeclaration of port 'UseData_Imm_Or_RegB'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:16: Redeclaration of port 'UseData_Imm_Or_ALU'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:16: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./1_Input/RTL/CONTROL.v:17: Redeclaration of port 'Reset_AluRegs'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:17: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./1_Input/RTL/CONTROL.v:18: Redeclaration of port 'EndOfInstrn'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:18: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./1_Input/RTL/CONTROL.v:19: Redeclaration of port 'PushEnbl'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:19: Redeclaration of port 'PopEnbl'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:19: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./1_Input/RTL/CONTROL.v:20: Redeclaration of port 'OUT_VALID'. (VER-331)
+Warning:  ./1_Input/RTL/CONTROL.v:20: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file ./1_Input/RTL/DATA_PATH.v
+Warning:  ./1_Input/RTL/DATA_PATH.v:36: Redeclaration of port 'Oprnd_A'. (VER-331)
+Warning:  ./1_Input/RTL/DATA_PATH.v:37: Redeclaration of port 'Oprnd_B'. (VER-331)
+Warning:  ./1_Input/RTL/DATA_PATH.v:38: Redeclaration of port 'RegPort_C'. (VER-331)
+Compiling source file ./1_Input/RTL/INSTRN_LAT.v
+Compiling source file ./1_Input/RTL/PRGRM_CNT_TOP.v
+Compiling source file ./1_Input/RTL/REG_FILE.v
+Compiling source file ./1_Input/RTL/ALU.v
+Warning:  ./1_Input/RTL/ALU.v:20: Redeclaration of port 'Lachd_Result'. (VER-331)
+Warning:  ./1_Input/RTL/ALU.v:21: Redeclaration of port 'Zro_Flag'. (VER-331)
+Warning:  ./1_Input/RTL/ALU.v:22: Redeclaration of port 'Neg_Flag'. (VER-331)
+Warning:  ./1_Input/RTL/ALU.v:23: Redeclaration of port 'Carry_Flag'. (VER-331)
+Compiling source file ./1_Input/RTL/STACK_TOP.v
+Compiling source file ./1_Input/RTL/STACK_FSM.v
+Compiling source file ./1_Input/RTL/STACK_MEM.v
+Compiling source file ./1_Input/RTL/PRGRM_CNT.v
+Compiling source file ./1_Input/RTL/PRGRM_DECODE.v
+Compiling source file ./1_Input/RTL/PRGRM_FSM.v
+Presto compilation completed successfully.
+Loading db file '/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db'
+Loading db file '/tools/dk/SAED32_EDK/lib/io_std/db_nldm/saed32io_fc_ss0p95v125c_2p25v.db'
+Loading db file '/tools/dk/SAED32_EDK/lib/pll/db_nldm/saed32pll_ss0p95v125c_2p25v.db'
+Loading db file '/tools/dk/SAED32_EDK/lib/sram/db_nldm/saed32sram_ss0p95v125c.db'
+Loading db file '/tools/synopsys_2021/syn/S-2021.06-SP5-5/libraries/syn/dw_foundation.sldb'
+Loading db file '/tools/synopsys_2021/syn/S-2021.06-SP5-5/libraries/syn/gtech.db'
+Loading db file '/tools/synopsys_2021/syn/S-2021.06-SP5-5/libraries/syn/standard.sldb'
+  Loading link library 'saed32rvt_ss0p95v125c'
+  Loading link library 'saed32io_fc_ss0p95v125c_2p25v'
+  Loading link library 'saed32pll_ss0p95v125c_2p25v'
+  Loading link library 'saed32sram_ss0p95v125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (ORCA)
+Elaborated 1 design.
+Current design is now 'ORCA'.
+Information: Building the design 'IOPOWER'. (HDL-193)
+Presto compilation completed successfully. (IOPOWER)
+Information: Building the design 'CLOCK_GEN'. (HDL-193)
+Presto compilation completed successfully. (CLOCK_GEN)
+Information: Building the design 'ORCA_TOP'. (HDL-193)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:108: Net pci_rst_n connected to instance I_RESET_BLOCK is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:108: Net sdram_rst_n connected to instance I_RESET_BLOCK is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:108: Net sys_rst_n connected to instance I_RESET_BLOCK is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:108: Net sys_2x_rst_n connected to instance I_RESET_BLOCK is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:124: Net pci_rst_n connected to instance I_PCI_CORE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:174: Net sys_rst_n connected to instance I_PARSER is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:209: Net sys_rst_n connected to instance I_CONTEXT_MEM is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:222: Net sdram_rst_n connected to instance I_SDRAM_IF is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:252: Net sys_2x_rst_n connected to instance I_RISC_CORE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:269: Net sys_rst_n connected to instance I_BLENDER is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:285: Net pci_rst_n connected to instance I_PCI_READ_FIFO is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:313: Net sys_rst_n connected to instance I_PCI_WRITE_FIFO is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:341: Net sdram_rst_n connected to instance I_SDRAM_READ_FIFO is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/ORCA_TOP.v:414: Net sys_rst_n connected to instance I_SDRAM_WRITE_FIFO is declared as reg data type but is not driven by an always block. (VER-1004)
+Presto compilation completed successfully. (ORCA_TOP)
+Information: Building the design 'CLKMUL'. (HDL-193)
+Presto compilation completed successfully. (CLKMUL)
+Information: Building the design 'RESET_BLOCK'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RESET_BLOCK line 25 in file
+		'./1_Input/RTL/RESET_BLOCK.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  pci_rst_n_buf_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     prst_ff_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RESET_BLOCK line 36 in file
+		'./1_Input/RTL/RESET_BLOCK.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| sdram_rst_n_buf_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  sdram_rst_ff_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RESET_BLOCK line 47 in file
+		'./1_Input/RTL/RESET_BLOCK.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  sys_rst_n_buf_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   sys_rst_ff_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RESET_BLOCK line 58 in file
+		'./1_Input/RTL/RESET_BLOCK.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| sys_2x_rst_n_buf_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  sys_2x_rst_ff_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (RESET_BLOCK)
+Information: Building the design 'PCI_CORE' instantiated from design 'ORCA_TOP' with
+	the parameters "pci_data_width=16". (HDL-193)
+Warning:  ./1_Input/RTL/PCI_CORE.v:86: Variable word is read before being assigned; the synthesized result may not match simulations. (ELAB-293)
+
+Statistics for case statements in always block at line 140 in file
+	'./1_Input/RTL/PCI_CORE.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           142            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 157 in file
+	'./1_Input/RTL/PCI_CORE.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           161            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 177 in file
+	'./1_Input/RTL/PCI_CORE.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           181            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine PCI_CORE_pci_data_width16 line 124 in file
+		'./1_Input/RTL/PCI_CORE.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pad_en_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PCI_CORE_pci_data_width16 line 132 in file
+		'./1_Input/RTL/PCI_CORE.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pc_be_en_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PCI_CORE_pci_data_width16 line 157 in file
+		'./1_Input/RTL/PCI_CORE.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   d_out_p_bus_reg   | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PCI_CORE_pci_data_width16 line 177 in file
+		'./1_Input/RTL/PCI_CORE.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   d_out_i_bus_reg   | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PCI_CORE_pci_data_width16 line 197 in file
+		'./1_Input/RTL/PCI_CORE.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   mega_shift_reg    | Flip-flop |  976  |  Y  | N  | Y  | N  | N  | N  | N  |
+|   pad_out_buf_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (PCI_CORE_pci_data_width16)
+Information: Building the design 'PARSER'. (HDL-193)
+
+Statistics for case statements in always block at line 113 in file
+	'./1_Input/RTL/PARSER.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           118            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 133 in file
+	'./1_Input/RTL/PARSER.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           138            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine PARSER line 65 in file
+		'./1_Input/RTL/PARSER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     r_pcmd_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|    sync_pcmd_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  r_pcmd_valid_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| sync_pcmd_valid_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PARSER line 73 in file
+		'./1_Input/RTL/PARSER.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|     r_pcmd_out_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|    sync_pcmd_out_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  r_pcmd_out_valid_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| sync_pcmd_out_valid_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine PARSER line 85 in file
+		'./1_Input/RTL/PARSER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| blender_clk_en_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PARSER line 94 in file
+		'./1_Input/RTL/PARSER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      i_reg_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PARSER line 102 in file
+		'./1_Input/RTL/PARSER.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| i_pcmd_out_valid_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    i_pcmd_out_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine PARSER line 113 in file
+		'./1_Input/RTL/PARSER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     out_bus_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PARSER line 133 in file
+		'./1_Input/RTL/PARSER.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| sd_w_mux_select_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+| pci_w_mux_select_reg | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (PARSER)
+Information: Building the design 'CONTEXT_MEM'. (HDL-193)
+
+Statistics for case statements in always block at line 58 in file
+	'./1_Input/RTL/CONTEXT_MEM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            60            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 97 in file
+	'./1_Input/RTL/CONTEXT_MEM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            99            |    auto/auto     |
+===============================================
+Warning:  ./1_Input/RTL/CONTEXT_MEM.v:108: Net context_data_0 connected to instance CONTEXT_RAM0 is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/CONTEXT_MEM.v:126: Net context_data_1 connected to instance CONTEXT_RAM1 is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/CONTEXT_MEM.v:144: Net context_data_2 connected to instance CONTEXT_RAM2 is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/CONTEXT_MEM.v:162: Net context_data_3 connected to instance CONTEXT_RAM3 is declared as reg data type but is not driven by an always block. (VER-1004)
+
+Inferred memory devices in process
+	in routine CONTEXT_MEM line 34 in file
+		'./1_Input/RTL/CONTEXT_MEM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  ram_read_addr_reg  | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CONTEXT_MEM line 69 in file
+		'./1_Input/RTL/CONTEXT_MEM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| ram_write_addr_reg  | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (CONTEXT_MEM)
+Information: Building the design 'SDRAM_IF' instantiated from design 'ORCA_TOP' with
+	the parameters "sd_a_width=10,sd_dq_width=16". (HDL-193)
+Warning:  ./1_Input/RTL/SDRAM_IF.v:100: Variable word is read before being assigned; the synthesized result may not match simulations. (ELAB-293)
+
+Statistics for case statements in always block at line 153 in file
+	'./1_Input/RTL/SDRAM_IF.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           154            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SDRAM_IF_sd_a_width10_sd_dq_width16 line 125 in file
+		'./1_Input/RTL/SDRAM_IF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sd_DQ_en_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SDRAM_IF_sd_a_width10_sd_dq_width16 line 134 in file
+		'./1_Input/RTL/SDRAM_IF.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|   control_bus_reg    | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+| sync_control_bus_reg | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine SDRAM_IF_sd_a_width10_sd_dq_width16 line 139 in file
+		'./1_Input/RTL/SDRAM_IF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   out_control_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SDRAM_IF_sd_a_width10_sd_dq_width16 line 174 in file
+		'./1_Input/RTL/SDRAM_IF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     DQ_in_0_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SDRAM_IF_sd_a_width10_sd_dq_width16 line 178 in file
+		'./1_Input/RTL/SDRAM_IF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     DQ_in_1_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SDRAM_IF_sd_a_width10_sd_dq_width16 line 187 in file
+		'./1_Input/RTL/SDRAM_IF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    DQ_out_0_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  mega_shift_0_reg   | Flip-flop |  496  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SDRAM_IF_sd_a_width10_sd_dq_width16 line 197 in file
+		'./1_Input/RTL/SDRAM_IF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    DQ_out_1_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  mega_shift_1_reg   | Flip-flop |  496  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (SDRAM_IF_sd_a_width10_sd_dq_width16)
+Information: Building the design 'RISC_CORE'. (HDL-193)
+Warning:  ./1_Input/RTL/RISC_CORE.v:34: Net Oprnd_A connected to instance I_ALU is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:34: Net Oprnd_B connected to instance I_ALU is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:34: Net Xecutng_Instrn connected to instance I_ALU is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:34: Net Latch_Result connected to instance I_ALU is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:34: Net Latch_Flags connected to instance I_ALU is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:34: Net Op_Result connected to instance I_ALU is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:34: Net PushDataIn connected to instance I_ALU is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:34: Net ALU_Neg connected to instance I_ALU is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:34: Net ALU_Carry connected to instance I_ALU is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net Crnt_Instrn_2 connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net Current_State connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net PSW connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net Rd_Instr connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net Rd_Oprnd_A connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net Rd_Oprnd_B connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net Latch_Flags connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net Latch_Result connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net Write_RegC connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net UseData_Imm_Or_RegB connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net UseData_Imm_Or_ALU connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net Reset_AluRegs connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net PushEnbl connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:48: Net PopEnbl connected to instance I_CONTROL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net Reset_AluRegs connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net Rd_Oprnd_A connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net Rd_Oprnd_B connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net UseData_Imm_Or_RegB connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net UseData_Imm_Or_ALU connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net Latch_Flags connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net PushDataIn connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net ALU_Neg connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net ALU_Carry connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net PopDataOut connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net Crnt_Instrn_2 connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net RESULT_DATA connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net RegPort_B connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net Op_Result connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net PSW connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net Addr_A connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net Oprnd_A connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net Oprnd_B connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:71: Net RegPort_C connected to instance I_DATA_PATH is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:99: Net Rd_Instr connected to instance I_INSTRN_LAT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:99: Net Xecutng_Instrn connected to instance I_INSTRN_LAT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:99: Net Crnt_Instrn_2 connected to instance I_INSTRN_LAT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:107: Net Crnt_Instrn_2 connected to instance I_PRGRM_CNT_TOP is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:107: Net PSW connected to instance I_PRGRM_CNT_TOP is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:107: Net PopDataOut connected to instance I_PRGRM_CNT_TOP is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:107: Net Current_State connected to instance I_PRGRM_CNT_TOP is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:121: Net Addr_A connected to instance I_REG_FILE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:121: Net Xecutng_Instrn connected to instance I_REG_FILE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:121: Net RegPort_C connected to instance I_REG_FILE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:121: Net Write_RegC connected to instance I_REG_FILE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:121: Net RESULT_DATA connected to instance I_REG_FILE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:121: Net RegPort_B connected to instance I_REG_FILE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:132: Net PushEnbl connected to instance I_STACK_TOP is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:132: Net PopEnbl connected to instance I_STACK_TOP is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:132: Net PushDataIn connected to instance I_STACK_TOP is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:132: Net PSW connected to instance I_STACK_TOP is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/RISC_CORE.v:132: Net PopDataOut connected to instance I_STACK_TOP is declared as reg data type but is not driven by an always block. (VER-1004)
+Presto compilation completed successfully. (RISC_CORE)
+Information: Building the design 'BLENDER'. (HDL-193)
+
+Statistics for case statements in always block at line 75 in file
+	'./1_Input/RTL/BLENDER.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            83            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine BLENDER line 37 in file
+		'./1_Input/RTL/BLENDER.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+| latched_clk_en_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine BLENDER line 51 in file
+		'./1_Input/RTL/BLENDER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rem_blue_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    rem_green_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     trans1_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     trans2_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     trans3_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     rem_red_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine BLENDER line 127 in file
+		'./1_Input/RTL/BLENDER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1_op1_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     s1_op2_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine BLENDER line 147 in file
+		'./1_Input/RTL/BLENDER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s2_op2_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     s2_op1_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine BLENDER line 172 in file
+		'./1_Input/RTL/BLENDER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s3_op1_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     s3_op2_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine BLENDER line 192 in file
+		'./1_Input/RTL/BLENDER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s4_op1_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     s4_op2_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine BLENDER line 212 in file
+		'./1_Input/RTL/BLENDER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    s5_result_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine BLENDER line 218 in file
+		'./1_Input/RTL/BLENDER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     result_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (BLENDER)
+Information: Building the design 'PCI_RFIFO' instantiated from design 'ORCA_TOP' with
+	the parameters "fifo_data_width=32,fifo_depth=32". (HDL-193)
+Presto compilation completed successfully. (PCI_RFIFO_fifo_data_width32_fifo_depth32)
+Information: Building the design 'PCI_WFIFO' instantiated from design 'ORCA_TOP' with
+	the parameters "fifo_data_width=32,fifo_depth=32". (HDL-193)
+Presto compilation completed successfully. (PCI_WFIFO_fifo_data_width32_fifo_depth32)
+Information: Building the design 'SDRAM_RFIFO' instantiated from design 'ORCA_TOP' with
+	the parameters "fifo_data_width=32,fifo_depth=64". (HDL-193)
+Warning:  ./1_Input/RTL/SDRAM_RFIFO.v:49: Net we_n connected to instance SD_RFIFO_CTL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_RFIFO.v:49: Net wr_addr connected to instance SD_RFIFO_CTL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_RFIFO.v:49: Net rd_addr connected to instance SD_RFIFO_CTL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_RFIFO.v:102: Net wr_addr connected to instance SD_RFIFO_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_RFIFO.v:102: Net we_n connected to instance SD_RFIFO_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_RFIFO.v:102: Net rd_addr connected to instance SD_RFIFO_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_RFIFO.v:102: Net data_out_fifo connected to instance SD_RFIFO_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Presto compilation completed successfully. (SDRAM_RFIFO_fifo_data_width32_fifo_depth64)
+Information: Building the design 'SDRAM_WFIFO' instantiated from design 'ORCA_TOP' with
+	the parameters "fifo_data_width=32,fifo_depth=64". (HDL-193)
+Warning:  ./1_Input/RTL/SDRAM_WFIFO.v:52: Net we_n connected to instance SD_WFIFO_CTL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_WFIFO.v:52: Net wr_addr connected to instance SD_WFIFO_CTL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_WFIFO.v:52: Net rd_addr connected to instance SD_WFIFO_CTL is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_WFIFO.v:105: Net wr_addr connected to instance SD_WFIFO_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_WFIFO.v:105: Net we_n connected to instance SD_WFIFO_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_WFIFO.v:105: Net rd_addr connected to instance SD_WFIFO_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/SDRAM_WFIFO.v:105: Net data_out_fifo connected to instance SD_WFIFO_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Presto compilation completed successfully. (SDRAM_WFIFO_fifo_data_width32_fifo_depth64)
+Information: Building the design 'PCI_W_MUX'. (HDL-193)
+Presto compilation completed successfully. (PCI_W_MUX)
+Information: Building the design 'SD_W_MUX'. (HDL-193)
+Presto compilation completed successfully. (SD_W_MUX)
+Information: Building the design 'ALU'. (HDL-193)
+
+Statistics for case statements in always block at line 48 in file
+	'./1_Input/RTL/ALU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            57            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ALU line 25 in file
+		'./1_Input/RTL/ALU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  Lachd_Result_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ALU line 32 in file
+		'./1_Input/RTL/ALU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Zro_Flag_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    Neg_Flag_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   Carry_Flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (ALU)
+Information: Building the design 'CONTROL'. (HDL-193)
+Warning:  ./1_Input/RTL/CONTROL.v:128: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./1_Input/RTL/CONTROL.v:181: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./1_Input/RTL/CONTROL.v:265: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 80 in file
+	'./1_Input/RTL/CONTROL.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            83            |    auto/auto     |
+|           128            |    auto/auto     |
+|           181            |    auto/auto     |
+|           265            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine CONTROL line 68 in file
+		'./1_Input/RTL/CONTROL.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| UseData_Imm_Or_RegB_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| UseData_Imm_Or_ALU_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine CONTROL line 80 in file
+		'./1_Input/RTL/CONTROL.v'.
+============================================================================
+|    Register Name     | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+============================================================================
+| Data_Imm_Or_RegB_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   Latch_Instr_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| Data_Imm_Or_ALU_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  Reset_AluRegs_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    Write_RegC_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     PushEnbl_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     PopEnbl_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   Latch_Flags_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   Latch_Result_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    Rd_Oprnd_A_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    Rd_Oprnd_B_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+============================================================================
+
+Inferred memory devices in process
+	in routine CONTROL line 302 in file
+		'./1_Input/RTL/CONTROL.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   EndOfInstrn_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (CONTROL)
+Information: Building the design 'DATA_PATH'. (HDL-193)
+
+Inferred memory devices in process
+	in routine DATA_PATH line 39 in file
+		'./1_Input/RTL/DATA_PATH.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     Oprnd_A_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     Oprnd_B_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine DATA_PATH line 57 in file
+		'./1_Input/RTL/DATA_PATH.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    PSWL_Zro_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    PSWL_Neg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   PSWL_Carry_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (DATA_PATH)
+Information: Building the design 'INSTRN_LAT'. (HDL-193)
+
+Inferred memory devices in process
+	in routine INSTRN_LAT line 9 in file
+		'./1_Input/RTL/INSTRN_LAT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  Crnt_Instrn_1_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  Crnt_Instrn_2_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (INSTRN_LAT)
+Information: Building the design 'PRGRM_CNT_TOP'. (HDL-193)
+Warning:  ./1_Input/RTL/PRGRM_CNT_TOP.v:21: Net Current_State connected to instance I_PRGRM_FSM is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/PRGRM_CNT_TOP.v:27: Net Current_State connected to instance I_PRGRM_DECODE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/PRGRM_CNT_TOP.v:27: Net Incrmnt_PC connected to instance I_PRGRM_DECODE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/PRGRM_CNT_TOP.v:27: Net Ld_Brnch_Addr connected to instance I_PRGRM_DECODE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/PRGRM_CNT_TOP.v:27: Net Ld_Rtn_Addr connected to instance I_PRGRM_DECODE is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/PRGRM_CNT_TOP.v:38: Net Incrmnt_PC connected to instance I_PRGRM_CNT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/PRGRM_CNT_TOP.v:38: Net Ld_Brnch_Addr connected to instance I_PRGRM_CNT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/PRGRM_CNT_TOP.v:38: Net Ld_Rtn_Addr connected to instance I_PRGRM_CNT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/PRGRM_CNT_TOP.v:38: Net PC connected to instance I_PRGRM_CNT is declared as reg data type but is not driven by an always block. (VER-1004)
+Presto compilation completed successfully. (PRGRM_CNT_TOP)
+Information: Building the design 'REG_FILE'. (HDL-193)
+Warning:  ./1_Input/RTL/REG_FILE.v:43: Net RegPort_A connected to instance REG_FILE_A_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  ./1_Input/RTL/REG_FILE.v:60: Net RegPort_B connected to instance REG_FILE_B_RAM is declared as reg data type but is not driven by an always block. (VER-1004)
+Presto compilation completed successfully. (REG_FILE)
+Information: Building the design 'STACK_TOP'. (HDL-193)
+Presto compilation completed successfully. (STACK_TOP)
+Information: Building the design 'PRGRM_FSM'. (HDL-193)
+
+Statistics for case statements in always block at line 19 in file
+	'./1_Input/RTL/PRGRM_FSM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine PRGRM_FSM line 19 in file
+		'./1_Input/RTL/PRGRM_FSM.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|   Next_State_reg    | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine PRGRM_FSM line 29 in file
+		'./1_Input/RTL/PRGRM_FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  Current_State_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (PRGRM_FSM)
+Information: Building the design 'PRGRM_DECODE'. (HDL-193)
+
+Statistics for case statements in always block at line 19 in file
+	'./1_Input/RTL/PRGRM_DECODE.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            38            |    auto/auto     |
+|            46            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (PRGRM_DECODE)
+Information: Building the design 'PRGRM_CNT'. (HDL-193)
+
+Inferred memory devices in process
+	in routine PRGRM_CNT line 15 in file
+		'./1_Input/RTL/PRGRM_CNT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      PCint_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (PRGRM_CNT)
+Information: Building the design 'STACK_FSM'. (HDL-193)
+
+Statistics for case statements in always block at line 21 in file
+	'./1_Input/RTL/STACK_FSM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            26            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine STACK_FSM line 83 in file
+		'./1_Input/RTL/STACK_FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   Crnt_Stack_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   STACK_FULL_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     TOS_int_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (STACK_FSM)
+Information: Building the design 'STACK_MEM'. (HDL-193)
+
+Inferred memory devices in process
+	in routine STACK_MEM line 27 in file
+		'./1_Input/RTL/STACK_MEM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Stack_Mem_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine STACK_MEM line 34 in file
+		'./1_Input/RTL/STACK_MEM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   PopDataOut_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   STACK_MEM/37   |   8    |    4    |      3       |
+======================================================
+Presto compilation completed successfully. (STACK_MEM)
+Current design is 'ORCA'.
+{ORCA}
+dc_shell> Running PRESTO HDLC
+Presto compilation completed successfully. (ORCA)
+Warning: Overwriting design file '/home1/std251_4/2_Synthesis/ORCA.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'ORCA'.
+1
+dc_shell>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+Memory usage for this session 232 Mbytes.
+Memory usage for this session including child processes 232 Mbytes.
+CPU usage for this session 6 seconds ( 0.00 hours ).
+Elapsed time for this session 4758 seconds ( 1.32 hours ).
+
+Thank you...

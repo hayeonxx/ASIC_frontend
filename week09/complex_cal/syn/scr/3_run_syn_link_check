@@ -1,0 +1,12 @@
+# link design
+current_design complex_cal
+link
+
+# check design
+check_design ./rpt/complex_cal.chk_design.rpt
+
+# write ddc
+write_file -f ddc -hier -output out/unmapped/complex_cal.ddc
+
+# wrtie verilog netlist
+write -f verilog -hier -output ./out/unmapped/complex_cal.v

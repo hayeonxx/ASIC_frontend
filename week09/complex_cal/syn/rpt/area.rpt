@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : complex_cal
+Version: S-2021.06-SP5-5
+Date   : Mon May 26 14:48:58 2025
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_ss0p95v125c (File: /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db)
+
+Number of ports:                          153
+Number of nets:                          1208
+Number of cells:                          986
+Number of combinational cells:            948
+Number of sequential cells:                34
+Number of macros/black boxes:               0
+Number of buf/inv:                        208
+Number of references:                      14
+
+Combinational area:               2891.904564
+Buf/Inv area:                      390.365191
+Noncombinational area:             241.945092
+Macro/Black Box area:                0.000000
+Net Interconnect area:             446.344271
+
+Total cell area:                  3133.849656
+Total area:                       3580.193927
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  -----------
+complex_cal                       3133.8497    100.0   133.9339   241.9451  0.0000  complex_cal
+u_complex_add                       79.2929      2.5    79.2929     0.0000  0.0000  complex_add
+u_complex_mul                     2678.6777     85.5  2678.6777     0.0000  0.0000  complex_mul
+--------------------------------  ---------  -------  ---------  ---------  ------  -----------
+Total                                                 2891.9046   241.9451  0.0000
+
+1

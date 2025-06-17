@@ -1,0 +1,3 @@
+Command Line: /tools/synopsys_2021/verdi/S-2021.09-SP2-9/platform/LINUXAMD64/bin/Novas -Ultra -f run_pre.f -ssf test.pre.fsdb
+uname(Linux sse506-s3 4.18.0-553.34.1.el8_10.x86_64 #1 SMP Wed Jan 8 14:44:18 UTC 2025 x86_64)
+au time 6758.151703 27.509055 75.946509 delta 331141120 331141120 total 876302336 876302336

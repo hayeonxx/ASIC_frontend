@@ -1,0 +1,6 @@
+## read verilig rtl files
+read_verilog {complex_cal.v complex_add.v complex_mul.v}
+
+current_design complex_cal
+
+

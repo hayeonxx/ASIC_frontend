@@ -1,0 +1,3 @@
+LIBRARY /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db
+VERILOG /home1/std251_4/week04/mydesign/syn/out/mapped/mydesign.v
+TOP_CELL_NAME mydesign

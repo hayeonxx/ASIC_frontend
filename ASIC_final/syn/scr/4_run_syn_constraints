@@ -1,0 +1,5 @@
+# constraint for timing and area
+
+source -echo -verbose ../Constraint/Constraint.con
+
+

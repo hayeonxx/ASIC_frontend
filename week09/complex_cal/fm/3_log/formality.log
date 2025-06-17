@@ -1,0 +1,38 @@
+
+                                 Formality (R)
+
+               Version S-2021.06-SP5 for linux64 - Jan 11, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Build: 7435886
+Hostname: sse506-s3
+Current time: Tue May 20 08:37:44 2025
+
+Loading db file '/tools/synopsys_2021/fm/S-2021.06-SP5/libraries/syn/gtech.db'
+
+Script: scr/0_Script/main_r2n.tcl
+
+Error: could not open script file "scr/0_Script/main_r2n.tcl" (CMD-015)
+fm_shell (setup)> exit
+
+Maximum memory usage for this session: 866 MB
+CPU usage for this session: 0.43 seconds ( 0.00 hours )
+Current time: Tue May 20 08:38:41 2025
+Elapsed time: 57 seconds ( 0.02 hours )
+
+Thank you for using Formality (R)!

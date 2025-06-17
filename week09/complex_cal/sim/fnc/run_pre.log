@@ -1,0 +1,739 @@
+Command: vcs -full64 -debug_acc+all -kdb +define+SDF_PRE +neg_tchk +maxdelays -timescale=1ns/1ps \
++lint=TFIPC-L -f run_pre.f -l run_pre.log
+                         Chronologic VCS (TM)
+      Version S-2021.09-SP2-9_Full64 -- Mon May 26 12:37:30 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '../../syn/out/mapped/complex_cal.v'
+Parsing design file '../tb/testbench.v'
+Parsing library file '/tools/dk/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v'
+Top Level Modules:
+       tb_complex_cal
+TimeScale is 1 ps / 1 ps
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 191
+complex_mul, "FADDX1_RVT U42( .A (n847),  .B (n846),  .CI (n845),  .CO (n859));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 246
+complex_mul, "FADDX1_RVT U97( .A (n770),  .B (n768),  .CI (n769),  .CO (n812));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 315
+complex_mul, "FADDX1_RVT U166( .A (n502),  .B (n500),  .CI (n37),  .CO (n504));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 319
+complex_mul, "FADDX1_RVT U170( .A (n443),  .B (n442),  .CI (n441),  .CO (n456));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 323
+complex_mul, "FADDX1_RVT U174( .A (n200),  .B (n199),  .CI (n9),  .CO (n197));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 380
+complex_mul, "FADDX1_RVT U230( .A (n761),  .B (n760),  .CI (n105),  .CO (n823));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 409
+complex_mul, "FADDX1_RVT U259( .A (n67),  .B (n604),  .CI (n2),  .CO (n779));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 449
+complex_mul, "FADDX1_RVT U299( .A (n95),  .B (n257),  .CI (n96),  .CO (n251));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 462
+complex_mul, "FADDX1_RVT U312( .A (n562),  .B (n561),  .CI (n103),  .CO (n618));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 469
+complex_mul, "FADDX1_RVT U319( .A (n812),  .B (n813),  .CI (n814),  .CO (n829));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 520
+complex_mul, "FADDX1_RVT U370( .A (n212),  .B (n75),  .CI (n79),  .CO (n216));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 545
+complex_mul, "FADDX1_RVT U395( .A (n255),  .B (n16),  .CI (n61),  .CO (n271));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 571
+complex_mul, "FADDX1_RVT U421( .A (n293),  .B (n292),  .CI (n294),  .CO (n283));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 577
+complex_mul, "FADDX1_RVT U427( .A (n259),  .B (n260),  .CI (n258),  .CO (n237));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 605
+complex_mul, "FADDX1_RVT U455( .A (n30),  .B (n42),  .CI (n235),  .CO (n500));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 625
+complex_mul, "FADDX1_RVT U475( .A (n315),  .B (n314),  .CI (n6),  .CO (n467));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 653
+complex_mul, "FADDX1_RVT U503( .A (n359),  .B (n358),  .CI (n357),  .CO (n463));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 655
+complex_mul, "FADDX1_RVT U505( .A (n320),  .B (n319),  .CI (n318),  .CO (n465));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 679
+complex_mul, "FADDX1_RVT U529( .A (n356),  .B (n355),  .CI (n354),  .CO (n457));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 722
+complex_mul, "FADDX1_RVT U572( .A (n446),  .B (n445),  .CI (n444),  .CO (n449));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 741
+complex_mul, "FADDX1_RVT U591( .A (n489),  .B (n488),  .CI (n487),  .CO (n499));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 802
+complex_mul, "FADDX1_RVT U652( .A (n588),  .B (n587),  .CI (n586),  .CO (n620));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 843
+complex_mul, "FADDX1_RVT U693( .A (n660),  .B (n659),  .CI (n658),  .CO (n751));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'S' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 969
+complex_cal, "complex_add u_complex_add( .re_1 ({n76, n79, n83, n80, re_1_d[3:2], n82, re_1_d[0]}),  .im_1 ({im_1_d[7], n72, n75, n25, n22, n74, im_1_d[1:0]}),  .re_2 ({re_2_d[7], n81, re_2_d[5], n78, n92, n77, n91, re_2_d[0]}),  .im_2 ({im_2_d[7], n28, n73, n23, n24, im_2_d[2], n29, im_2_d[0]}),  .add_din_vld (1'b0),  .add_dout_re (add_dout_re),  .add_dout_im (add_dout_im));"
+  The above instance has fewer port connections than the module definition,
+  There are 8 port(s) in module "complex_add" definition, but only 7 port 
+  connect(s) in the instance.
+  output port 'add_dout_vld' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 975
+complex_cal, "complex_mul u_complex_mul( .re_1 ({re_1_d[7:5], n37, n90, n31, re_1_d[1:0]}),  .im_1 ({im_1_d[7], n38, n33, n25, im_1_d[3:0]}),  .re_2 ({n35, re_2_d[6], n42, re_2_d[4], n92, re_2_d[2], n91, re_2_d[0]}),  .im_2 ({im_2_d[7:6], n73, im_2_d[4:3], n40, im_2_d[1:0]}),  .mul_din_vld (1'b0),  .mul_dout_re (mul_dout_re),  .mul_dout_im (mul_dout_im));"
+  The above instance has fewer port connections than the module definition,
+  There are 8 port(s) in module "complex_mul" definition, but only 7 port 
+  connect(s) in the instance.
+  output port 'mul_dout_vld' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 980
+complex_cal, "DFFARX1_RVT cal_mode_d_reg( .D (cal_mode),  .CLK (clk),  .RSTB (n_rst),  .Q (cal_mode_d));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 984
+complex_cal, "DFFARX1_RVT re_1_d_reg_0_( .D (din_re_1[0]),  .CLK (clk),  .RSTB (n_rst),  .Q (re_1_d[0]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 986
+complex_cal, "DFFARX1_RVT re_2_d_reg_6_( .D (din_re_2[6]),  .CLK (clk),  .RSTB (n_rst),  .Q (re_2_d[6]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 988
+complex_cal, "DFFARX1_RVT re_2_d_reg_2_( .D (din_re_2[2]),  .CLK (clk),  .RSTB (n_rst),  .Q (re_2_d[2]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 990
+complex_cal, "DFFARX1_RVT dout_im_reg_7_( .D (n20),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_im[7]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 991
+complex_cal, "DFFARX1_RVT dout_im_reg_6_( .D (n19),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_im[6]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 992
+complex_cal, "DFFARX1_RVT dout_im_reg_5_( .D (n18),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_im[5]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 993
+complex_cal, "DFFARX1_RVT dout_im_reg_4_( .D (n17),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_im[4]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 994
+complex_cal, "DFFARX1_RVT dout_im_reg_3_( .D (n16),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_im[3]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 995
+complex_cal, "DFFARX1_RVT dout_im_reg_2_( .D (n15),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_im[2]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 996
+complex_cal, "DFFARX1_RVT dout_im_reg_1_( .D (n14),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_im[1]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 997
+complex_cal, "DFFARX1_RVT dout_im_reg_0_( .D (n13),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_im[0]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 998
+complex_cal, "DFFARX1_RVT dout_vld_reg( .D (din_vld_d),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_vld));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1000
+complex_cal, "DFFARX1_RVT dout_re_reg_7_( .D (n12),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_re[7]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1001
+complex_cal, "DFFARX1_RVT dout_re_reg_6_( .D (n11),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_re[6]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1002
+complex_cal, "DFFARX1_RVT dout_re_reg_5_( .D (n10),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_re[5]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1003
+complex_cal, "DFFARX1_RVT dout_re_reg_4_( .D (n9),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_re[4]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1005
+complex_cal, "DFFARX1_RVT dout_re_reg_3_( .D (n8),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_re[3]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1007
+complex_cal, "DFFARX1_RVT dout_re_reg_2_( .D (n7),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_re[2]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1009
+complex_cal, "DFFARX1_RVT dout_re_reg_1_( .D (n6),  .CLK (clk),  .RSTB (n_rst),  .Q (dout_re[1]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1013
+complex_cal, "DFFARX2_RVT re_2_d_reg_1_( .D (din_re_2[1]),  .CLK (clk),  .RSTB (n_rst),  .QN (n85));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'Q' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1015
+complex_cal, "DFFARX2_RVT re_2_d_reg_3_( .D (din_re_2[3]),  .CLK (clk),  .RSTB (n_rst),  .QN (n84));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'Q' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1019
+complex_cal, "DFFARX2_RVT im_2_d_reg_4_( .D (din_im_2[4]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_2_d[4]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1021
+complex_cal, "DFFARX1_RVT re_1_d_reg_5_( .D (din_re_1[5]),  .CLK (clk),  .RSTB (n_rst),  .Q (re_1_d[5]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1023
+complex_cal, "DFFARX2_RVT im_2_d_reg_0_( .D (din_im_2[0]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_2_d[0]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1027
+complex_cal, "DFFARX2_RVT im_2_d_reg_7_( .D (din_im_2[7]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_2_d[7]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1029
+complex_cal, "DFFARX2_RVT im_1_d_reg_3_( .D (din_im_1[3]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_1_d[3]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1031
+complex_cal, "DFFARX1_RVT re_1_d_reg_1_( .D (din_re_1[1]),  .CLK (clk),  .RSTB (n_rst),  .Q (re_1_d[1]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1033
+complex_cal, "DFFASX1_RVT dout_re_reg_0_( .D (n50),  .CLK (clk),  .SETB (n_rst),  .QN (dout_re[0]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFASX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'Q' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1035
+complex_cal, "DFFASX2_RVT re_2_d_reg_0_( .D (n71),  .CLK (clk),  .SETB (n_rst),  .QN (re_2_d[0]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFASX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'Q' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1037
+complex_cal, "DFFASX2_RVT re_2_d_reg_4_( .D (n70),  .CLK (clk),  .SETB (n_rst),  .QN (re_2_d[4]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFASX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'Q' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1039
+complex_cal, "DFFARX1_RVT im_1_d_reg_0_( .D (din_im_1[0]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_1_d[0]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1041
+complex_cal, "DFFARX1_RVT im_1_d_reg_1_( .D (din_im_1[1]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_1_d[1]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1043
+complex_cal, "DFFARX1_RVT im_2_d_reg_6_( .D (din_im_2[6]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_2_d[6]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1045
+complex_cal, "DFFARX1_RVT re_1_d_reg_7_( .D (din_re_1[7]),  .CLK (clk),  .RSTB (n_rst),  .Q (re_1_d[7]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1047
+complex_cal, "DFFARX2_RVT im_1_d_reg_7_( .D (din_im_1[7]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_1_d[7]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1049
+complex_cal, "DFFARX1_RVT im_1_d_reg_2_( .D (din_im_1[2]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_1_d[2]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1051
+complex_cal, "DFFARX1_RVT im_1_d_reg_6_( .D (din_im_1[6]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_1_d[6]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1053
+complex_cal, "DFFARX1_RVT im_2_d_reg_5_( .D (din_im_2[5]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_2_d[5]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1055
+complex_cal, "DFFARX1_RVT im_2_d_reg_1_( .D (din_im_2[1]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_2_d[1]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1065
+complex_cal, "DFFARX2_RVT re_1_d_reg_6_( .D (din_re_1[6]),  .CLK (clk),  .RSTB (n_rst),  .Q (re_1_d[6]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX2_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1067
+complex_cal, "DFFARX1_RVT im_1_d_reg_4_( .D (din_im_1[4]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_1_d[4]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/complex_cal.v, 1069
+complex_cal, "DFFARX1_RVT im_2_d_reg_3_( .D (din_im_2[3]),  .CLK (clk),  .RSTB (n_rst),  .Q (im_2_d[3]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Warning-[DDTC] Duplicate Timing Check is disabled
+/tools/dk/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v, 3798
+  The below duplicate timing check will be disabled:
+  $width(negedge RSTB, 0, 0, notifier);
+
+
+Warning-[DDTC] Duplicate Timing Check is disabled
+/tools/dk/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v, 3904
+  The below duplicate timing check will be disabled:
+  $width(negedge RSTB, 0, 0, notifier);
+
+
+Warning-[DDTC] Duplicate Timing Check is disabled
+/tools/dk/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v, 4391
+  The below duplicate timing check will be disabled:
+  $width(negedge SETB, 0, 0, notifier);
+
+
+Warning-[DDTC] Duplicate Timing Check is disabled
+/tools/dk/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v, 4499
+  The below duplicate timing check will be disabled:
+  $width(negedge SETB, 0, 0, notifier);
+
+
+   ***   $sdf_annotate() version 1.2R
+
+Warning-[SDFCOM_CNOF] Cannot Open File
+  SDF Error: Cannot open SDF file ../syn/out/mapped/complex_cal.pre.sdf for 
+  reading.      
+  No such file or directory.
+
+
+          Total errors: 1
+          Total warnings: 0
+   ***    SDF annotation aborted: Mon May 26 12:37:31 2025
+
+
+Starting vcs inline pass...
+45 modules and 5 UDPs read.
+recompiling module complex_add
+recompiling module complex_mul
+recompiling module complex_cal
+recompiling module tb_complex_cal
+recompiling module AND2X1_RVT
+recompiling module AND2X2_RVT
+recompiling module AND3X1_RVT
+recompiling module AO21X1_RVT
+recompiling module AO22X1_RVT
+recompiling module AOI21X1_RVT
+recompiling module AOI22X1_RVT
+recompiling module DFFARX1_RVT
+recompiling module DFFARX2_RVT
+recompiling module DFFASX1_RVT
+recompiling module DFFASX2_RVT
+recompiling module FADDX1_RVT
+recompiling module HADDX1_RVT
+recompiling module INVX0_RVT
+recompiling module INVX1_RVT
+recompiling module INVX2_RVT
+recompiling module INVX4_RVT
+recompiling module INVX8_RVT
+recompiling module MUX21X2_RVT
+recompiling module NAND2X0_RVT
+recompiling module NAND2X1_RVT
+recompiling module NAND2X4_RVT
+recompiling module NAND3X0_RVT
+recompiling module NBUFFX2_RVT
+recompiling module NBUFFX4_RVT
+recompiling module NBUFFX8_RVT
+recompiling module NOR2X0_RVT
+recompiling module NOR2X2_RVT
+recompiling module OA21X1_RVT
+recompiling module OAI21X1_RVT
+recompiling module OAI21X2_RVT
+recompiling module OAI22X1_RVT
+recompiling module OAI22X2_RVT
+recompiling module OR2X1_RVT
+recompiling module OR2X2_RVT
+recompiling module XNOR2X1_RVT
+recompiling module XNOR2X2_RVT
+recompiling module XOR2X1_RVT
+recompiling module XOR2X2_RVT
+recompiling module XOR3X1_RVT
+recompiling module XOR3X2_RVT
+All of 45 modules done
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib -L/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _780783_archive_1.so \
+objs/udps/CZfJ6.o objs/udps/u96GI.o objs/udps/Ux6u8.o objs/udps/Gjg4Z.o objs/udps/Z0GwU.o \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcs_save_restore_new.o /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/pli.a \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: .522 seconds to compile + .162 seconds to elab + .285 seconds to link
+Verdi KDB elaboration done and the database successfully generated: 0 error(s), 0 warning(s)

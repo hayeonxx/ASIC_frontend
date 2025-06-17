@@ -1,0 +1,660 @@
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+debImport "-f" "run.f"
+debLoadSimResult /home1/std251_4/ASIC_final/sim/fnc/top.fsdb
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "tb_fir13_filter"
+verdiWindowResize -win $_Verdi_1 -10 "31" "1440" "996"
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -inst "u_fir13_filter"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -inst "fir13_filter:Always1:61:66:RegCombo"
+schPushViewIn -win $_nSchema3
+srcSetScope "tb_fir13_filter.u_fir13_filter" -delim "." -win $_nTrace1
+srcSelect -win $_nTrace1 -range {61 66 1 3 1 1}
+verdiSetActWin -win $_nWave2
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_4
+schSelect -win $_nSchema4 -inst "fir13_filter:Always2:87:96:RegCombo"
+schPushViewIn -win $_nSchema4
+srcSelect -win $_nTrace1 -range {87 96 1 3 1 1}
+verdiSetActWin -win $_nWave2
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_5
+schSelect -win $_nSchema5 -inst "fir13_filter:Always0:21:32:Reg"
+schPushViewIn -win $_nSchema5
+srcSelect -win $_nTrace1 -range {21 32 1 3 1 1}
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_6
+schSelect -win $_nSchema6 -inst "fir13_filter:Always2:87:96:RegCombo"
+schPushViewIn -win $_nSchema6
+srcSelect -win $_nTrace1 -range {87 96 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+debReload
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_7
+schSelect -win $_nSchema7 -inst "fir13_filter:SigOp29:75:77:Combo"
+schPushViewIn -win $_nSchema7
+srcSelect -win $_nTrace1 -range {75 77 1 4 1 1}
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_8
+schSelect -win $_nSchema8 -inst "fir13_filter:Always1:61:66:RegCombo"
+schPushViewIn -win $_nSchema8
+srcSelect -win $_nTrace1 -range {61 66 1 3 1 1}
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_9
+debReload
+schSelect -win $_nSchema9 -inst "fir13_filter:Always2:72:77:RegCombo"
+schPushViewIn -win $_nSchema9
+srcSelect -win $_nTrace1 -range {72 77 1 3 1 1}
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+debReload
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_10
+debReload
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_11
+verdiWindowBeWindow -win $_nSchema_11
+schSetOptions -win $_nSchema11 -portName on
+schSetOptions -win $_nSchema11 -pinName on
+schSetOptions -win $_nSchema11 -instName on
+schSetOptions -win $_nSchema11 -localNetName on
+schSetOptions -win $_nSchema11 -completeName on
+schSetOptions -win $_nSchema11 -highContrastMode on
+schSetOptions -win $_nSchema11 -parameterList on
+schSetOptions -win $_nSchema11 -highContrastMode off
+schSetOptions -win $_nSchema11 -highContrastMode on
+schSetOptions -win $_nSchema11 -highContrastMode off
+schSetOptions -win $_nSchema11 -highContrastMode on
+schSetOptions -win $_nSchema11 -highContrastMode off
+schSetOptions -win $_nSchema11 -highContrastMode on
+schSelect -win $_nSchema11 -inst "fir13_filter:SigOp27:87:89:Combo"
+schPushViewIn -win $_nSchema11
+srcSelect -win $_nTrace1 -range {87 89 1 4 1 1}
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+schDeselectAll -win $_nSchema11
+verdiSetActWin -win $_nSchema_11
+schZoomOut -win $_nSchema11 -pos 30526 9070
+schZoomOut -win $_nSchema11
+schZoomIn -win $_nSchema11 -pos 22687 14970
+schZoomIn -win $_nSchema11 -pos 22687 14970
+schZoomIn -win $_nSchema11 -pos 22687 14971
+schZoomIn -win $_nSchema11 -pos 22687 14970
+schZoomOut -win $_nSchema11 -pos 22686 14970
+schZoomOut -win $_nSchema11 -pos 22686 14894
+schZoomIn -win $_nSchema11 -pos 37338 8322
+schZoomOut -win $_nSchema11 -pos 37408 8321
+verdiWindowBeDocked -win $_nSchema_11
+wvCreateWindow
+verdiSetActWin -win $_nWave12
+wvSetPosition -win $_nWave12 {("G1" 0)}
+wvOpenFile -win $_nWave12 {/home1/std251_4/ASIC_final/sim/fnc/test.fsdb}
+wvGetSignalOpen -win $_nWave12
+wvGetSignalSetScope -win $_nWave12 "/tb_fir13_filter"
+wvSetPosition -win $_nWave12 {("G1" 7)}
+wvSetPosition -win $_nWave12 {("G1" 7)}
+wvAddSignal -win $_nWave12 -clear
+wvAddSignal -win $_nWave12 -group {"G1" \
+{/tb_fir13_filter/clk} \
+{/tb_fir13_filter/i\[31:0\]} \
+{/tb_fir13_filter/n_rst} \
+{/tb_fir13_filter/r_addr\[12:0\]} \
+{/tb_fir13_filter/xn\[7:0\]} \
+{/tb_fir13_filter/y_file\[31:0\]} \
+{/tb_fir13_filter/yn\[7:0\]} \
+}
+wvAddSignal -win $_nWave12 -group {"G2" \
+}
+wvSelectSignal -win $_nWave12 {( "G1" 1 2 3 4 5 6 7 )} 
+wvSetPosition -win $_nWave12 {("G1" 7)}
+wvSetPosition -win $_nWave12 {("G1" 7)}
+wvSetPosition -win $_nWave12 {("G1" 7)}
+wvAddSignal -win $_nWave12 -clear
+wvAddSignal -win $_nWave12 -group {"G1" \
+{/tb_fir13_filter/clk} \
+{/tb_fir13_filter/i\[31:0\]} \
+{/tb_fir13_filter/n_rst} \
+{/tb_fir13_filter/r_addr\[12:0\]} \
+{/tb_fir13_filter/xn\[7:0\]} \
+{/tb_fir13_filter/y_file\[31:0\]} \
+{/tb_fir13_filter/yn\[7:0\]} \
+}
+wvAddSignal -win $_nWave12 -group {"G2" \
+}
+wvSelectSignal -win $_nWave12 {( "G1" 1 2 3 4 5 6 7 )} 
+wvSetPosition -win $_nWave12 {("G1" 7)}
+wvGetSignalClose -win $_nWave12
+wvSelectGroup -win $_nWave12 {G2}
+wvSelectSignal -win $_nWave12 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave12 {( "G1" 6 )} 
+wvCut -win $_nWave12
+wvSetPosition -win $_nWave12 {("G2" 0)}
+wvSetPosition -win $_nWave12 {("G1" 6)}
+wvSelectSignal -win $_nWave12 {( "G1" 4 )} 
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvDigitalToAnalog -win $_nWave12
+wvCut -win $_nWave12
+wvSetPosition -win $_nWave12 {("G2" 0)}
+wvSetPosition -win $_nWave12 {("G1" 6)}
+wvSelectSignal -win $_nWave12 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave12 {( "G1" 5 6 )} 
+wvSetRadix -win $_nWave12 -2Com
+wvDigitalToAnalog -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvSelectSignal -win $_nWave12 {( "G1" 4 )} 
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+verdiWindowBeWindow -win $_nWave12
+wvResizeWindow -win $_nWave12 0 0 1920 345
+wvResizeWindow -win $_nWave12 -117 125 1920 626
+wvResizeWindow -win $_nWave12 -278 102 1757 636
+wvResizeWindow -win $_nWave12 33 90 1757 636
+wvResizeWindow -win $_nWave12 33 90 1757 636
+wvSetCursor -win $_nWave12 15906073.515149 -snap {("G1" 8)}
+wvSetCursor -win $_nWave12 16912340.097129 -snap {("G1" 8)}
+wvSetCursor -win $_nWave12 18607104.866778 -snap {("G1" 8)}
+wvResizeWindow -win $_nWave12 33 90 1757 636
+wvSetCursor -win $_nWave12 1006347.586594 -snap {("G2" 0)}
+wvSetCursor -win $_nWave12 11776032.285231 -snap {("G1" 8)}
+wvSetCursor -win $_nWave12 600277.507793 -snap {("G1" 8)}
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvResizeWindow -win $_nWave12 33 90 1734 636
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvResizeWindow -win $_nWave12 33 90 1712 636
+wvSetCursor -win $_nWave12 2137389.203333 -snap {("G1" 8)}
+wvSetCursor -win $_nWave12 4002747.053514
+wvSetCursor -win $_nWave12 17468299.034511 -snap {("G1" 8)}
+wvSetCursor -win $_nWave12 24385667.728933 -snap {("G1" 8)}
+wvSetCursor -win $_nWave12 25182330.977448 -snap {("G1" 8)}
+wvSetCursor -win $_nWave12 9074188.708695 -snap {("G1" 8)}
+verdiSetActWin -win $_nSchema_11
+debReload
+verdiWindowBeWindow -win $_nSchema_11
+schSelect -win $_nSchema11 -inst "fir13_filter:Always2:108:117:RegCombo"
+schPushViewIn -win $_nSchema11
+srcSelect -win $_nTrace1 -range {108 117 1 3 1 1}
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_13
+schSelect -win $_nSchema13 -inst "fir13_filter:SigOp22:93:93:Combo"
+schPushViewIn -win $_nSchema13
+srcSelect -win $_nTrace1 -range {93 93 1 22 1 1}
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_14
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_15
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_16
+schSelect -win $_nSchema16 -inst "fir13_filter:Always0:21:32:Reg"
+schSelect -win $_nSchema16 -inst "fir13_filter:Always0:21:32:Reg"
+schPushViewIn -win $_nSchema16
+srcSelect -win $_nTrace1 -range {21 32 1 3 1 1}
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_17
+debReload
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_18
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_19
+schSelect -win $_nSchema19 -inst "fir13_filter:SigOp22:54:54:Combo"
+schPushViewIn -win $_nSchema19
+srcSelect -win $_nTrace1 -range {54 54 1 22 1 1}
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {53 54 3 4 1 3}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "p5" -line 54 -pos 1 -win $_nTrace1
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_20
+verdiSetActWin -win $_nSchema_11
+verdiSetActWin -win $_nSchema_20
+debReload
+schSelect -win $_nSchema20 -inst "fir13_filter:Always3:92:97:Reg"
+schPushViewIn -win $_nSchema20
+srcSelect -win $_nTrace1 -range {92 97 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_21
+schSelect -win $_nSchema21 -inst "fir13_filter:Always1:72:80:RegCombo"
+schPushViewIn -win $_nSchema21
+srcSelect -win $_nTrace1 -range {72 80 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_22
+debReload
+debReload
+debReload
+schSelect -win $_nSchema22 -inst "fir13_filter:Always2:71:79:Reg"
+schPushViewIn -win $_nSchema22
+srcSelect -win $_nTrace1 -range {71 79 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_23
+debReload
+schSelect -win $_nSchema23 -inst "fir13_filter:Always2:71:79:Reg"
+schSelect -win $_nSchema23 -inst "fir13_filter:Always2:71:79:Reg"
+schSelect -win $_nSchema23 -inst "fir13_filter:Always2:71:79:Reg"
+schPushViewIn -win $_nSchema23
+srcSelect -win $_nTrace1 -range {71 79 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+debReload
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_24
+schSelect -win $_nSchema24 -inst "fir13_filter:SigOp27:104:106:Combo"
+schPushViewIn -win $_nSchema24
+srcSelect -win $_nTrace1 -range {104 106 1 4 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_25
+schSelect -win $_nSchema25 -inst "fir13_filter:Always2:83:89:RegCombo"
+schPushViewIn -win $_nSchema25
+srcSelect -win $_nTrace1 -range {83 89 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+debReload
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_26
+verdiSetActWin -win $_nSchema_11
+verdiSetActWin -win $_nSchema_26
+debReload
+schSelect -win $_nSchema26 -instpin "fir13_filter:Always2:210:218:RegCombo" \
+          "acc_pre\[18:0\]"
+schZoomIn -win $_nSchema26 -pos 41702 7251
+schZoomIn -win $_nSchema26 -pos 41702 7251
+schZoomIn -win $_nSchema26 -pos 41702 7250
+schZoomIn -win $_nSchema26 -pos 40050 8143
+schZoomIn -win $_nSchema26 -pos 40050 8142
+schZoomIn -win $_nSchema26 -pos 40026 8167
+schZoomIn -win $_nSchema26 -pos 40025 8167
+schSelect -win $_nSchema26 -instpin "fir13_filter:Always2:210:218:RegCombo" \
+          "acc_pre\[18:0\]"
+schFocusConnection -win $_nSchema26
+schSetOptions -win $_nSchema26 -portName on
+schSetOptions -win $_nSchema26 -pinName on
+schSetOptions -win $_nSchema26 -localNetName on
+schSetOptions -win $_nSchema26 -instName on
+schSetOptions -win $_nSchema26 -completeName on
+schZoomOut -win $_nSchema26 -pos 40479 6946
+schZoomOut -win $_nSchema26 -pos 40479 6945
+schZoomOut -win $_nSchema26 -pos 40478 6945
+schZoomOut -win $_nSchema26 -pos 40478 6945
+schZoomOut -win $_nSchema26 -pos 40477 6945
+schZoomOut -win $_nSchema26 -pos 40477 6945
+schZoomOut -win $_nSchema26 -pos 40477 6944
+debReload
+schCreateWindow -delim "." -win $_nSchema1 -scope \
+           "tb_fir13_filter.u_fir13_filter"
+verdiSetActWin -win $_nSchema_27
+schSelect -win $_nSchema27 -signal "clk"
+schZoomIn -win $_nSchema27 -pos 31293 9789
+schZoomIn -win $_nSchema27 -pos 31293 9789
+schZoomIn -win $_nSchema27 -pos 31293 9788
+schZoomIn -win $_nSchema27 -pos 31293 9787
+schSetOptions -win $_nSchema27 -portName on
+schSetOptions -win $_nSchema27 -pinName on
+schSetOptions -win $_nSchema27 -instName on
+schSetOptions -win $_nSchema27 -localNetName on
+schSetOptions -win $_nSchema27 -completeName on
+schZoomOut -win $_nSchema27 -pos 40454 10456
+schZoomOut -win $_nSchema27 -pos 40453 10456
+schZoomOut -win $_nSchema27 -pos 40453 10456
+schZoomOut -win $_nSchema27 -pos 40452 10456
+schZoomOut -win $_nSchema27 -pos 44352 16662
+verdiSetActWin -win $_nWave12
+wvSetCursor -win $_nWave12 5440627.063029 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvDisplayGridCount -win $_nWave12 -off
+wvGetSignalClose -win $_nWave12
+wvReloadFile -win $_nWave12
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvDisplayGridCount -win $_nWave12 -off
+wvGetSignalClose -win $_nWave12
+wvReloadFile -win $_nWave12
+wvResizeWindow -win $_nWave12 3 188 1812 636
+wvResizeWindow -win $_nWave12 3 188 1789 636
+wvResizeWindow -win $_nWave12 3 188 1789 636
+wvResizeWindow -win $_nWave12 3 188 1789 636
+wvSetCursor -win $_nWave12 24545163.621007 -snap {("G1" 6)}
+wvSetCursor -win $_nWave12 24489631.576616 -snap {("G1" 6)}
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvSetCursor -win $_nWave12 24600200.245700
+wvSetCursor -win $_nWave12 24562728.501229
+wvSetCursor -win $_nWave12 24487785.012285
+wvSetCursor -win $_nWave12 24487785.012285
+wvSetCursor -win $_nWave12 24469049.140049 -snap {("G1" 6)}
+wvSetCursor -win $_nWave12 24469049.140049 -snap {("G1" 6)}
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvZoomIn -win $_nWave12
+wvGetSignalOpen -win $_nWave12
+wvGetSignalClose -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+wvZoomOut -win $_nWave12
+verdiSetActWin -win $_nSchema_27
+debReload
+schSetOptions -win $_nSchema27 -parameterList on
+verdiDockWidgetMaximize -dock windowDock_nSchema_27
+schSelect -win $_nSchema27 -signal "acc\[19:0\]"
+schSelect -win $_nSchema27 -inst "fir13_filter:SigOp13:160:160:Combo"
+debReload
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiSetActWin -win $_nSchema_27
+schZoomIn -win $_nSchema27 -pos 41657 7353
+schZoomIn -win $_nSchema27 -pos 41657 7353
+schZoomOut -win $_nSchema27 -pos 39881 9985
+debReload
+schSelect -win $_nSchema27 -inst "fir13_filter:SigOp23:202:204:Combo"
+schPushViewIn -win $_nSchema27
+srcSelect -win $_nTrace1 -range {202 204 1 8 1 1}
+schDeselectAll -win $_nSchema27
+schSelect -win $_nSchema27 -inst "fir13_filter:SigOp23:202:204:Combo"
+schPushViewIn -win $_nSchema27
+srcSelect -win $_nTrace1 -range {202 204 1 8 1 1}
+schSelect -win $_nSchema27 -inst "fir13_filter:SigOp23:202:204:Combo"
+schPushViewIn -win $_nSchema27
+srcSelect -win $_nTrace1 -range {202 204 1 8 1 1}
+schSelect -win $_nSchema27 -inst "fir13_filter:SigOp23:202:204:Combo"
+verdiDockWidgetMaximize -dock widgetDock_<Message>
+verdiSetActWin -dock widgetDock_<Message>
+verdiDockWidgetRestore -dock widgetDock_<Message>
+verdiSetActWin -win $_nSchema_27
+verdiDockWidgetMaximize -dock windowDock_nSchema_27
+schSelect -win $_nSchema27 -inst "fir13_filter:SigOp23:202:204:Combo"
+schPushViewIn -win $_nSchema27
+srcSelect -win $_nTrace1 -range {202 204 1 8 1 1}
+schSelect -win $_nSchema27 -inst "fir13_filter:SigOp23:202:204:Combo"
+verdiWindowBeWindow -win $_nSchema_27
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiWindowResize -win $_Verdi_1 "302" "88" "1440" "996"
+schDeselectAll -win $_nSchema27
+verdiSetActWin -win $_nSchema_27
+schSelect -win $_nSchema27 -inst "fir13_filter:SigOp23:202:204:Combo"
+schPushViewIn -win $_nSchema27
+srcSelect -win $_nTrace1 -range {202 204 1 8 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schDeselectAll -win $_nSchema27
+verdiSetActWin -win $_nSchema_27
+wvCreateWindow
+verdiSetActWin -win $_nWave28
+wvCreateWindow
+verdiSetActWin -win $_nWave29
+verdiWindowBeWindow -win $_nWave29
+wvResizeWindow -win $_nWave29 0 0 1920 345
+wvSetPosition -win $_nWave29 {("G1" 0)}
+wvOpenFile -win $_nWave29 {/home1/std251_4/ASIC_final/sim/fnc/test.fsdb}
+wvGetSignalOpen -win $_nWave29
+wvGetSignalSetScope -win $_nWave29 "/tb_fir13_filter"
+wvSetPosition -win $_nWave29 {("G1" 6)}
+wvSetPosition -win $_nWave29 {("G1" 6)}
+wvAddSignal -win $_nWave29 -clear
+wvAddSignal -win $_nWave29 -group {"G1" \
+{/tb_fir13_filter/clk} \
+{/tb_fir13_filter/i\[31:0\]} \
+{/tb_fir13_filter/n_rst} \
+{/tb_fir13_filter/r_addr\[12:0\]} \
+{/tb_fir13_filter/xn\[7:0\]} \
+{/tb_fir13_filter/yn\[7:0\]} \
+}
+wvAddSignal -win $_nWave29 -group {"G2" \
+}
+wvSelectSignal -win $_nWave29 {( "G1" 1 2 3 4 5 6 )} 
+wvSetPosition -win $_nWave29 {("G1" 6)}
+wvSetPosition -win $_nWave29 {("G1" 6)}
+wvSetPosition -win $_nWave29 {("G1" 6)}
+wvAddSignal -win $_nWave29 -clear
+wvAddSignal -win $_nWave29 -group {"G1" \
+{/tb_fir13_filter/clk} \
+{/tb_fir13_filter/i\[31:0\]} \
+{/tb_fir13_filter/n_rst} \
+{/tb_fir13_filter/r_addr\[12:0\]} \
+{/tb_fir13_filter/xn\[7:0\]} \
+{/tb_fir13_filter/yn\[7:0\]} \
+}
+wvAddSignal -win $_nWave29 -group {"G2" \
+}
+wvSelectSignal -win $_nWave29 {( "G1" 1 2 3 4 5 6 )} 
+wvSetPosition -win $_nWave29 {("G1" 6)}
+wvGetSignalClose -win $_nWave29
+wvSelectSignal -win $_nWave29 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave29 {( "G1" 5 6 )} 
+wvSetRadix -win $_nWave29 -2Com
+wvSelectGroup -win $_nWave29 {G2}
+wvSelectSignal -win $_nWave29 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave29 {( "G1" 5 6 )} 
+wvDigitalToAnalog -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvZoomOut -win $_nWave29
+wvSetCursor -win $_nWave29 9085326.778485 -snap {("G1" 8)}
+wvSetCursor -win $_nWave29 13742659.340659 -snap {("G1" 8)}
+wvResizeWindow -win $_nWave29 22 244 1920 447
+wvSetCursor -win $_nWave29 13019361.480625 -snap {("G2" 0)}
+verdiSetActWin -win $_nSchema_27
+verdiSetActWin -win $_nWave28
+debReload
+verdiSetActWin -win $_nWave2
+verdiSetActWin -win $_nSchema_27
+schSelect -win $_nSchema27 -signal "h2\[7:0\]"
+schZoomIn -win $_nSchema27 -pos 17606 23921
+schZoomIn -win $_nSchema27 -pos 17317 24263
+schZoomIn -win $_nSchema27 -pos 17207 24518
+schSelect -win $_nSchema27 -signal "sum3\[8:0\]" "h3\[7:0\]"
+schZoom {16909} {22845} {17587} {25149} -win $_nSchema27
+schZoomIn -win $_nSchema27 -pos 16584 24545
+schZoomIn -win $_nSchema27 -pos 16583 24544
+schZoomOut -win $_nSchema27 -pos 16583 24544
+schZoomOut -win $_nSchema27 -pos 16583 24544
+schZoomOut -win $_nSchema27 -pos 16583 24543
+schZoomOut -win $_nSchema27 -pos 16583 24543
+schZoomOut -win $_nSchema27 -pos 16584 24542
+schZoomOut -win $_nSchema27 -pos 16583 24542
+schZoomOut -win $_nSchema27 -pos 16575 24557
+schZoomOut -win $_nSchema27 -pos 16575 24556
+schZoomIn -win $_nSchema27 -pos 16097 25947
+schZoomIn -win $_nSchema27 -pos 16096 25947
+schZoomIn -win $_nSchema27 -pos 16096 25948
+schZoomOut -win $_nSchema27 -pos 16067 25966
+schZoomOut -win $_nSchema27 -pos 16066 25971
+schZoomOut -win $_nSchema27 -pos 16066 25970
+schZoomOut -win $_nSchema27 -pos 16066 25970
+schZoomOut -win $_nSchema27 -pos 16066 25970
+schZoomOut -win $_nSchema27 -pos 16051 25998
+schZoomOut -win $_nSchema27 -pos 15356 26775
+schZoomOut -win $_nSchema27 -pos 15355 26773
+schZoomOut -win $_nSchema27 -pos 15270 26744
+schZoomOut -win $_nSchema27 -pos 15270 26636
+schZoomOut -win $_nSchema27 -pos 15270 26184
+schZoomOut -win $_nSchema27 -pos 16163 23757
+schZoomOut -win $_nSchema27 -pos 16163 23756
+schZoomOut -win $_nSchema27 -pos 16164 23755
+schZoomIn -win $_nSchema27 -pos 10819 28936
+schZoomIn -win $_nSchema27 -pos 10818 28935
+schZoomIn -win $_nSchema27 -pos 10818 28934
+schZoomIn -win $_nSchema27 -pos 10818 28935
+schZoomIn -win $_nSchema27 -pos 12198 28273
+schSelect -win $_nSchema27 -signal "n_rst"
+verdiSetActWin -win $_nWave12
+verdiSetActWin -win $_nWave28
+wvCreateWindow
+wvSetPosition -win $_nWave28 {("G1" 0)}
+wvOpenFile -win $_nWave28 {/home1/std251_4/ASIC_final/sim/pre/test.pre.fsdb}
+wvGetSignalOpen -win $_nWave28
+wvGetSignalSetScope -win $_nWave28 "/tb_fir13_filter"
+wvSetPosition -win $_nWave28 {("G1" 7)}
+wvSetPosition -win $_nWave28 {("G1" 7)}
+wvAddSignal -win $_nWave28 -clear
+wvAddSignal -win $_nWave28 -group {"G1" \
+{/tb_fir13_filter/clk} \
+{/tb_fir13_filter/i\[31:0\]} \
+{/tb_fir13_filter/n_rst} \
+{/tb_fir13_filter/r_addr\[12:0\]} \
+{/tb_fir13_filter/xn\[7:0\]} \
+{/tb_fir13_filter/y_file\[31:0\]} \
+{/tb_fir13_filter/yn\[7:0\]} \
+}
+wvAddSignal -win $_nWave28 -group {"G2" \
+}
+wvSelectSignal -win $_nWave28 {( "G1" 1 2 3 4 5 6 7 )} 
+wvSetPosition -win $_nWave28 {("G1" 7)}
+wvSetPosition -win $_nWave28 {("G1" 7)}
+wvSetPosition -win $_nWave28 {("G1" 7)}
+wvAddSignal -win $_nWave28 -clear
+wvAddSignal -win $_nWave28 -group {"G1" \
+{/tb_fir13_filter/clk} \
+{/tb_fir13_filter/i\[31:0\]} \
+{/tb_fir13_filter/n_rst} \
+{/tb_fir13_filter/r_addr\[12:0\]} \
+{/tb_fir13_filter/xn\[7:0\]} \
+{/tb_fir13_filter/y_file\[31:0\]} \
+{/tb_fir13_filter/yn\[7:0\]} \
+}
+wvAddSignal -win $_nWave28 -group {"G2" \
+}
+wvSelectSignal -win $_nWave28 {( "G1" 1 2 3 4 5 6 7 )} 
+wvSetPosition -win $_nWave28 {("G1" 7)}
+wvGetSignalClose -win $_nWave28
+verdiSetActWin -win $_nWave12
+verdiSetActWin -win $_nWave28
+verdiWindowResize -win $_Verdi_1 "117" "19" "1440" "996"
+verdiWindowResize -win $_Verdi_1 "117" "501" "1440" "514"
+wvSyncAllWaveform -win $_nWave28 -cursor_marker on -horizontal_range on \
+           -vertical_scroll on
+wvZoomOut -win $_nWave28
+wvZoomOut -win $_nWave28
+wvZoomOut -win $_nWave28
+wvZoomOut -win $_nWave28
+wvZoomOut -win $_nWave28
+wvZoomOut -win $_nWave28
+wvZoomOut -win $_nWave28
+wvZoomOut -win $_nWave28
+wvZoomOut -win $_nWave28
+wvZoomOut -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomIn -win $_nWave28
+wvZoomOut -win $_nWave28
+wvSelectSignal -win $_nWave12 {( "G1" 4 )} 
+verdiSetActWin -win $_nWave12
+wvSelectSignal -win $_nWave12 {( "G1" 4 5 )} 
+wvSetRadix -win $_nWave12 -2Com
+wvSetCursor -win $_nWave12 15108115.786241 -snap {("G1" 7)}
+wvSelectSignal -win $_nWave28 {( "G1" 5 )} 
+verdiSetActWin -win $_nWave28
+verdiSetActWin -win $_nWave12
+wvSelectSignal -win $_nWave12 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave12 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave12 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave12 {( "G1" 5 6 )} 
+wvSetRadix -win $_nWave12 -2Com
+wvSelectSignal -win $_nWave28 {( "G1" 6 )} 
+verdiSetActWin -win $_nWave28
+wvSelectSignal -win $_nWave28 {( "G1" 5 )} 
+wvSetPosition -win $_nWave28 {("G1" 5)}
+wvSetPosition -win $_nWave28 {("G1" 6)}
+wvMoveSelected -win $_nWave28
+wvSetPosition -win $_nWave28 {("G1" 6)}
+wvOpenFile -win $_nWave28 {/home1/std251_4/ASIC_final/sim/fnc/test.fsdb}
+debExit

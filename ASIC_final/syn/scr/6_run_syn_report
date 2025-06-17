@@ -1,0 +1,5 @@
+## reports for deisgn and timing, etc.
+report_clocks -attributes -skew             		> ./rpt/clocks.rpt
+report_area -hierarchy					> ./rpt/area.rpt
+report_timing -max 32 -nets -nosplit		 	> ./rpt/timing.rpt
+report_analysis_coverage > ./rpt/analysis_coverage.rpt

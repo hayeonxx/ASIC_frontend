@@ -1,0 +1,94 @@
+Magic 271485
+Revision Verdi_S-2021.09-SP2-9
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1920 528 100 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home1/std251_4/week04/mydesign/sim/fnc/top.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 1838.200000
+cursor 400.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 7
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home1/std251_4/week04/mydesign/sim/fnc/top.fsdb"
+addSignal -h 15 /testbench/clk
+addSignal -h 15 -holdScope n_rst
+addSignal -h 15 -holdScope din1
+addSignal -h 15 /testbench/u_top/u_not_gate/s_in
+addSignal -h 15 /testbench/u_top/u_shift2/p_out[1:0]
+addSignal -h 15 /testbench/do1[1:0]
+addSignal -h 15 /testbench/u_top/u_ff/do2_xor_ff[1:0]
+addSignal -h 15 /testbench/do2[1:0]
+addSignal -h 15 -holdScope up1_dn0
+addSignal -h 15 -UNSIGNED -BIN /testbench/u_top/up1_do0[1:0]
+addSignal -h 15 /testbench/sel
+addSignal -h 15 -UNSIGNED -BIN -holdScope do3[1:0]
+addSignal -h 15 -holdScope cin1
+addSignal -h 15 -holdScope cin2
+addSignal -h 15 /testbench/u_top/sel
+addSignal -h 15 /testbench/co1
+addSignal -h 15 -holdScope co2
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home1/std251_4/week04/mydesign/sim/fnc/top.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/testbench"
+"/testbench/u_top"
+"/testbench/u_top/u_shift2"
+
+SCOPE_LIST_BEGIN
+"/testbench"
+"/testbench/u_top"
+"/testbench/u_top/u_not_gate"
+"/testbench/u_top/u_swap"
+"/testbench/u_top/u_xor_gate"
+"/testbench/u_top/u_cnt"
+"/testbench/u_top/u_ff"
+"/testbench/u_top/u_inv"
+"/testbench/u_top/u_shift2"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

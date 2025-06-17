@@ -1,0 +1,17 @@
+## write ddc and gate verilog netlist, etc.
+change_names -rules verilog -hierarchy
+
+# write ddc
+write -format ddc -hier -o ./2_Output/mapped/ORCA_gate.ddc
+
+# wrtie verilog netlist
+write -f verilog -h -o ./2_Output/mapped/ORCA_gate.v
+
+# write SDC
+write_sdc ./2_Output/mapped/ORCA_func.sdc
+
+
+
+
+
+

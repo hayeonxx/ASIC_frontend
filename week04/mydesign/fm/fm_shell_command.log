@@ -1,0 +1,287 @@
+#@ # 
+#@ # Running fm_shell Version S-2021.06-SP5 for linux64 -- Jan 11, 2022
+#@ # Date:   Fri May 30 11:38:51 2025
+#@ # Run by: std251_4@sse506-s3
+#@ 
+
+source /tools/synopsys_2021/fm/S-2021.06-SP5/admin/setup/.synopsys_fm.setup
+#@ # -- Starting source /tools/synopsys_2021/fm/S-2021.06-SP5/admin/setup/.synopsys_fm.setup
+
+#@ #
+#@ # .synopsys_fm.setup: Initialization File for Formality
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparc" || $sh_arch == "sparcOS5" ||      $sh_arch == "hp700" || $sh_arch == "hpux10" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ 
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ # -- End source /tools/synopsys_2021/fm/S-2021.06-SP5/admin/setup/.synopsys_fm.setup
+
+source -echo -verbose 0_Script/main_r2n.tcl
+#@ # -- Starting source 0_Script/main_r2n.tcl
+
+#@ #####################################################################
+#@ # control variables
+#@ #####################################################################
+#@ source -e -v ./0_Script/0_run_r2n_setup.tcl
+#@ # -- Starting source ./0_Script/0_run_r2n_setup.tcl
+
+#@ #setup version
+#@ set ver [getenv ver]
+#@ set fm_ver [getenv fm_ver]
+#@ set curr_dir [pwd]
+#@ set REPORTS ${curr_dir}/4_rpt/${fm_ver}
+#@ set SCRIPTS ${curr_dir}/0_Script
+#@ 
+#@ ##implement_design_path
+#@ set implement_design_path ../syn/out/mapped
+#@ 
+#@ set TOP_MODULE "mydesign"
+#@ 
+#@ set clock_gating_mode 1
+#@ set QUIT_ON_FINISH 0
+#@ # -- End source ./0_Script/0_run_r2n_setup.tcl
+
+#@ 
+#@ #####################################################################
+#@ # Remove possible old design entries
+#@ #####################################################################
+#@ source -e -v ./0_Script/1_run_r2n_remove_design.tcl
+#@ # -- Starting source ./0_Script/1_run_r2n_remove_design.tcl
+
+#@ ##Remove possible old design entries
+#@ remove_container r
+#@ remove_container i
+#@ remove_guidance
+#@ remove_constant -all
+#@ remove_black_box -all
+#@ remove_user_match -all
+#@ remove_dont_verify_point -all
+#@ remove_library -all
+#@ 
+#@ # -- End source ./0_Script/1_run_r2n_remove_design.tcl
+
+#@ 
+#@ #####################################################################
+#@ # Common Variable Setup
+#@ #####################################################################
+#@ source -e -v ./0_Script/2_run_r2n_variable_setup.tcl
+#@ # -- Starting source ./0_Script/2_run_r2n_variable_setup.tcl
+
+#@ ##Common Variable Setup
+#@ set synopsys_auto_setup true
+#@ 
+#@ set hdlin_error_on_mismatch_message false
+#@ set hdlin_warning_on_mismatch_message {FMR_ELAB-147 FMR_ELAB-116 FMR_ELAB-115}
+#@ set hdlin_unresolved_modules black_box
+#@ 
+#@ if {$clock_gating_mode} {
+#@ 		set verification_clock_gate_reverse_gating true
+#@ 	} else {
+#@ 		set verification_clock_gate_edge_analysis true
+#@ 	}
+#@ 
+#@ set verification_failing_point_limit 1000
+#@ set verification_timeout_limit 72:00:00
+#@ 
+#@ set verification_run_analyze_points true
+#@ #
+#@ set svf_presto_parameter_naming true
+#@ 
+#@ set verification_ignore_unmatched_implementation_blackbox_input true
+#@ set verification_inversion_push false
+#@ 
+#@ set fm_enable_new_fne true
+#@ set hdlin_enable_vpp true
+#@ 
+#@ set hdlin_vrlg_std 2001
+#@ 
+#@ 
+#@ 
+#@ # -- End source ./0_Script/2_run_r2n_variable_setup.tcl
+
+#@ 
+#@ #####################################################################
+#@ # Read Library
+#@ #####################################################################
+#@ source -e -v ./0_Script/3_run_r2n_lib_setup.tcl
+#@ # -- Starting source ./0_Script/3_run_r2n_lib_setup.tcl
+
+#@ ##########################################################################################
+#@ # User-defined variables for logical library, RTL setup
+#@ ##########################################################################################
+#@ set lib_rvt 	"/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm" 	;#  Logic cell library directory
+#@ # set lib_io 	"/tools/dk/SAED32_EDK/lib/io_std/db_nldm"  	;#  IO library directory
+#@ # set lib_mem 	"/tools/dk/SAED32_EDK/lib/sram/db_nldm"	;#  Memory library directory
+#@ # set lib_pll 	"/tools/dk/SAED32_EDK/lib/pll/db_nldm"  		;#  PLL library directory
+#@ set RTL_path 	"../rtl" 
+#@ ######################################################################
+#@ # Search path Settings
+#@ ######################################################################
+#@ set search_path ". $lib_rvt 
+#@ 		$RTL_path 		"
+#@ # $lib_io 		# $lib_mem 		# $lib_pll ######################################################################
+#@ # Read DB Read DB
+#@ ######################################################################
+#@ read_db saed32rvt_ss0p95v125c.db
+#@ # read_db saed32io_fc_ss0p95v125c_2p25v.db
+#@ # read_db saed32pll_ss0p95v125c_2p25v.db
+#@ # read_db saed32sram_ss0p95v125c.db
+#@ # -- End source ./0_Script/3_run_r2n_lib_setup.tcl
+
+#@ 
+#@ #####################################################################
+#@ # svf setup
+#@ #####################################################################
+#@ set_svf ../syn
+#@ 
+#@ #####################################################################
+#@ # Read design
+#@ #####################################################################
+#@ source -e -v ./0_Script/4_run_r2n_read_design.tcl
+#@ # -- Starting source ./0_Script/4_run_r2n_read_design.tcl
+
+#@ #####################################################################
+#@ # Read reference design - RTL
+#@ #####################################################################
+#@ 
+#@ read_verilog -r -libname WORK {mydesign.v shift2.v}
+#@ 
+#@ set_top r:/WORK/${TOP_MODULE}
+#@ 
+#@ #####################################################################
+#@ # Read implement design - Netlist
+#@ #####################################################################
+#@ 
+#@ read_verilog -i -libname WORK ${implement_design_path}/mydesign.v
+#@ 
+#@ set_top i:/WORK/${TOP_MODULE}
+#@ 
+#@ # -- End source ./0_Script/4_run_r2n_read_design.tcl
+
+#@ 
+#@ #####################################################################
+#@ # Matching
+#@ #####################################################################
+#@ source -e -v ./0_Script/5_run_r2n_match.tcl
+#@ # -- Starting source ./0_Script/5_run_r2n_match.tcl
+
+#@ #####################################################################
+#@ # Matching
+#@ #####################################################################
+#@ 
+#@ match
+#@ 
+#@ report_unmatched_point > ${REPORTS}/unmatched_points_post_matching.rpt
+#@ report_user_matches > ${REPORTS}/user_matches_post_matching.rpt
+#@ # -- End source ./0_Script/5_run_r2n_match.tcl
+
+#@ 
+#@ #####################################################################
+#@ # Verifying
+#@ #####################################################################
+#@ source -e -v ./0_Script/6_run_r2n_verify.tcl
+#@ # -- Starting source ./0_Script/6_run_r2n_verify.tcl
+
+#@ if {[verify]} {
+#@ 			puts ""
+#@ 			puts " PPPPPPPPPPPPPPPPP        AAA                 SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS  "
+#@ 			puts " P::::::::::::::::P      A:::A              SS:::::::::::::::S SS:::::::::::::::S "
+#@ 			puts " P::::::PPPPPP:::::P    A:::::A            S:::::SSSSSS::::::SS:::::SSSSSS::::::S "
+#@ 			puts " PP:::::P     P:::::P  A:::::::A           S:::::S     SSSSSSSS:::::S     SSSSSSS "
+#@ 			puts "   P::::P     P:::::P A:::::::::A          S:::::S            S:::::S             "
+#@ 			puts "   P::::P     P:::::PA:::::A:::::A         S:::::S            S:::::S             "
+#@ 			puts "   P::::PPPPPP:::::PA:::::A A:::::A         S::::SSSS          S::::SSSS          "
+#@ 			puts "   P:::::::::::::PPA:::::A   A:::::A         SS::::::SSSSS      SS::::::SSSSS     "
+#@ 			puts "   P::::PPPPPPPPP A:::::A     A:::::A          SSS::::::::SS      SSS::::::::SS   "
+#@ 			puts "   P::::P        A:::::AAAAAAAAA:::::A            SSSSSS::::S        SSSSSS::::S  "
+#@ 			puts "   P::::P       A:::::::::::::::::::::A                S:::::S            S:::::S "
+#@ 			puts "   P::::P      A:::::AAAAAAAAAAAAA:::::A               S:::::S            S:::::S "
+#@ 			puts " PP::::::PP   A:::::A             A:::::A  SSSSSSS     S:::::SSSSSSSS     S:::::S "
+#@ 			puts " P::::::::P  A:::::A               A:::::A S::::::SSSSSS:::::SS::::::SSSSSS:::::S "
+#@ 			puts " P::::::::P A:::::A                 A:::::AS:::::::::::::::SS S:::::::::::::::SS  "
+#@ 			puts " PPPPPPPPPPAAAAAAA                   AAAAAAASSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS    "
+#@ 			puts ""
+#@ 
+#@ 	} else {
+#@ 
+#@                                                                                 
+#@ 			puts ""
+#@ 			puts " FFFFFFFFFFFFFFFFFFFFFF      AAA               IIIIIIIIIILLLLLLLLLLL              "
+#@ 			puts " F::::::::::::::::::::F     A:::A              I::::::::IL:::::::::L              "
+#@ 			puts " F::::::::::::::::::::F    A:::::A             I::::::::IL:::::::::L              "
+#@ 			puts " FF::::::FFFFFFFFF::::F   A:::::::A            II::::::IILL:::::::LL              "
+#@ 			puts "   F:::::F       FFFFFF  A:::::::::A             I::::I    L:::::L                "
+#@ 			puts "   F:::::F              A:::::A:::::A            I::::I    L:::::L                "
+#@ 			puts "   F::::::FFFFFFFFFF   A:::::A A:::::A           I::::I    L:::::L                "
+#@ 			puts "   F:::::::::::::::F  A:::::A   A:::::A          I::::I    L:::::L                "
+#@ 			puts "   F:::::::::::::::F A:::::A     A:::::A         I::::I    L:::::L                "
+#@ 			puts "   F::::::FFFFFFFFFFA:::::AAAAAAAAA:::::A        I::::I    L:::::L                "
+#@ 			puts "   F:::::F         A:::::::::::::::::::::A       I::::I    L:::::L                "
+#@ 			puts "   F:::::F        A:::::AAAAAAAAAAAAA:::::A      I::::I    L:::::L         LLLLLL "
+#@ 			puts " FF:::::::FF     A:::::A             A:::::A   II::::::IILL:::::::LLLLLLLLL:::::L "
+#@ 			puts " F::::::::FF    A:::::A               A:::::A  I::::::::IL::::::::::::::::::::::L "
+#@ 			puts " F::::::::FF   A:::::A                 A:::::A I::::::::IL::::::::::::::::::::::L "
+#@ 			puts " FFFFFFFFFFF  AAAAAAA                   AAAAAAAIIIIIIIIIILLLLLLLLLLLLLLLLLLLLLLLL "
+#@ 			puts ""
+#@ 
+#@ 
+#@ 	}
+#@ # -- End source ./0_Script/6_run_r2n_verify.tcl
+
+#@ 
+#@ #####################################################################
+#@ # report
+#@ #####################################################################
+#@ source -e -v ./0_Script/7_run_r2n_report.tcl
+#@ # -- Starting source ./0_Script/7_run_r2n_report.tcl
+
+#@ report_failing_point > ${REPORTS}/failing_points.rpt
+#@ report_aborted_point > ${REPORTS}/aborted_points.rpt
+#@ report_unverified_point > ${REPORTS}/unverified_points.rpt
+#@ report_black_box > ${REPORTS}/black_box.rpt
+#@ report_constants > ${REPORTS}/constants.rpt
+#@ report_dont_verify_points > ${REPORTS}/dont_verify_points.rpt
+#@ 
+#@ save_session -replace ./2_out/${fm_ver}/saved_session
+#@ 
+#@ if {$QUIT_ON_FINISH} {
+#@ 		exit
+#@ 	}
+#@ # -- End source ./0_Script/7_run_r2n_report.tcl
+
+#@ 
+#@ save_session -replace session_mydesign
+#@ # -- End source 0_Script/main_r2n.tcl
+
+exit

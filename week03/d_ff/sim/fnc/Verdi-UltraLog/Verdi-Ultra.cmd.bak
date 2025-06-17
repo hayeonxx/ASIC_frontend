@@ -1,0 +1,84 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-f" "run.f"
+debLoadSimResult /home1/std251_4/week03/d_ff/sim/fnc/top.fsdb
+wvCreateWindow
+verdiWindowResize -win $_Verdi_1 "490" "174" "900" "700"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -delim "." -win $_nSchema1 -scope "tb_d_ff"
+verdiSetActWin -win $_nSchema_3
+wvCreateWindow
+verdiSetActWin -win $_nWave4
+schSelect -win $_nSchema3 -inst "u_d_ff"
+schPushViewIn -win $_nSchema3
+verdiSetActWin -win $_nSchema_3
+verdiSetActWin -win $_nWave4
+wvSetPosition -win $_nWave4 {("G1" 0)}
+wvOpenFile -win $_nWave4 {/home1/std251_4/week03/d_ff/sim/fnc/top.fsdb}
+wvGetSignalOpen -win $_nWave4
+wvGetSignalSetScope -win $_nWave4 "/tb_d_ff"
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvAddSignal -win $_nWave4 -clear
+wvAddSignal -win $_nWave4 -group {"G1" \
+{/tb_d_ff/D} \
+{/tb_d_ff/Q} \
+{/tb_d_ff/clk} \
+{/tb_d_ff/rst} \
+}
+wvAddSignal -win $_nWave4 -group {"G2" \
+}
+wvSelectSignal -win $_nWave4 {( "G1" 1 2 3 4 )} 
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvAddSignal -win $_nWave4 -clear
+wvAddSignal -win $_nWave4 -group {"G1" \
+{/tb_d_ff/D} \
+{/tb_d_ff/Q} \
+{/tb_d_ff/clk} \
+{/tb_d_ff/rst} \
+}
+wvAddSignal -win $_nWave4 -group {"G2" \
+}
+wvSelectSignal -win $_nWave4 {( "G1" 1 2 3 4 )} 
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvGetSignalClose -win $_nWave4
+wvSetCursor -win $_nWave4 55.339967 -snap {("G2" 0)}
+wvZoomOut -win $_nWave4
+wvZoomOut -win $_nWave4
+wvSetCursor -win $_nWave4 183.116801 -snap {("G2" 0)}
+wvSelectSignal -win $_nWave4 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvSetPosition -win $_nWave4 {("G1" 1)}
+wvSetPosition -win $_nWave4 {("G1" 2)}
+wvSetPosition -win $_nWave4 {("G1" 3)}
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvMoveSelected -win $_nWave4
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvSelectSignal -win $_nWave4 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvSetPosition -win $_nWave4 {("G1" 1)}
+wvSetPosition -win $_nWave4 {("G1" 2)}
+wvSetPosition -win $_nWave4 {("G1" 3)}
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvSetPosition -win $_nWave4 {("G2" 0)}
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvMoveSelected -win $_nWave4
+wvSetPosition -win $_nWave4 {("G1" 4)}
+wvSetCursor -win $_nWave4 29.694616 -snap {("G2" 0)}
+wvSelectSignal -win $_nWave4 {( "G1" 4 )} 
+wvSelectGroup -win $_nWave4 {G2}
+debReload
+verdiWindowResize -win $_Verdi_1 "490" "174" "900" "700"
+verdiSetActWin -win $_nSchema_3
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "tb_d_ff" -win $_nTrace1
+srcSetScope "tb_d_ff" -delim "." -win $_nTrace1
+srcHBSelect "tb_d_ff" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1

@@ -1,0 +1,342 @@
+ 
+****************************************
+Report : cell
+Design : ORCA
+Version: S-2021.06-SP5-5
+Date   : Mon Dec 11 12:48:41 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    d - dont_touch
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+I_CLK_SOURCE_PCLK         NBUFFX4_RVT     saed32rvt_ss0p95v125c
+                                                          2.541440  d
+I_CLK_SOURCE_SDRAM_CLK    NBUFFX4_RVT     saed32rvt_ss0p95v125c
+                                                          2.541440  d
+I_CLK_SOURCE_SYS_2x_CLK   NBUFFX4_RVT     saed32rvt_ss0p95v125c
+                                                          2.541440  d
+I_CLK_SOURCE_SYS_CLK      NBUFFX4_RVT     saed32rvt_ss0p95v125c
+                                                          2.541440  d
+I_CLOCK_GEN               CLOCK_GEN                       10913.433346
+                                                                    b, h
+I_ORCA_TOP                ORCA_TOP                        232837.426852
+                                                                    b, h, n
+PCI_BE_Bus[0].pc_be_iopad B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+PCI_BE_Bus[1].pc_be_iopad B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+PCI_BE_Bus[2].pc_be_iopad B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+PCI_BE_Bus[3].pc_be_iopad B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[0].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[1].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[2].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[3].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[4].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[5].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[6].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[7].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[8].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_A_Bus[9].sdram_A_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_BWS_Bus[0].sdram_BWS_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_BWS_Bus[1].sdram_BWS_iopad
+                          D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[0].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[1].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[2].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[3].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[4].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[5].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[6].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[7].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[8].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[9].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[10].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[11].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[12].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[13].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[14].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+SDRAM_DQ_Bus[15].sdram_DQ_iopad
+                          B16I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+U31                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U32                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U33                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U34                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U35                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U36                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U37                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U38                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U39                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U40                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U41                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U42                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U43                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U44                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U45                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U46                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U47                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U48                       INVX8_RVT       saed32rvt_ss0p95v125c
+                                                          3.049728  
+U49                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U50                       NAND2X0_RVT     saed32rvt_ss0p95v125c
+                                                          1.524864  
+U51                       INVX1_RVT       saed32rvt_ss0p95v125c
+                                                          1.270720  
+U52                       NBUFFX32_RVT    saed32rvt_ss0p95v125c
+                                                          10.674048 
+U53                       NBUFFX32_RVT    saed32rvt_ss0p95v125c
+                                                          10.674048 
+U54                       NBUFFX32_RVT    saed32rvt_ss0p95v125c
+                                                          10.674048 
+U55                       NBUFFX32_RVT    saed32rvt_ss0p95v125c
+                                                          10.674048 
+U56                       NBUFFX32_RVT    saed32rvt_ss0p95v125c
+                                                          10.674048 
+U57                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U58                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U59                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U60                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U61                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U62                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U63                       INVX2_RVT       saed32rvt_ss0p95v125c
+                                                          1.524864  
+U_IOPOWER                 IOPOWER                         240000.000000
+                                                                    b, h
+genblk1[6].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk1[7].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk1[8].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk1[9].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk1[10].pad_iopad     B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk1[11].pad_iopad     B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk1[12].pad_iopad     B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk1[13].pad_iopad     B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk1[14].pad_iopad     B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk1[15].pad_iopad     B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk2[0].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk2[1].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk2[2].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk2[3].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk2[4].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+genblk2[5].pad_iopad      B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+pclk_iopad                I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+pdevsel_n_iopad           B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+pframe_n_iopad            B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+pgnt_n_iopad              I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+pidsel_iopad              I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+pirdy_n_iopad             B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+pm66en_iopad              I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+powersave_iopad           I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+ppar_iopad                B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+pperr_n_iopad             B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+preq_n_iopad              D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+prst_n_iopad              I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+pserr_n_iopad             B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+pstop_n_iopad             B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+ptrdy_n_iopad             B12I1025_NS     saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+scan_en_iopad             I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+sdr_clk_iopad             I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+sdram_CK_iopad            D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+sdram_CKn_iopad           D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+sdram_LD_iopad            D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+sdram_RW_iopad            D8I1025_NS      saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d, n
+sys_clk_iopad             I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+test_mode_iopad           I1025_NS        saed32io_fc_ss0p95v125c_2p25v
+                                                          8000.000000
+                                                                    d
+--------------------------------------------------------------------------------
+Total 111 cells                                           1051858.363111
+1

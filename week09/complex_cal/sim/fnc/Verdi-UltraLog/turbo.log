@@ -1,0 +1,3 @@
+Command Line: /tools/synopsys_2021/verdi/S-2021.09-SP2-9/platform/LINUXAMD64/bin/Novas -Ultra -f run.f -ssf top.fsdb
+uname(Linux sse506-s3 4.18.0-553.34.1.el8_10.x86_64 #1 SMP Wed Jan 8 14:44:18 UTC 2025 x86_64)
+au time 21006.211718 84.482664 237.007004 delta 734367744 734367744 total 1279528960 1279528960

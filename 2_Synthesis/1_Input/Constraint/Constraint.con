@@ -1,0 +1,99 @@
+
+
+###################################
+# Constraints file for design ORCA
+###################################
+
+## define create clock
+create_clock [get_ports pclk]  -period 8  -waveform {0 4}
+create_clock [get_ports sys_clk]  -period 4  -waveform {0 2}
+create_clock [get_ports sdr_clk]  -period 4  -waveform {0 2}
+create_clock  -name PCI_CLK -period 8 -waveform {0 4} [get_pins I_CLOCK_GEN/I_PLL_PCI/CLK_1X]
+create_clock  -name SDRAM_CLK -period 4 -waveform {0 2}  [get_pins I_CLOCK_GEN/I_PLL_SD/CLK_1X]
+
+## define generated clock
+create_generated_clock [get_ports sd_CK]  -name SD_DDR_CLK  -source [get_pins I_CLOCK_GEN/I_PLL_SD/CLK_1X]  -divide_by 1
+create_generated_clock [get_pins I_CLOCK_GEN/I_CLKMUL/CLK_1X]  -name SYS_CLK  -source [get_pins I_CLOCK_GEN/I_CLKMUL/CLK_IN]  -multiply_by 1
+create_generated_clock [get_pins I_CLOCK_GEN/I_CLKMUL/CLK_2X]  -name SYS_2x_CLK  -source [get_pins I_CLOCK_GEN/I_CLKMUL/CLK_IN]  -multiply_by 2
+
+## define case analysis (faster functional mode)
+set_case_analysis 0 [get_ports scan_en]
+set_case_analysis 0 [get_ports power_save]
+set_case_analysis 1 [get_ports pm66en]
+
+## define clock uncertainty
+set_clock_uncertainty -setup 0.3 [get_clocks pclk]
+set_clock_uncertainty -setup 0.3 [get_clocks sys_clk]
+set_clock_uncertainty -setup 0.3 [get_clocks sdr_clk]
+set_clock_uncertainty -setup 0.3  [get_clocks PCI_CLK]
+set_clock_uncertainty -setup 0.3  [get_clocks SDRAM_CLK]
+set_clock_uncertainty -setup 0.3  [get_clocks SD_DDR_CLK]
+set_clock_uncertainty -setup 0.3  [get_clocks SYS_CLK]
+set_clock_uncertainty -setup 0.4  [get_clocks SYS_2x_CLK]
+
+## Constrain interface
+set pci_io_ports [get_ports p* -filter "port_direction==inout"]
+set pci_in_ports [add_to_collection [get_ports "pidsel pgnt_n pm66en"] $pci_io_ports]
+set pci_out_ports [add_to_collection [get_ports "preq_n"] $pci_io_ports]
+set pci_ports [add_to_collection $pci_io_ports [get_ports "pidsel pgnt_n pm66en preq_n"]]
+set sd_io_ddr_ports [get_ports "sd_DQ*"]
+set sd_out_ports [remove_from_collection [get_ports sd_*] [add_to_collection $sd_io_ddr_ports [get_ports "sd_CK sd_CKn"]]]
+set sd_ports [add_to_collection $sd_io_ddr_ports $sd_out_ports]
+set all_I0_mux_pins [get_pins I_ORCA_TOP/I_SDRAM_IF/*sd_mux_dq_out/A1]
+set all_I1_mux_pins [get_pins I_ORCA_TOP/I_SDRAM_IF/*sd_mux_dq_out/A2]
+
+## define input delay
+set_input_delay 6.0 -max -clock PCI_CLK -add_delay $pci_in_ports
+set_input_delay 2.0 -min -clock PCI_CLK -add_delay $pci_in_ports
+set_input_delay 0.800 -max  -clock SDRAM_CLK -add_delay $sd_io_ddr_ports
+set_input_delay 0.800 -max  -clock SDRAM_CLK -clock_fall -add_delay $sd_io_ddr_ports
+set_input_delay 0.200 -min  -clock SDRAM_CLK -add_delay $sd_io_ddr_ports
+set_input_delay 0.200 -min  -clock SDRAM_CLK -clock_fall -add_delay $sd_io_ddr_ports
+set_input_delay 4.0 -max -clock PCI_CLK [get_ports "scan_en power_save"] 
+set_input_delay 2.0 -min -clock PCI_CLK [get_ports "scan_en power_save"]
+
+## define output delay
+set_output_delay 4.0 -max -clock PCI_CLK -add_delay $pci_out_ports
+set_output_delay -1.0 -min -clock PCI_CLK -add_delay $pci_out_ports
+set_output_delay 0.750 -max -clock SD_DDR_CLK -add_delay $sd_ports
+set_output_delay 0.750 -max -clock SD_DDR_CLK -clock_fall -add_delay $sd_io_ddr_ports
+set_output_delay -0.100 -min -clock SD_DDR_CLK -add_delay $sd_ports
+set_output_delay -0.100 -min -clock SD_DDR_CLK -clock_fall -add_delay $sd_io_ddr_ports
+
+## define load
+set_load 15 $pci_ports
+set_load 20 $sd_ports
+set_load 5 [get_ports "sd_CK sd_CKn"]
+set_load 10 [get_ports "scan_en test_mode power_save"]
+set_load 10 [all_outputs]
+
+## define input transition
+set_input_transition 0.500 [all_inputs]
+set_input_transition 1.000 $pci_in_ports
+
+## setup constraints for clock gating
+set_clock_gating_check -low -setup 0.200 -hold 0.100 $all_I0_mux_pins
+set_clock_gating_check -high -setup 0.200 -hold 0.100 $all_I1_mux_pins
+set_clock_gating_check -setup 0.200 -hold 0.100 [get_clocks SYS_CLK]
+
+## define false path
+set_false_path -from [get_clocks SYS_CLK] -to [get_clocks {PCI_CLK SDRAM_CLK SD_DDR_CLK}] 
+set_false_path -from [get_clocks SYS_2x_CLK] -to [get_clocks {PCI_CLK SDRAM_CLK SD_DDR_CLK}] 
+set_false_path -from [get_clocks PCI_CLK] -to [get_clocks {SYS_CLK SYS_2x_CLK SDRAM_CLK SD_DDR_CLK}] 
+set_false_path -from [get_clocks SDRAM_CLK] -to [get_clocks {SYS_CLK SYS_2x_CLK PCI_CLK}] 
+set_false_path -from [get_clocks SD_DDR_CLK] -to [get_clocks {SYS_CLK SYS_2x_CLK PCI_CLK}]
+
+## define multi cycle path
+set_multicycle_path -setup 2 -end -from [get_clocks sdr_clk] -to [get_clocks SD_DDR_CLK]
+set_multicycle_path -hold 1  -end -from [get_clocks sdr_clk] -to [get_clocks SD_DDR_CLK]
+set_multicycle_path -setup 2 -end -from [get_clocks SDRAM_CLK] -to [get_clocks SD_DDR_CLK]
+set_multicycle_path -hold 1  -end -from [get_clocks SDRAM_CLK] -to [get_clocks SD_DDR_CLK]
+
+
+
+
+
+
+
+
+

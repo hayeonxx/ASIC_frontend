@@ -1,0 +1,509 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version S-2021.06-SP5-5 for linux64 - Sep 20, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /home1/std251_4/.synopsys_dc_gui/preferences.tcl
+##########################################################################################
+# Reading a Verilog RTL File
+##########################################################################################
+source -e -v ./scr/1_run_syn_setup
+## .synopsys_dc.setup file
+source -e -v ./.synopsys_dc.setup
+#########################################################################################
+# User-defined variables for logical library, RTL setup
+##########################################################################################
+set lib_rvt 	"/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm" 	;#  Logic cell library directory
+/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm
+set lib_hvt 	"/tools/dk/SAED32_EDK/lib/stdcell_hvt/db_nldm" 	;#  Logic cell library directory
+/tools/dk/SAED32_EDK/lib/stdcell_hvt/db_nldm
+set lib_lvt 	"/tools/dk/SAED32_EDK/lib/stdcell_lvt/db_nldm" 	;#  Logic cell library directory
+/tools/dk/SAED32_EDK/lib/stdcell_lvt/db_nldm
+set lib_io 	"/tools/dk/SAED32_EDK/lib/io_std/db_nldm" 	;#  IO library directory
+/tools/dk/SAED32_EDK/lib/io_std/db_nldm
+set lib_mem 	"/tools/dk/SAED32_EDK/lib/sram/db_nldm" 	;#  Memory library directory
+/tools/dk/SAED32_EDK/lib/sram/db_nldm
+set lib_pll 	"/tools/dk/SAED32_EDK/lib/pll/db_nldm" 		;#  PLL library directory
+/tools/dk/SAED32_EDK/lib/pll/db_nldm
+set RTL_path 	"../rtl" 					;#  RTL directory
+../rtl
+######################################################################
+# Search path Settings
+######################################################################
+set search_path ". $lib_rvt \
+		$lib_hvt \
+		$lib_lvt \
+		$lib_io \
+		$lib_mem \
+		$lib_pll \
+		$RTL_path"
+. /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_hvt/db_nldm  /tools/dk/SAED32_EDK/lib/stdcell_lvt/db_nldm  /tools/dk/SAED32_EDK/lib/io_std/db_nldm  /tools/dk/SAED32_EDK/lib/sram/db_nldm  /tools/dk/SAED32_EDK/lib/pll/db_nldm  ../rtl
+##########################################################################################
+# Target library setup
+##########################################################################################
+set target_library "saed32rvt_ss0p95v125c.db"
+saed32rvt_ss0p95v125c.db
+##########################################################################################
+# Link library setup
+##########################################################################################
+set link_library "* $target_library \
+		saed32io_fc_ss0p95v125c_2p25v.db \
+		saed32pll_ss0p95v125c_2p25v.db \
+		saed32sram_ss0p95v125c.db \
+		dw_foundation.sldb"
+* saed32rvt_ss0p95v125c.db  saed32io_fc_ss0p95v125c_2p25v.db  saed32pll_ss0p95v125c_2p25v.db  saed32sram_ss0p95v125c.db  dw_foundation.sldb
+##########################################################################################
+# User setup
+##########################################################################################
+define_design_lib work -path "./work"
+1
+set hdlin_enable_rtldrc_info true
+true
+set hdlin_enable_presto_for_vl true
+true
+true
+true
+source -e -v ./scr/2_run_syn_read_verilog
+## read verilig rtl files
+read_verilog {mydesign.v shift2.v}
+Loading db file '/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db'
+Loading db file '/tools/dk/SAED32_EDK/lib/io_std/db_nldm/saed32io_fc_ss0p95v125c_2p25v.db'
+Loading db file '/tools/dk/SAED32_EDK/lib/pll/db_nldm/saed32pll_ss0p95v125c_2p25v.db'
+Loading db file '/tools/dk/SAED32_EDK/lib/sram/db_nldm/saed32sram_ss0p95v125c.db'
+Loading db file '/tools/synopsys_2021/syn/S-2021.06-SP5-5/libraries/syn/dw_foundation.sldb'
+Loading db file '/tools/synopsys_2021/syn/S-2021.06-SP5-5/libraries/syn/gtech.db'
+Loading db file '/tools/synopsys_2021/syn/S-2021.06-SP5-5/libraries/syn/standard.sldb'
+  Loading link library 'saed32rvt_ss0p95v125c'
+  Loading link library 'saed32io_fc_ss0p95v125c_2p25v'
+  Loading link library 'saed32pll_ss0p95v125c_2p25v'
+  Loading link library 'saed32sram_ss0p95v125c'
+  Loading link library 'gtech'
+Loading verilog files: '/home1/std251_4/week04/mydesign/rtl/mydesign.v' '/home1/std251_4/week04/mydesign/rtl/shift2.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home1/std251_4/week04/mydesign/rtl/mydesign.v
+Compiling source file /home1/std251_4/week04/mydesign/rtl/shift2.v
+
+Inferred memory devices in process
+	in routine mydesign line 136 in file
+		'/home1/std251_4/week04/mydesign/rtl/mydesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     xor_ff_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine mydesign line 146 in file
+		'/home1/std251_4/week04/mydesign/rtl/mydesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine mydesign line 157 in file
+		'/home1/std251_4/week04/mydesign/rtl/mydesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sel_d1_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine shift2 line 52 in file
+		'/home1/std251_4/week04/mydesign/rtl/shift2.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     shift_r_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home1/std251_4/week04/mydesign/rtl/mydesign.db:mydesign'
+Loaded 2 designs.
+Current design is 'mydesign'.
+mydesign shift2
+current_design mydesign
+Current design is 'mydesign'.
+{mydesign}
+{mydesign}
+##########################################################################################
+# Explicitly Link the Design and Checks Current Design for Connectivity Hierarchy Issues
+##########################################################################################
+source -e -v ./scr/3_run_syn_link_check
+# link design
+current_design mydesign
+Current design is 'mydesign'.
+{mydesign}
+link
+
+  Linking design 'mydesign'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /home1/std251_4/week04/mydesign/rtl/mydesign.db, etc
+  saed32rvt_ss0p95v125c (library) /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db
+  saed32io_fc_ss0p95v125c_2p25v (library) /tools/dk/SAED32_EDK/lib/io_std/db_nldm/saed32io_fc_ss0p95v125c_2p25v.db
+  saed32pll_ss0p95v125c_2p25v (library) /tools/dk/SAED32_EDK/lib/pll/db_nldm/saed32pll_ss0p95v125c_2p25v.db
+  saed32sram_ss0p95v125c (library) /tools/dk/SAED32_EDK/lib/sram/db_nldm/saed32sram_ss0p95v125c.db
+  dw_foundation.sldb (library) /tools/synopsys_2021/syn/S-2021.06-SP5-5/libraries/syn/dw_foundation.sldb
+
+1
+# check design
+check_design ./rpt/mydesign.chk_design.rpt
+ 
+****************************************
+Report:      ./rpt/mydesign.chk_design.rpt
+Total Count: 0
+Severity:    Warning
+Message:     In design '', input pin '' of leaf cell '' is not connected to any net.  '' assumed.
+Version:     S-2021.06-SP5-5
+Date:        Sat May 31 09:54:56 2025
+****************************************
+
+No LINT-0 found.
+1
+# write ddc
+write_file -f ddc -hier -output out/unmapped/mydesign.ddc
+Writing ddc file 'out/unmapped/mydesign.ddc'.
+1
+# wrtie verilog netlist
+write -f verilog -hier -output ./out/unmapped/mydesign.v
+Writing verilog file '/home1/std251_4/week04/mydesign/syn/out/unmapped/mydesign.v'.
+Warning: Module mydesign contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+1
+1
+source -e -v ./scr/4_run_syn_constraints
+# constraint for timing and area
+source -echo -verbose ../Constraint/Constraint.con
+#####################################
+# clean-up
+#####################################
+reset_design
+1
+#####################################
+# Constraints file for design mydesign
+###################################
+## define create clock : 333.33MHz -> 3ns
+create_clock -name clk -period 3.0 [get_ports clk]
+1
+## source_latency : clock generator delay = 700ps
+set_clock_latency -source 0.7 [get_clocks clk]
+1
+##network latency
+set_clock_latency -max 0.3 [get_clocks clk]
+1
+##jitter + margin + skew*2 = 40 + 50 + 30*2 = 150ps
+set_clock_uncertainty -setup 0.15 [get_clocks clk]
+1
+##transition time(rise/fall time) = 120ps
+set_clock_transition 0.12 [get_clocks clk] 
+1
+set_input_delay -max 2.15 -clock clk [get_ports din1]
+1
+set_input_delay -max 0.45 -clock clk [get_ports up1_dn0]
+1
+set_input_delay -max 0.4 -clock clk [get_ports sel]
+1
+set_output_delay -max 0.5 -clock clk [get_ports do1]
+1
+set_output_delay -max 0.4 -clock clk [get_ports do2]
+1
+set_output_delay -max 2.04 -clock clk [get_ports do3]
+1
+set_input_delay -max 0.2 -clock clk [get_ports cin*]
+1
+set_output_delay -max 0.2 -clock clk [get_ports co*]
+1
+#set_driving_cell -library saed32rvt_ss0p95v125c -lib_cell INVX0_RVT [get_ports {din1 up1_dn0 sel cin1 cin2}]
+#set MAX_INPUT_LOAD [expr {[load_of saed32rvt_ss0p95v125c/AND2X1_RVT/A1] * 5}]
+#set_max_capacitance $MAX_INPUT_LOAD [get_ports {din1 up1_dn0 sel cin1 cin2}]
+#set_load -max [expr {$MAX_INPUT_LOAD * 3}] [all_outputs]source -e -v ./scr/5_run_syn_compile 
+compile_ultra -no_autoungroup
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.5 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.5 |     *     |
+============================================================================
+
+============================================================================
+| Flow Information                                                         |
+----------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                       |
+============================================================================
+| Design Information                                      | Value          |
+============================================================================
+| Number of Scenarios                                     | 0              |
+| Leaf Cell Count                                         | 35             |
+| Number of User Hierarchies                              | 1              |
+| Sequential Cell Count                                   | 7              |
+| Macro Count                                             | 0              |
+| Number of Power Domains                                 | 0              |
+| Design with UPF Data                                    | false          |
+============================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'mydesign'
+
+Loaded alib file './alib-52/saed32rvt_ss0p95v125c.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mydesign'
+Information: Added key list 'DesignWare' to design 'mydesign'. (DDB-72)
+  Processing 'shift2'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'PMT3_RVT' in the library 'saed32rvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_RVT' in the library 'saed32rvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_RVT' in the library 'saed32rvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_RVT' in the library 'saed32rvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_RVT' in the library 'saed32rvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_RVT' in the library 'saed32rvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01      77.8      0.00       0.0       0.0                           5029243.5000
+    0:00:01      77.8      0.00       0.0       0.0                           5029243.5000
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Isolate Ports
+  -----------------------
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:01      74.0      0.00       0.0       0.0                           4995312.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4995312.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4995312.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4995312.5000
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+    0:00:01      74.0      0.00       0.0       0.0                           4995312.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4995312.5000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:01      74.0      0.00       0.0       0.0                           4995312.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4995312.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4995312.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01      74.0      0.00       0.0       0.0                           4973215.5000
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+    0:00:01      74.0      0.00       0.0       0.0                           4951118.5000
+Loading db file '/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db'
+Loading db file '/tools/dk/SAED32_EDK/lib/io_std/db_nldm/saed32io_fc_ss0p95v125c_2p25v.db'
+Loading db file '/tools/dk/SAED32_EDK/lib/pll/db_nldm/saed32pll_ss0p95v125c_2p25v.db'
+Loading db file '/tools/dk/SAED32_EDK/lib/sram/db_nldm/saed32sram_ss0p95v125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+1
+#source -e -v ./scr/6_run_syn_report
+source -e -v ./scr/7_run_syn_write_output
+## write ddc and gate verilog netlist, etc.
+change_names -rules verilog -hierarchy 
+1
+# write ddc
+write -format ddc -hier -o out/mapped/mydesign.ddc
+Writing ddc file 'out/mapped/mydesign.ddc'.
+1
+# wrtie verilog netlist
+write -f verilog -h -o ./out/mapped/mydesign.v
+Writing verilog file '/home1/std251_4/week04/mydesign/syn/out/mapped/mydesign.v'.
+1
+write_sdf ./out/mapped/mydesign.pre.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home1/std251_4/week04/mydesign/syn/out/mapped/mydesign.pre.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+1
+1
+dc_shell> exit
+
+Memory usage for this session 198 Mbytes.
+Memory usage for this session including child processes 198 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
+Elapsed time for this session 97 seconds ( 0.03 hours ).
+
+Thank you...

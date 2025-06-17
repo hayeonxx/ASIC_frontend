@@ -1,0 +1,6 @@
+source /tools/synopsys_2021/prime/S-2021.06-SP5-2/admin/setup/.synopsys_pt.setup
+source /home1/std251_4/ASIC_final/sta/.synopsys_pt.setup
+source -echo -verbose pt.tcl
+exit
+if { [namespace which -command __pre_quit_tcl_procs] == "::__pre_quit_tcl_procs" } {   __pre_quit_tcl_procs}
+

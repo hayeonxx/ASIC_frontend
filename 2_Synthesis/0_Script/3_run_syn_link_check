@@ -1,0 +1,12 @@
+# link design
+current_design ORCA
+link
+
+# check design
+check_design ./4_Report/ORCA.chk_design.rpt
+
+# write ddc
+write_file -f ddc -hier -output 2_Output/unmapped/ORCA.ddc
+
+# wrtie verilog netlist
+write -f verilog -hier -output ./2_Output/unmapped/ORCA.v

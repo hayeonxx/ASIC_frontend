@@ -1,0 +1,11 @@
+*design* DebussyLib (btIdent Verdi_S-2021.09-SP2-9)
+Command arguments:
+    +define+verilog
+    -f run.f
+        ../../rtl/counter.v
+        ../tb/tb_counter.v
+
+Highest level modules:
+tb_counter
+
+Total	0 error(s),   0 warning(s)

@@ -1,0 +1,135 @@
+Command: vcs -full64 -debug_acc+all -kdb +define+SDF_PRE +neg_tchk +maxdelays -timescale=1ns/1ps \
++lint=TFIPC-L -f run_pre.f -l run_pre.log
+                         Chronologic VCS (TM)
+      Version S-2021.09-SP2-9_Full64 -- Thu May 22 06:24:46 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '../../syn/out/mapped/mydesign.v'
+Parsing design file '../tb/testbench.v'
+Parsing library file '/tools/dk/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v'
+Top Level Modules:
+       testbench
+TimeScale is 1 ps / 1 ps
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/mydesign.v, 13
+shift2, "DFFARX1_RVT shift_r_reg_1_( .D (din),  .CLK (clk),  .RSTB (n_rst),  .Q (dout[1]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/mydesign.v, 15
+shift2, "DFFARX1_RVT shift_r_reg_0_( .D (dout[1]),  .CLK (clk),  .RSTB (n_rst),  .Q (dout[0]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/mydesign.v, 33
+mydesign, "DFFARX1_RVT xor_ff_reg_0_( .D (do1[0]),  .CLK (clk),  .RSTB (n_rst),  .Q (do2[0]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/mydesign.v, 37
+mydesign, "DFFARX1_RVT xor_ff_reg_1_( .D (do1[1]),  .CLK (clk),  .RSTB (n_rst),  .Q (do2[1]));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "DFFARX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'QN' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/mydesign.v, 43
+mydesign, "HADDX1_RVT U16( .A0 (cnt[1]),  .B0 (shift2_do[1]),  .SO (do1[1]));"
+  The above instance has fewer port connections than the module definition,
+  There are 4 port(s) in module "HADDX1_RVT" definition, but only 3 port 
+  connect(s) in the instance.
+  output port 'C1' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/mydesign.v, 44
+mydesign, "HADDX1_RVT U17( .A0 (cnt[0]),  .B0 (shift2_do[0]),  .SO (do1[0]));"
+  The above instance has fewer port connections than the module definition,
+  There are 4 port(s) in module "HADDX1_RVT" definition, but only 3 port 
+  connect(s) in the instance.
+  output port 'C1' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../../syn/out/mapped/mydesign.v, 49
+mydesign, "FADDX1_RVT U22( .A (up1_dn0),  .B (cnt[1]),  .CI (n6),  .S (N16));"
+  The above instance has fewer port connections than the module definition,
+  There are 5 port(s) in module "FADDX1_RVT" definition, but only 4 port 
+  connect(s) in the instance.
+  output port 'CO' is not connected.
+
+
+Warning-[DDTC] Duplicate Timing Check is disabled
+/tools/dk/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v, 3798
+  The below duplicate timing check will be disabled:
+  $width(negedge RSTB, 0, 0, notifier);
+
+
+   ***   $sdf_annotate() version 1.2R
+
+Warning-[SDFCOM_CNOF] Cannot Open File
+  SDF Error: Cannot open SDF file ../syn/out/mapped/mydesign.pre.sdf for 
+  reading.      
+  No such file or directory.
+
+
+          Total errors: 1
+          Total warnings: 0
+   ***    SDF annotation aborted: Thu May 22 06:24:46 2025
+
+
+Starting vcs inline pass...
+8 modules and 4 UDPs read.
+recompiling module shift2
+recompiling module mydesign
+recompiling module testbench
+recompiling module AO22X1_RVT
+recompiling module DFFARX1_RVT
+recompiling module FADDX1_RVT
+recompiling module HADDX1_RVT
+recompiling module INVX0_RVT
+All of 8 modules done
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib -L/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _503953_archive_1.so \
+objs/udps/CZfJ6.o objs/udps/u96GI.o objs/udps/Gjg4Z.o objs/udps/Z0GwU.o  SIM_l.o \
+rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o        \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcs_save_restore_new.o /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/pli.a \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: .355 seconds to compile + .138 seconds to elab + .253 seconds to link
+Verdi KDB elaboration done and the database successfully generated: 0 error(s), 0 warning(s)

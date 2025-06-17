@@ -1,0 +1,23 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-f" "run.f"
+debLoadSimResult /home1/std251_4/week09/complex_cal/sim/fnc/top.fsdb
+wvCreateWindow
+verdiWindowResize -win $_Verdi_1 "748" "165" "1052" "754"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvCreateWindow
+verdiSetActWin -win $_nWave3
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+verdiSetActWin -win $_nWave3
+wvSetPosition -win $_nWave3 {("G1" 0)}
+wvOpenFile -win $_nWave3 {/home1/std251_4/week04/mydesign/sim/fnc/top.fsdb}
+wvGetSignalOpen -win $_nWave3
+wvGetSignalSetScope -win $_nWave3 "/testbench"
+wvGetSignalClose -win $_nWave3
+srcHBSelect "tb_complex_cal" -win $_nTrace1
+srcHBSelect "tb_complex_cal" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+wvCreateWindow
+verdiSetActWin -win $_nWave4
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+debExit

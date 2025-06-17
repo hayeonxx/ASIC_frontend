@@ -1,0 +1,1 @@
+/testbench/u_top/u_ff/do2[1:0]

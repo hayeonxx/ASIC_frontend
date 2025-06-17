@@ -1,0 +1,37 @@
+ 
+****************************************
+Report : reference
+Design : ORCA
+Version: S-2021.06-SP5-5
+Date   : Mon Dec 11 12:48:42 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+B12I1025_NS        saed32io_fc_ss0p95v125c_2p25v  8000.000000      28 224000.000000 d, n
+B16I1025_NS        saed32io_fc_ss0p95v125c_2p25v  8000.000000      16 128000.000000 d, n
+CLOCK_GEN                     10913.433346       1  10913.433346  b, h
+D8I1025_NS         saed32io_fc_ss0p95v125c_2p25v  8000.000000      17 136000.000000 d, n
+I1025_NS           saed32io_fc_ss0p95v125c_2p25v  8000.000000      10 80000.000000 d
+INVX1_RVT          saed32rvt_ss0p95v125c     1.270720       1     1.270720
+INVX2_RVT          saed32rvt_ss0p95v125c     1.524864      25    38.121599
+INVX8_RVT          saed32rvt_ss0p95v125c     3.049728       1     3.049728
+IOPOWER                       240000.000000       1 240000.000000 b, h
+NAND2X0_RVT        saed32rvt_ss0p95v125c     1.524864       1     1.524864
+NBUFFX4_RVT        saed32rvt_ss0p95v125c     2.541440       4    10.165760
+NBUFFX32_RVT       saed32rvt_ss0p95v125c    10.674048       5    53.370242
+ORCA_TOP                      232837.426852       1 232837.426852 b, h, n
+-----------------------------------------------------------------------------
+Total 13 references                                 1051858.363111
+1

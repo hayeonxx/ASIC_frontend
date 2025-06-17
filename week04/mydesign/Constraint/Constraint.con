@@ -1,0 +1,41 @@
+#####################################
+ # clean-up
+ #####################################
+ reset_design
+ #####################################
+# Constraints file for design mydesign
+###################################
+
+## define create clock : 333.33MHz -> 3ns
+create_clock -name clk -period 3.0 [get_ports clk]
+
+## source_latency : clock generator delay = 700ps
+set_clock_latency -source 0.7 [get_clocks clk]
+
+
+##network latency
+set_clock_latency -max 0.3 [get_clocks clk]
+
+##jitter + margin + skew*2 = 40 + 50 + 30*2 = 150ps
+set_clock_uncertainty -setup 0.15 [get_clocks clk]
+
+##transition time(rise/fall time) = 120ps
+set_clock_transition 0.12 [get_clocks clk] 
+
+set_input_delay -max 2.15 -clock clk [get_ports din1]
+set_input_delay -max 0.45 -clock clk [get_ports up1_dn0]
+set_input_delay -max 0.4 -clock clk [get_ports sel]
+
+set_output_delay -max 0.5 -clock clk [get_ports do1]
+set_output_delay -max 0.4 -clock clk [get_ports do2]
+set_output_delay -max 2.04 -clock clk [get_ports do3]
+
+set_input_delay -max 0.2 -clock clk [get_ports cin*]
+set_output_delay -max 0.2 -clock clk [get_ports co*]
+
+#set_driving_cell -library saed32rvt_ss0p95v125c -lib_cell INVX0_RVT [get_ports {din1 up1_dn0 sel cin1 cin2}]
+
+#set MAX_INPUT_LOAD [expr {[load_of saed32rvt_ss0p95v125c/AND2X1_RVT/A1] * 5}]
+#set_max_capacitance $MAX_INPUT_LOAD [get_ports {din1 up1_dn0 sel cin1 cin2}]
+
+#set_load -max [expr {$MAX_INPUT_LOAD * 3}] [all_outputs]

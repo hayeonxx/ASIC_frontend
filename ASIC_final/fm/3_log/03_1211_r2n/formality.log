@@ -1,0 +1,418 @@
+
+                                 Formality (R)
+
+               Version S-2021.06-SP5 for linux64 - Jan 11, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Build: 7435886
+Hostname: sse506-s3
+Current time: Mon Jun 16 17:30:03 2025
+
+Loading db file '/tools/synopsys_2021/fm/S-2021.06-SP5/libraries/syn/gtech.db'
+
+Script: 0_Script/main_r2n.tcl
+
+#####################################################################
+# control variables
+#####################################################################
+source -e -v ./0_Script/0_run_r2n_setup.tcl
+#setup version
+set ver [getenv ver]
+03_1211
+set fm_ver [getenv fm_ver]
+03_1211_r2n
+set curr_dir [pwd]
+/home1/std251_4/ASIC_final/fm
+set REPORTS ${curr_dir}/4_rpt/${fm_ver}
+/home1/std251_4/ASIC_final/fm/4_rpt/03_1211_r2n
+set SCRIPTS ${curr_dir}/0_Script
+/home1/std251_4/ASIC_final/fm/0_Script
+##implement_design_path
+set implement_design_path ../syn/out/mapped
+../syn/out/mapped
+set TOP_MODULE "fir13_filter"
+fir13_filter
+set clock_gating_mode 1
+1
+set QUIT_ON_FINISH 0
+0
+0
+#####################################################################
+# Remove possible old design entries
+#####################################################################
+source -e -v ./0_Script/1_run_r2n_remove_design.tcl
+##Remove possible old design entries
+remove_container r
+Cleared container 'r'
+1
+remove_container i
+Cleared container 'i'
+1
+remove_guidance
+SVF hasn't been set.
+0
+remove_constant -all
+Warning: No user defined constants (FM-178)
+1
+remove_black_box -all
+Removed all user defined black boxes
+1
+remove_user_match -all
+Removed all user matches
+1
+remove_dont_verify_point -all
+1
+remove_library -all
+1
+1
+#####################################################################
+# Common Variable Setup
+#####################################################################
+source -e -v ./0_Script/2_run_r2n_variable_setup.tcl
+##Common Variable Setup
+set synopsys_auto_setup true
+true
+set hdlin_error_on_mismatch_message false
+Info:  Use of 'hdlin_error_on_mismatch_message' is deprecated,  using 'set_mismatch_message_filter -warn' instead.
+false
+set hdlin_warning_on_mismatch_message {FMR_ELAB-147 FMR_ELAB-116 FMR_ELAB-115}
+FMR_ELAB-147 FMR_ELAB-116 FMR_ELAB-115
+set hdlin_unresolved_modules black_box
+black_box
+if {$clock_gating_mode} {
+		set verification_clock_gate_reverse_gating true
+	} else {
+		set verification_clock_gate_edge_analysis true
+	}
+true
+set verification_failing_point_limit 1000
+1000
+set verification_timeout_limit 72:00:00
+72:00:00
+set verification_run_analyze_points true
+true
+#
+set svf_presto_parameter_naming true
+true
+set verification_ignore_unmatched_implementation_blackbox_input true
+true
+set verification_inversion_push false
+Info:  'verification_inversion_push' is obsolete; ignored.
+false
+set fm_enable_new_fne true
+true
+set hdlin_enable_vpp true
+true
+set hdlin_vrlg_std 2001
+2001
+2001
+#####################################################################
+# Read Library
+#####################################################################
+source -e -v ./0_Script/3_run_r2n_lib_setup.tcl
+##########################################################################################
+# User-defined variables for logical library, RTL setup
+##########################################################################################
+set lib_rvt 	"/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm" 	;#  Logic cell library directory
+/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm
+# set lib_io 	"/tools/dk/SAED32_EDK/lib/io_std/db_nldm"  	;#  IO library directory
+# set lib_mem 	"/tools/dk/SAED32_EDK/lib/sram/db_nldm"	;#  Memory library directory
+# set lib_pll 	"/tools/dk/SAED32_EDK/lib/pll/db_nldm"  		;#  PLL library directory
+set RTL_path 	"../rtl" 
+../rtl
+######################################################################
+# Search path Settings
+######################################################################
+set search_path ". $lib_rvt 
+		$RTL_path 		"
+. /tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm 
+  ../rtl   
+# $lib_io 		# $lib_mem 		# $lib_pll ######################################################################
+# Read DB Read DB
+######################################################################
+read_db saed32rvt_ss0p95v125c.db
+Loading db file '/tools/dk/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db'
+1
+# read_db saed32io_fc_ss0p95v125c_2p25v.db
+# read_db saed32pll_ss0p95v125c_2p25v.db
+# read_db saed32sram_ss0p95v125c.db
+#####################################################################
+# svf setup
+#####################################################################
+set_svf ../syn
+SVF set to '/home1/std251_4/ASIC_final/syn/default.svf'.
+1
+#####################################################################
+# Read design
+#####################################################################
+source -e -v ./0_Script/4_run_r2n_read_design.tcl
+#####################################################################
+# Read reference design - RTL
+#####################################################################
+read_verilog -r -libname WORK {fir13_filter.v}
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home1/std251_4/ASIC_final/rtl/fir13_filter.v'
+Current container set to 'r'
+1
+set_top r:/WORK/${TOP_MODULE}
+Setting top design to 'r:/WORK/fir13_filter'
+Status:   Elaborating design fir13_filter   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  8 unlinked power cell(s) with unread pg pins.
+Warning:  1 unlinked power cell(s) with unread save/restore retention signals.
+Warning:  72 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'r:/WORK/fir13_filter'
+Reference design set to 'r:/WORK/fir13_filter'
+1
+#####################################################################
+# Read implement design - Netlist
+#####################################################################
+read_verilog -i -libname WORK ${implement_design_path}/m_fir13_filter.v
+Loading verilog file '/home1/std251_4/ASIC_final/syn/out/mapped/m_fir13_filter.v'
+Current container set to 'i'
+1
+set_top i:/WORK/${TOP_MODULE}
+Setting top design to 'i:/WORK/fir13_filter'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  8 unlinked power cell(s) with unread pg pins.
+Warning:  1 unlinked power cell(s) with unread save/restore retention signals.
+Warning:  72 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'i:/WORK/fir13_filter'
+Implementation design set to 'i:/WORK/fir13_filter'
+1
+1
+#####################################################################
+# Matching
+#####################################################################
+source -e -v ./0_Script/5_run_r2n_match.tcl
+#####################################################################
+# Matching
+#####################################################################
+match
+Reference design is 'r:/WORK/fir13_filter'
+Implementation design is 'i:/WORK/fir13_filter'
+Status:  Checking designs...
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+    SVF BEGIN: Timestamp: Cpu: 0.000h, Wall: 0.000h, Mem: 0.881G, Current time: Mon Jun 16 17:30:04 2025
+    SVF END: Timestamp: Cpu: 0.000h, Wall: 0.001h, Mem: 0.888G, Current time: Mon Jun 16 17:30:04 2025
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+architecture_netlist:          1          0          0          0          1
+boundary            :          2          0          0          0          2
+boundary_netlist    :          1          0          0          0          1
+change_names        :          2          0          0          0          2
+datapath            :          2          0          0          0          2
+environment         :          4          0          0          0          4
+mark                :          2          0          0          0          2
+merge               :          2          0          0          0          2
+reg_merging         :          5          0          0          0          5
+replace             :          6          0          0          0          6
+uniquify            :          2          0          0          0          2
+----------------------------------------------------------------------------
+Total               :         29          0          0          0         29
+
+
+Note: No guide_hier_map commands were found in the SVF. It is
+      important to enable guide_hier_map generation in
+      Design Compiler to avoid SVF rejections that can cause
+      aborted/failing points or long run times during verification.
+      In Design Compiler the recommended methodology uses variable
+      hdlin_enable_hier_map and command set_verification_top.
+
+SVF files read:
+      /home1/std251_4/ASIC_final/syn/default.svf
+
+SVF files produced:
+  /home1/std251_4/ASIC_final/fm/formality2_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 163 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 10 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 9(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+1
+report_unmatched_point > ${REPORTS}/unmatched_points_post_matching.rpt
+report_user_matches > ${REPORTS}/user_matches_post_matching.rpt
+#####################################################################
+# Verifying
+#####################################################################
+source -e -v ./0_Script/6_run_r2n_verify.tcl
+if {[verify]} {
+			puts ""
+			puts " PPPPPPPPPPPPPPPPP        AAA                 SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS  "
+			puts " P::::::::::::::::P      A:::A              SS:::::::::::::::S SS:::::::::::::::S "
+			puts " P::::::PPPPPP:::::P    A:::::A            S:::::SSSSSS::::::SS:::::SSSSSS::::::S "
+			puts " PP:::::P     P:::::P  A:::::::A           S:::::S     SSSSSSSS:::::S     SSSSSSS "
+			puts "   P::::P     P:::::P A:::::::::A          S:::::S            S:::::S             "
+			puts "   P::::P     P:::::PA:::::A:::::A         S:::::S            S:::::S             "
+			puts "   P::::PPPPPP:::::PA:::::A A:::::A         S::::SSSS          S::::SSSS          "
+			puts "   P:::::::::::::PPA:::::A   A:::::A         SS::::::SSSSS      SS::::::SSSSS     "
+			puts "   P::::PPPPPPPPP A:::::A     A:::::A          SSS::::::::SS      SSS::::::::SS   "
+			puts "   P::::P        A:::::AAAAAAAAA:::::A            SSSSSS::::S        SSSSSS::::S  "
+			puts "   P::::P       A:::::::::::::::::::::A                S:::::S            S:::::S "
+			puts "   P::::P      A:::::AAAAAAAAAAAAA:::::A               S:::::S            S:::::S "
+			puts " PP::::::PP   A:::::A             A:::::A  SSSSSSS     S:::::SSSSSSSS     S:::::S "
+			puts " P::::::::P  A:::::A               A:::::A S::::::SSSSSS:::::SS::::::SSSSSS:::::S "
+			puts " P::::::::P A:::::A                 A:::::AS:::::::::::::::SS S:::::::::::::::SS  "
+			puts " PPPPPPPPPPAAAAAAA                   AAAAAAASSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS    "
+			puts ""
+
+	} else {
+
+                                                                                
+			puts ""
+			puts " FFFFFFFFFFFFFFFFFFFFFF      AAA               IIIIIIIIIILLLLLLLLLLL              "
+			puts " F::::::::::::::::::::F     A:::A              I::::::::IL:::::::::L              "
+			puts " F::::::::::::::::::::F    A:::::A             I::::::::IL:::::::::L              "
+			puts " FF::::::FFFFFFFFF::::F   A:::::::A            II::::::IILL:::::::LL              "
+			puts "   F:::::F       FFFFFF  A:::::::::A             I::::I    L:::::L                "
+			puts "   F:::::F              A:::::A:::::A            I::::I    L:::::L                "
+			puts "   F::::::FFFFFFFFFF   A:::::A A:::::A           I::::I    L:::::L                "
+			puts "   F:::::::::::::::F  A:::::A   A:::::A          I::::I    L:::::L                "
+			puts "   F:::::::::::::::F A:::::A     A:::::A         I::::I    L:::::L                "
+			puts "   F::::::FFFFFFFFFFA:::::AAAAAAAAA:::::A        I::::I    L:::::L                "
+			puts "   F:::::F         A:::::::::::::::::::::A       I::::I    L:::::L                "
+			puts "   F:::::F        A:::::AAAAAAAAAAAAA:::::A      I::::I    L:::::L         LLLLLL "
+			puts " FF:::::::FF     A:::::A             A:::::A   II::::::IILL:::::::LLLLLLLLL:::::L "
+			puts " F::::::::FF    A:::::A               A:::::A  I::::::::IL::::::::::::::::::::::L "
+			puts " F::::::::FF   A:::::A                 A:::::A I::::::::IL::::::::::::::::::::::L "
+			puts " FFFFFFFFFFF  AAAAAAA                   AAAAAAAIIIIIIIIIILLLLLLLLLLLLLLLLLLLLLLLL "
+			puts ""
+
+
+	}
+Reference design is 'r:/WORK/fir13_filter'
+Implementation design is 'i:/WORK/fir13_filter'
+    
+*********************************** Matching Results ***********************************    
+ 163 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 10 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 9(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: r:/WORK/fir13_filter
+ Implementation design: i:/WORK/fir13_filter
+ 163 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0       8     155       0     163
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+
+ PPPPPPPPPPPPPPPPP        AAA                 SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS  
+ P::::::::::::::::P      A:::A              SS:::::::::::::::S SS:::::::::::::::S 
+ P::::::PPPPPP:::::P    A:::::A            S:::::SSSSSS::::::SS:::::SSSSSS::::::S 
+ PP:::::P     P:::::P  A:::::::A           S:::::S     SSSSSSSS:::::S     SSSSSSS 
+   P::::P     P:::::P A:::::::::A          S:::::S            S:::::S             
+   P::::P     P:::::PA:::::A:::::A         S:::::S            S:::::S             
+   P::::PPPPPP:::::PA:::::A A:::::A         S::::SSSS          S::::SSSS          
+   P:::::::::::::PPA:::::A   A:::::A         SS::::::SSSSS      SS::::::SSSSS     
+   P::::PPPPPPPPP A:::::A     A:::::A          SSS::::::::SS      SSS::::::::SS   
+   P::::P        A:::::AAAAAAAAA:::::A            SSSSSS::::S        SSSSSS::::S  
+   P::::P       A:::::::::::::::::::::A                S:::::S            S:::::S 
+   P::::P      A:::::AAAAAAAAAAAAA:::::A               S:::::S            S:::::S 
+ PP::::::PP   A:::::A             A:::::A  SSSSSSS     S:::::SSSSSSSS     S:::::S 
+ P::::::::P  A:::::A               A:::::A S::::::SSSSSS:::::SS::::::SSSSSS:::::S 
+ P::::::::P A:::::A                 A:::::AS:::::::::::::::SS S:::::::::::::::SS  
+ PPPPPPPPPPAAAAAAA                   AAAAAAASSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS    
+
+#####################################################################
+# report
+#####################################################################
+source -e -v ./0_Script/7_run_r2n_report.tcl
+report_failing_point > ${REPORTS}/failing_points.rpt
+report_aborted_point > ${REPORTS}/aborted_points.rpt
+report_unverified_point > ${REPORTS}/unverified_points.rpt
+report_black_box > ${REPORTS}/black_box.rpt
+report_constants > ${REPORTS}/constants.rpt
+report_dont_verify_points > ${REPORTS}/dont_verify_points.rpt
+save_session -replace ./2_out/${fm_ver}/saved_session
+Info:  Wrote file './2_out/03_1211_r2n/saved_session.fss'.
+1
+if {$QUIT_ON_FINISH} {
+		exit
+	}
+save_session -replace session_mydesignInfo:  Wrote file 'session_mydesign.fss'.
+1
+1
+fm_shell (verify)> efm_shell (verify)> exit
+
+Maximum memory usage for this session: 910 MB
+CPU usage for this session: 2.09 seconds ( 0.00 hours )
+Current time: Mon Jun 16 18:22:19 2025
+Elapsed time: 3136 seconds ( 0.87 hours )
+
+Thank you for using Formality (R)!

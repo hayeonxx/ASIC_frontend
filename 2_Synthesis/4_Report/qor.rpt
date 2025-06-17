@@ -1,0 +1,188 @@
+ 
+****************************************
+Report : qor
+Design : ORCA
+Version: S-2021.06-SP5-5
+Date   : Mon Dec 11 12:48:40 2023
+****************************************
+
+
+  Timing Path Group 'INS'
+  -----------------------------------
+  Levels of Logic:               2.00
+  Critical Path Length:          0.47
+  Critical Path Slack:           0.27
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'OUTS'
+  -----------------------------------
+  Levels of Logic:               5.00
+  Critical Path Length:          1.96
+  Critical Path Slack:           1.74
+  Critical Path Clk Period:      8.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:         -0.16
+  Total Hold Violation:         -1.80
+  No. of Hold Violations:       12.00
+  -----------------------------------
+
+  Timing Path Group 'PCI_CLK'
+  -----------------------------------
+  Levels of Logic:               0.00
+  Critical Path Length:          0.16
+  Critical Path Slack:           3.41
+  Critical Path Clk Period:      8.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'SDRAM_CLK'
+  -----------------------------------
+  Levels of Logic:               4.00
+  Critical Path Length:          0.57
+  Critical Path Slack:           0.97
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'SYS_2x_CLK'
+  -----------------------------------
+  Levels of Logic:              19.00
+  Critical Path Length:          1.47
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:      2.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'SYS_CLK'
+  -----------------------------------
+  Levels of Logic:              31.00
+  Critical Path Length:          3.31
+  Critical Path Slack:           0.27
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:         -0.07
+  Total Hold Violation:         -8.73
+  No. of Hold Violations:      129.00
+  -----------------------------------
+
+  Timing Path Group 'pclk'
+  -----------------------------------
+  Levels of Logic:               0.00
+  Critical Path Length:          0.16
+  Critical Path Slack:           3.41
+  Critical Path Clk Period:      8.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'sdr_clk'
+  -----------------------------------
+  Levels of Logic:               4.00
+  Critical Path Length:          0.57
+  Critical Path Slack:           0.97
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'sys_clk'
+  -----------------------------------
+  Levels of Logic:              19.00
+  Critical Path Length:          1.47
+  Critical Path Slack:           0.10
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:         -0.07
+  Total Hold Violation:         -8.71
+  No. of Hold Violations:      128.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:        124
+  Hierarchical Port Count:       4172
+  Leaf Cell Count:              21140
+  Buf/Inv Cell Count:            1082
+  Buf Cell Count:                 599
+  Inv Cell Count:                 483
+  CT Buf/Inv Cell Count:            7
+  Combinational Cell Count:     18056
+  Sequential Cell Count:         3084
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   168098.507448
+  Noncombinational Area:
+                        515641.717968
+  Buf/Inv Area:           1939.118779
+  Total Buffer Area:          1295.37
+  Total Inverter Area:         643.75
+  Macro/Black Box Area: 368118.137695
+  Net Area:              33248.448753
+  -----------------------------------
+  Cell Area:           1051858.363111
+  Design Area:         1085106.811864
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         26684
+  Nets With Violations:           119
+  Max Trans Violations:           119
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: us01odcvde42949
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    3.24
+  Logic Optimization:                  2.93
+  Mapping Optimization:                6.18
+  -----------------------------------------
+  Overall Compile Time:               29.47
+  Overall Compile Wall Clock Time:    31.10
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.16  TNS: 10.53  Number of Violating Paths: 141
+
+  --------------------------------------------------------------------
+
+
+1

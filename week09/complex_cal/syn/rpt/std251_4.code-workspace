@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"name": "RISC-V_CPU",
+			"path": "../../../../cpu_project/RISC-V_CPU"
+		}
+	],
+	"settings": {}
+}

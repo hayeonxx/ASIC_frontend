@@ -1,0 +1,5 @@
+## read verilig rtl files
+read_verilog fir13_filter.v
+current_design fir13_filter
+
+

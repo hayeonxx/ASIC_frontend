@@ -1,0 +1,436 @@
+**************************************************
+Report         : black_boxes
+
+Reference      : r:/WORK/fir13_filter
+Implementation : i:/WORK/fir13_filter
+Version        : S-2021.06-SP5
+Date           : Mon Jun 16 17:30:08 2025
+**************************************************
+Information: Reporting black boxes for current reference and implementation designs. (FM-184)
+
+ ___________________________________________________
+|                                                   |
+|  Legend:                                          |
+|           Black Box Attributes                    |
+|              s = Set with set_black_box command   |
+|              i = Module read with -interface_only |
+|              u = Unresolved design module         |
+|              e = Empty design module              |
+|              * = Unlinked design module           |
+|             ut = Unread tech cells pins           |
+|              L = Linked to non-black box design   |
+|              f = Formality Power Model            |
+|              m = Technology Macro cell (.db)      |
+|___________________________________________________|
+
+
+##################################################################
+####    TECH LIBRARY - i:/SAED32RVT_SS0P95V125C
+##################################################################
+Type  Design Name
+----  ----------
+m *    ANTENNA_RVT
+
+       Instances : 0
+
+m      ANTENNA_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/ANTENNA_RVT#PWR/pwrBB
+
+m      BSLEX1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/BSLEX1_RVT#PWR/pwrBB
+
+m      BSLEX1_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/BSLEX1_RVT/pwrBB
+
+m      BSLEX2_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/BSLEX2_RVT#PWR/pwrBB
+
+m      BSLEX2_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/BSLEX2_RVT/pwrBB
+
+m      BSLEX4_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/BSLEX4_RVT#PWR/pwrBB
+
+m      BSLEX4_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/BSLEX4_RVT/pwrBB
+
+m *    BUSKP_RVT
+
+       Instances : 0
+
+m      BUSKP_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/BUSKP_RVT#PWR/pwrBB
+
+m *    CLOAD1_RVT
+
+       Instances : 0
+
+m      CLOAD1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/CLOAD1_RVT#PWR/pwrBB
+
+m *    DCAP_RVT
+
+       Instances : 0
+
+m *    DHFILLH2_RVT
+
+       Instances : 0
+
+m *    DHFILLHL2_RVT
+
+       Instances : 0
+
+m *    DHFILLHLHLS11_RVT
+
+       Instances : 0
+
+m *    NMT1_RVT
+
+       Instances : 0
+
+m      NMT1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/NMT1_RVT#PWR/pwrBB
+
+m *    NMT2_RVT
+
+       Instances : 0
+
+m      NMT2_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/NMT2_RVT#PWR/pwrBB
+
+m *    NMT3_RVT
+
+       Instances : 0
+
+m      NMT3_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/NMT3_RVT#PWR/pwrBB
+
+m      PGX1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/PGX1_RVT#PWR/pwrBB
+
+m      PGX1_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/PGX1_RVT/pwrBB
+
+m      PGX2_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/PGX2_RVT#PWR/pwrBB
+
+m      PGX2_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/PGX2_RVT/pwrBB
+
+m      PGX4_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/PGX4_RVT#PWR/pwrBB
+
+m      PGX4_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/PGX4_RVT/pwrBB
+
+m *    PMT1_RVT
+
+       Instances : 0
+
+m      PMT1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/PMT1_RVT#PWR/pwrBB
+
+m *    PMT2_RVT
+
+       Instances : 0
+
+m      PMT2_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/PMT2_RVT#PWR/pwrBB
+
+m *    PMT3_RVT
+
+       Instances : 0
+
+m      PMT3_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       i:/SAED32RVT_SS0P95V125C/PMT3_RVT#PWR/pwrBB
+
+m *    SHFILL128_RVT
+
+       Instances : 0
+
+m *    SHFILL1_RVT
+
+       Instances : 0
+
+m *    SHFILL2_RVT
+
+       Instances : 0
+
+m *    SHFILL3_RVT
+
+       Instances : 0
+
+m *    SHFILL64_RVT
+
+       Instances : 0
+
+
+
+##################################################################
+####    TECH LIBRARY - r:/SAED32RVT_SS0P95V125C
+##################################################################
+Type  Design Name
+----  ----------
+m *    ANTENNA_RVT
+
+       Instances : 0
+
+m      ANTENNA_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/ANTENNA_RVT#PWR/pwrBB
+
+m      BSLEX1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/BSLEX1_RVT#PWR/pwrBB
+
+m      BSLEX1_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/BSLEX1_RVT/pwrBB
+
+m      BSLEX2_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/BSLEX2_RVT#PWR/pwrBB
+
+m      BSLEX2_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/BSLEX2_RVT/pwrBB
+
+m      BSLEX4_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/BSLEX4_RVT#PWR/pwrBB
+
+m      BSLEX4_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/BSLEX4_RVT/pwrBB
+
+m *    BUSKP_RVT
+
+       Instances : 0
+
+m      BUSKP_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/BUSKP_RVT#PWR/pwrBB
+
+m *    CLOAD1_RVT
+
+       Instances : 0
+
+m      CLOAD1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/CLOAD1_RVT#PWR/pwrBB
+
+m *    DCAP_RVT
+
+       Instances : 0
+
+m *    DHFILLH2_RVT
+
+       Instances : 0
+
+m *    DHFILLHL2_RVT
+
+       Instances : 0
+
+m *    DHFILLHLHLS11_RVT
+
+       Instances : 0
+
+m *    NMT1_RVT
+
+       Instances : 0
+
+m      NMT1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/NMT1_RVT#PWR/pwrBB
+
+m *    NMT2_RVT
+
+       Instances : 0
+
+m      NMT2_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/NMT2_RVT#PWR/pwrBB
+
+m *    NMT3_RVT
+
+       Instances : 0
+
+m      NMT3_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/NMT3_RVT#PWR/pwrBB
+
+m      PGX1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/PGX1_RVT#PWR/pwrBB
+
+m      PGX1_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/PGX1_RVT/pwrBB
+
+m      PGX2_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/PGX2_RVT#PWR/pwrBB
+
+m      PGX2_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/PGX2_RVT/pwrBB
+
+m      PGX4_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/PGX4_RVT#PWR/pwrBB
+
+m      PGX4_RVT_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/PGX4_RVT/pwrBB
+
+m *    PMT1_RVT
+
+       Instances : 0
+
+m      PMT1_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/PMT1_RVT#PWR/pwrBB
+
+m *    PMT2_RVT
+
+       Instances : 0
+
+m      PMT2_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/PMT2_RVT#PWR/pwrBB
+
+m *    PMT3_RVT
+
+       Instances : 0
+
+m      PMT3_RVT#PWR_FM_BBOX
+
+       Instances : 1 of 1
+       ------------------------
+       r:/SAED32RVT_SS0P95V125C/PMT3_RVT#PWR/pwrBB
+
+m *    SHFILL128_RVT
+
+       Instances : 0
+
+m *    SHFILL1_RVT
+
+       Instances : 0
+
+m *    SHFILL2_RVT
+
+       Instances : 0
+
+m *    SHFILL3_RVT
+
+       Instances : 0
+
+m *    SHFILL64_RVT
+
+       Instances : 0
+
+
+1

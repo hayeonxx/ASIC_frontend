@@ -1,0 +1,1372 @@
+ 
+****************************************
+Report : clock_gating
+        -structure
+Design : ORCA
+Version: S-2021.06-SP5-5
+Date   : Mon Dec 11 12:48:42 2023
+****************************************
+
+Information: Identification of clock-gating cells has not been performed. Pre-existing clock-gating cells will not be reported. (PWR-947)
+--------------------------------------------------------------------------------
+                        Clock Gating Structure Summary
+--------------------------------------------------------------------------------
+   Clock              | Total       | CG Stage   | # of Clock | # of Gated
+                      | Registers   |            | Gates      | Cells
+--------------------------------------------------------------------------------
+   pclk               | 1084        | 1          | 2          | 24
+   sys_clk            | 749         | 1          | 43         | 300
+                      |             | 2          | 3          | 24
+   sdr_clk            | 1174        | 1          | 2          | 28
+   PCI_CLK            | 1084        | 1          | 2          | 24
+   SDRAM_CLK          | 1174        | 1          | 2          | 28
+   SYS_CLK            | 749         | 1          | 43         | 300
+                      |             | 2          | 3          | 24
+   SYS_2x_CLK         | 247         | 1          | 37         | 236
+                      |             | 2          | 3          | 24
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+                        Clock Gating Structure Details
+--------------------------------------------------------------------------------
+   Clock    | CG    | Gating                | Fanout | Latency | Gated Cells
+            | Stage | Element               |        |         |
+--------------------------------------------------------------------------------
+   pclk     | 1     | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg
+                                            | 12     | -       | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[5]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg
+                                            | 12     | -       | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[5]
+            |       |                       |        |         |
+   sys_clk  | 1     | I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_read_addr_reg
+                                            | 6      | -       | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_write_addr_reg
+                                            | 6      | -       | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_ALU/clk_gate_Lachd_Result_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_A_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_B_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_PSWL_Zro_reg
+                                            | 3      | -       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/PSWL_Carry_reg
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/PSWL_Neg_reg
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/PSWL_Zro_reg
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[16]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[17]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[18]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[19]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[20]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[21]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[22]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[23]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[24]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[25]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[26]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[27]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[28]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[29]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[30]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[31]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg_0
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[16]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[17]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[18]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[19]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[20]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[21]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[22]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[23]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[24]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[25]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[26]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[27]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[28]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[29]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[30]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[31]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg_0
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/clk_gate_PCint_reg
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/clk_gate_TOS_int_reg
+                                            | 5      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/TOS_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/TOS_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/Crnt_Stack_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/Crnt_Stack_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/TOS_int_reg[1]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_PopDataOut_reg
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_PopDataOut_reg
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_PopDataOut_reg
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg
+                                            | 12     | -       | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[5]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg
+                                            | 12     | -       | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[5]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg
+                                            | 14     | -       | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[6]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg
+                                            | 14     | -       | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[6]
+            |       |                       |        |         |
+            | 2     | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_ml
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_ml
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_ml
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+            |       |                       |        |         |
+   sdr_clk  | 1     | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg
+                                            | 14     | -       | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[6]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg
+                                            | 14     | -       | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[6]
+            |       |                       |        |         |
+   PCI_CLK  | 1     | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg
+                                            | 12     | -       | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U1/count_int_reg[5]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg
+                                            | 12     | -       | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U2/count_int_reg[5]
+            |       |                       |        |         |
+   SDRAM_CLK
+            | 1     | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/clk_gate_this_addr_g_int_reg
+                                            | 14     | -       | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/this_addr_g_int_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U1/count_int_reg[6]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/clk_gate_this_addr_g_int_reg
+                                            | 14     | -       | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/this_addr_g_int_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U2/count_int_reg[6]
+            |       |                       |        |         |
+   SYS_CLK  | 1     | I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_read_addr_reg
+                                            | 6      | -       | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_read_addr_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_CONTEXT_MEM/clk_gate_ram_write_addr_reg
+                                            | 6      | -       | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_CONTEXT_MEM/ram_write_addr_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_ALU/clk_gate_Lachd_Result_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_A_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_B_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_PSWL_Zro_reg
+                                            | 3      | -       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/PSWL_Carry_reg
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/PSWL_Neg_reg
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/PSWL_Zro_reg
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[16]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[17]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[18]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[19]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[20]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[21]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[22]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[23]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[24]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[25]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[26]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[27]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[28]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[29]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[30]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[31]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg_0
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[16]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[17]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[18]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[19]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[20]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[21]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[22]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[23]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[24]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[25]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[26]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[27]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[28]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[29]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[30]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[31]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg_0
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/clk_gate_PCint_reg
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/clk_gate_TOS_int_reg
+                                            | 5      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/TOS_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/TOS_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/Crnt_Stack_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/Crnt_Stack_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/TOS_int_reg[1]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_PopDataOut_reg
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_PopDataOut_reg
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_PopDataOut_reg
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg
+                                            | 12     | -       | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_READ_FIFO/PCI_RFIFO_CTL/U2/count_int_reg[5]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg
+                                            | 12     | -       | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_PCI_WRITE_FIFO/PCI_WFIFO_CTL/U1/count_int_reg[5]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/clk_gate_this_addr_g_int_reg
+                                            | 14     | -       | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/this_addr_g_int_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_READ_FIFO/SD_RFIFO_CTL/U2/count_int_reg[6]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/clk_gate_this_addr_g_int_reg
+                                            | 14     | -       | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/this_addr_g_int_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_SDRAM_WRITE_FIFO/SD_WFIFO_CTL/U1/count_int_reg[6]
+            |       |                       |        |         |
+            | 2     | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_ml
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_ml
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_ml
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+            |       |                       |        |         |
+   SYS_2x_CLK
+            | 1     | I_ORCA_TOP/I_RISC_CORE/I_ALU/clk_gate_Lachd_Result_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_A_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_A_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_Oprnd_B_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/Oprnd_B_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/clk_gate_PSWL_Zro_reg
+                                            | 3      | -       | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/PSWL_Carry_reg
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/PSWL_Neg_reg
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_DATA_PATH/PSWL_Zro_reg
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[16]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[17]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[18]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[19]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[20]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[21]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[22]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[23]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[24]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[25]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[26]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[27]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[28]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[29]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[30]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[31]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_1_reg_0
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_1_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[16]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[17]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[18]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[19]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[20]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[21]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[22]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[23]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[24]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[25]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[26]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[27]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[28]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[29]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[30]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[31]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/clk_gate_Crnt_Instrn_2_reg_0
+                                            | 16     | -       | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[8]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[9]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[10]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[11]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[12]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[13]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[14]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_INSTRN_LAT/Crnt_Instrn_2_reg[15]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/clk_gate_PCint_reg
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_PRGRM_CNT_TOP/I_PRGRM_CNT/PCint_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/clk_gate_TOS_int_reg
+                                            | 5      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/TOS_int_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/TOS_int_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/Crnt_Stack_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/Crnt_Stack_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I_STACK_FSM/TOS_int_reg[1]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[0][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[1][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[2][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[3][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[4][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[5][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[6][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/Stack_Mem_reg[7][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_PopDataOut_reg
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/PopDataOut_reg[3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[0][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[1][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[2][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[3][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[4][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[5][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[6][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/Stack_Mem_reg[7][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_PopDataOut_reg
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/PopDataOut_reg[3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[0][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[1][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[2][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[3][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[4][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[5][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[6][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/Stack_Mem_reg[7][3]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_PopDataOut_reg
+                                            | 4      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/PopDataOut_reg[3]
+            |       |                       |        |         |
+            | 2     | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_ml
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I1_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_ml
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I2_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+            |       |                       |        |         |
+            |       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_ml
+                                            | 8      | -       | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[0]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[1]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[2]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[3]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[4]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[5]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[6]
+            |       |                       |        |         | I_ORCA_TOP/I_RISC_CORE/I_STACK_TOP/I3_STACK_MEM/clk_gate_Stack_Mem_reg[7]
+            |       |                       |        |         |
+--------------------------------------------------------------------------------
+
+
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |       50         |
+          |                                       |                  |
+          |    Number of Gated registers          |   352 (11.71%)   |
+          |                                       |                  |
+          |    Number of Ungated registers        |  2655 (88.29%)   |
+          |                                       |                  |
+          |    Maximum number of stages           |        2         |
+          |                                       |                  |
+          |    Total number of registers          |     3007         |
+          ------------------------------------------------------------
+
+
+
+                             Clock Gating Report by Origin
+          +-------------------------------------------------+------------------+
+          |                                                 |    Actual (%)    |
+          |                                                 |    Count         |
+          +-------------------------------------------------+------------------+
+          |  Number of tool-inserted clock gating elements  |    50 (100.00%)  |
+          |                                                 |                  |
+          |  Number of pre-existing clock gating elements   |     0 (0.00%)    |
+          |                                                 |                  |
+          |  Number of gated registers                      |   352 (11.71%)   |
+          |                                                 |                  |
+          |  Number of tool-inserted gated registers        |   352 (11.71%)   |
+          |                                                 |                  |
+          |  Number of pre-existing gated registers         |     0 (0.00%)    |
+          |                                                 |                  |
+          |  Number of ungated registers                    |  2655 (88.29%)   |
+          |                                                 |                  |
+          |  Number of registers                            |     3007         |
+          +-------------------------------------------------+------------------+
+
+
+
+1

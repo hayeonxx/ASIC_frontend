@@ -1,0 +1,12 @@
+*design* DebussyLib (btIdent Verdi_S-2021.09-SP2-9)
+Command arguments:
+    +define+verilog
+    -f run_pre.f
+        -v /tools/dk/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v
+        ../../syn/out/mapped/mydesign.v
+        ../tb/testbench.v
+
+Highest level modules:
+testbench
+
+Total	0 error(s),   0 warning(s)

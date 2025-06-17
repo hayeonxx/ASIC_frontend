@@ -1,0 +1,32 @@
+***********************
+Report : Interclock Relation
+  A common period of '-' means a full cycle was not expanded.
+***********************
+From                Period1  Count1    To                   Period2  Count2   Common
+----------------------------------------------------------------------------------
+pclk                   8.00      1     sys_clk                 4.00      2      8.00
+pclk                   8.00      1     PCI_CLK                 8.00      1      8.00
+pclk                   8.00      1     SYS_CLK                 4.00      2      8.00
+sys_clk                4.00      2     pclk                    8.00      1      8.00
+sys_clk                4.00      1     sdr_clk                 4.00      1      4.00
+sys_clk                4.00      2     PCI_CLK                 8.00      1      8.00
+sys_clk                4.00      1     SDRAM_CLK               4.00      1      4.00
+sys_clk                4.00      1     SYS_CLK                 4.00      1      4.00
+sys_clk                4.00      1     SYS_2x_CLK              2.00      2      4.00
+sdr_clk                4.00      1     sys_clk                 4.00      1      4.00
+sdr_clk                4.00      1     SDRAM_CLK               4.00      1      4.00
+sdr_clk                4.00      1     SD_DDR_CLK              4.00      1      4.00
+sdr_clk                4.00      1     SYS_CLK                 4.00      1      4.00
+PCI_CLK                8.00      1     pclk                    8.00      1      8.00
+PCI_CLK                8.00      1     sys_clk                 4.00      2      8.00
+SDRAM_CLK              4.00      1     sys_clk                 4.00      1      4.00
+SDRAM_CLK              4.00      1     sdr_clk                 4.00      1      4.00
+SDRAM_CLK              4.00      1     SD_DDR_CLK              4.00      1      4.00
+SYS_CLK                4.00      2     pclk                    8.00      1      8.00
+SYS_CLK                4.00      1     sys_clk                 4.00      1      4.00
+SYS_CLK                4.00      1     sdr_clk                 4.00      1      4.00
+SYS_CLK                4.00      1     SYS_2x_CLK              2.00      2      4.00
+SYS_2x_CLK             2.00      2     sys_clk                 4.00      1      4.00
+SYS_2x_CLK             2.00      2     sdr_clk                 4.00      1      4.00
+SYS_2x_CLK             2.00      2     SYS_CLK                 4.00      1      4.00
+1

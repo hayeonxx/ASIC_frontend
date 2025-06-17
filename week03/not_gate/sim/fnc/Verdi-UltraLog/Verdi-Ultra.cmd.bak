@@ -1,0 +1,55 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-f" "run.f"
+debLoadSimResult /home1/std251_4/week03/not_gate/sim/fnc/top.fsdb
+wvCreateWindow
+verdiWindowResize -win $_Verdi_1 -10 "134" "900" "700"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -delim "." -win $_nSchema1 -scope "tb_not_gate"
+verdiSetActWin -win $_nSchema_3
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -archName off
+schSetOptions -win $_nSchema3 -archName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -alignRight on
+schSetOptions -win $_nSchema3 -stickyLocator on
+schSetOptions -win $_nSchema3 -parameterList on
+schSetOptions -win $_nSchema3 -highContrastMode on
+schSetOptions -win $_nSchema3 -parameterList off
+schSetOptions -win $_nSchema3 -highContrastMode off
+verdiSetActWin -win $_nWave2
+wvSetFileTimeRange -win $_nWave2 -time_unit 100p 0 400
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/tb_not_gate"
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_not_gate/u_not_gate/a} \
+{/tb_not_gate/u_not_gate/o} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} 
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_not_gate/u_not_gate/a} \
+{/tb_not_gate/u_not_gate/o} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} 
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvGetSignalClose -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+verdiWindowResize -win $_Verdi_1 "958" "140" "900" "700"
+debExit

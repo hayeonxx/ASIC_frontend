@@ -1,0 +1,10 @@
+pt_shell> pt_shell -f pt.tcl | tee log/pt.log
+Error: unknown command 'pt_shell' (CMD-005)
+pt_shell> exit
+Maximum memory usage for this session: 3043.05 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 24 seconds
+Diagnostics summary: 1 error
+
+Thank you for using pt_shell!
+

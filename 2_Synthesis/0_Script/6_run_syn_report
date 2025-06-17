@@ -1,0 +1,4 @@
+## reports for deisgn and timing, etc.
+report_clocks -attributes -skew             		> ./4_Report/clocks.rpt
+report_area -hierarchy					> ./4_Report/area.rpt
+report_timing -max 32 -nets -nosplit		 	> ./4_Report/timing.rpt

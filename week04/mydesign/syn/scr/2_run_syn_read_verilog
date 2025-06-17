@@ -1,0 +1,6 @@
+## read verilig rtl files
+read_verilog {mydesign.v shift2.v}
+
+current_design mydesign
+
+

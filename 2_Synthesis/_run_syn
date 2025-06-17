@@ -1,0 +1,3 @@
+#!/bin/csh -f
+source setup.sh
+dc_shell -64  -f main_syn.tcl       | tee 3_Log/syn_dc.log

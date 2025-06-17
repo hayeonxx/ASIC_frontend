@@ -1,0 +1,773 @@
+ 
+****************************************
+Report : compile_options
+Design : ORCA
+Version: S-2021.06-SP5-5
+Date   : Mon Dec 11 12:48:43 2023
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+ORCA                                     flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+                                         design_ideal_nets      clock_on
+                                                                constant_on
+                                                                scan_on
+                                                                onclk_on
+
+IOPOWER                                  flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+CLOCK_GEN                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+CLKMUL                                   flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+ORCA_TOP                                 flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+RESET_BLOCK                              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+PCI_CORE                                 flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+PARSER                                   flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+CONTEXT_MEM                              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SNPS_CLOCK_GATE_HIGH_CONTEXT_MEM_0       flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_CONTEXT_MEM_1       flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_IF                                 flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+RISC_CORE                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+ALU                                      flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SNPS_CLOCK_GATE_HIGH_ALU_0               flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+ALU_DW01_sub_3                           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+ALU_DW01_add_3                           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+ALU_DW01_dec_1                           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+ALU_DW01_inc_3                           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+ALU_DW01_sub_2                           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+ALU_DW01_add_2                           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+ALU_DW01_inc_4                           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+CONTROL                                  flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+DATA_PATH                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SNPS_CLOCK_GATE_HIGH_DATA_PATH_0         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_DATA_PATH_2         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_DATA_PATH_1         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+INSTRN_LAT                               flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SNPS_CLOCK_GATE_HIGH_INSTRN_LAT_0        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_INSTRN_LAT_3        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_INSTRN_LAT_2        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_INSTRN_LAT_1        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PRGRM_CNT_TOP                            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+PRGRM_FSM                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+PRGRM_DECODE                             flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+PRGRM_CNT                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SNPS_CLOCK_GATE_HIGH_PRGRM_CNT           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PRGRM_CNT_DW01_inc_0_DW01_inc_1          flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+REG_FILE                                 flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+STACK_TOP                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+STACK_FSM                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SNPS_CLOCK_GATE_HIGH_STACK_FSM           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+STACK_MEM_0                              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_1         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_24        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_23        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_22        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_21        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_20        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_19        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_18        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_0         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_29        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+STACK_MEM_2                              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_17        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_16        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_15        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_14        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_13        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_12        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_11        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_10        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_28        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_27        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+STACK_MEM_1                              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_9         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_8         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_7         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_6         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_5         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_4         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_3         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_2         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_26        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_STACK_MEM_25        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER                                  flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+BLENDER_DW01_add_0_DW01_add_1            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW01_add_1_DW01_add_2            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW01_add_2_DW01_add_3            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW01_add_3_DW01_add_4            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW01_sub_0_DW01_sub_9            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW01_add_4_DW01_add_5            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW01_sub_1_DW01_sub_10           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW01_add_5_DW01_add_6            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW01_add_6_DW01_add_7            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW_mult_uns_0                    flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+BLENDER_DW_mult_uns_1                    flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_RFIFO                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+PCI_RFIFO_DW_fifoctl_s2_sf_0_DW_fifoctl_s2_sf_3 flatten         false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_RFIFO_DW_FIFOCTL_IF_0_DW_FIFOCTL_IF_6 flatten               false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_PCI_RFIFO_DW_FIFOCTL_IF_0_0 flatten        false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_RFIFO_DW_inc_0                       flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_RFIFO_DW_FIFOCTL_IF_1_DW_FIFOCTL_IF_7 flatten               false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_PCI_RFIFO_DW_FIFOCTL_IF_1_0 flatten        false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_RFIFO_DW_inc_1                       flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_WFIFO                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+PCI_WFIFO_DW_fifoctl_s2_sf_0_DW_fifoctl_s2_sf_2 flatten         false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_WFIFO_DW_FIFOCTL_IF_0_DW_FIFOCTL_IF_4 flatten               false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_PCI_WFIFO_DW_FIFOCTL_IF_0_0 flatten        false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_WFIFO_DW_inc_0                       flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_WFIFO_DW_FIFOCTL_IF_1_DW_FIFOCTL_IF_5 flatten               false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_PCI_WFIFO_DW_FIFOCTL_IF_1_0 flatten        false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_WFIFO_DW_inc_1                       flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_RFIFO                              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SDRAM_RFIFO_DW_fifoctl_s2_sf_0_DW_fifoctl_s2_sf_1 flatten       false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_RFIFO_DW_FIFOCTL_IF_0_DW_FIFOCTL_IF_2 flatten             false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_SDRAM_RFIFO_DW_FIFOCTL_IF_0_0 flatten      false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_RFIFO_DW_inc_0                     flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_RFIFO_DW01_sub_0_DW01_sub_3        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_RFIFO_DW_FIFOCTL_IF_1_DW_FIFOCTL_IF_3 flatten             false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_SDRAM_RFIFO_DW_FIFOCTL_IF_1_0 flatten      false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_RFIFO_DW_inc_1                     flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_RFIFO_DW01_sub_1_DW01_sub_4        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_WFIFO                              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SDRAM_WFIFO_DW_fifoctl_s2_sf_0           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_WFIFO_DW_FIFOCTL_IF_0              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_SDRAM_WFIFO_DW_FIFOCTL_IF_0_0 flatten      false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_WFIFO_DW_inc_0                     flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_WFIFO_DW01_sub_0_DW01_sub_1        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_WFIFO_DW_FIFOCTL_IF_1              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SNPS_CLOCK_GATE_HIGH_SDRAM_WFIFO_DW_FIFOCTL_IF_1_0 flatten      false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_WFIFO_DW_inc_1                     flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+SDRAM_WFIFO_DW01_sub_1_DW01_sub_2        flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+PCI_W_MUX                                flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+
+SD_W_MUX                                 flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+--------------------------------------------------------------------------------
+1

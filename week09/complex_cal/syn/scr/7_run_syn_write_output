@@ -1,0 +1,14 @@
+## write ddc and gate verilog netlist, etc.
+change_names -rules verilog -hierarchy 
+
+# write ddc
+write -format ddc -hier -o out/mapped/complex_cal.ddc
+
+# wrtie verilog netlist
+write -f verilog -h -o out/mapped/complex_cal.v
+
+
+write_sdf out/mapped/complex_cal.pre.sdf
+
+
+

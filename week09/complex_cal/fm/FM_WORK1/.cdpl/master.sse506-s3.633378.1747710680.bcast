@@ -1,0 +1,7 @@
+# Master Broadcast File
+time 1747710680
+pid 633378
+log /home1/std251_4/week09/complex_cal/fm/FM_WORK1/.cdpl/master.sse506-s3.633378.log
+tcp 192.168.0.67:39783
+wlog /home1/std251_4/week09/complex_cal/fm/FM_WORK1/.cdpl/worker.W1.sse506-s3.633450.log
+status done

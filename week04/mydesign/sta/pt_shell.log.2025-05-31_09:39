@@ -1,0 +1,19 @@
+Error: unknown command 'Information' (CMD-005)
+Information: script '/home1/std251_4/week04/mydesign/sta/.synopsys_pt.setup'
+        stopped at line 45 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"Information"
+    invoked from within
+"echo "\n[Information] Completed sourcing .synopsys_pt.setup\n""
+    (file "/home1/std251_4/week04/mydesign/sta/.synopsys_pt.setup" line 45)
+ -- End Extended Error Info
+pt_shell> exit
+Maximum memory usage for this session: 3047.36 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 65 seconds
+Diagnostics summary: 1 error, 1 informational
+
+Thank you for using pt_shell!
+
